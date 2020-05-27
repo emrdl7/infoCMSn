@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>infoCMS</title>
+
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="source/css/style.css"/>
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- javaScript -->
+        <script src="source/js/jquery-1.11.3.min.js"></script>
+        <script src="source/js/common.js"></script>
+
+    </head>
+ 
+    <body>
+        <!-- S:skip_navi -->
+        <div class="skip_navi">
+            <a class="sr-only sr-only-focusable" href="#header">메뉴 바로가기</a>
+            <a class="sr-only sr-only-focusable" href="#content">본문 바로가기</a>
+            <a class="sr-only sr-only-focusable" href="#footer">푸터 바로가기</a>
+        </div>
+        <!-- E:skip_navi -->
+        <!-- S:header -->
+        <header id="header">
+            <button class="menu">
+                <i class='bar'></i>
+                <i class='bar'></i>
+                메뉴토글</button>
+
+            <h1>
+                <a href="">인포마인드
+                    <small>inCMS 기본 템플릿</small></a>
+            </h1>
+
+            <p class="welcome">
+                <strong>관리자</strong>님 환영합니다.
+            </p>
+            <button class="logout">
+                <i class='bx bx-log-out'></i> LOGOUT</button>
+
+        </header>
+        <!-- E:header -->
+        <!-- S:mainContent -->
+
+        <div id="content">
+
+            <aside>
+
+                <div class="profile">
+                    <p class="photo">
+                        <img src="source/images/user.gif">
+                    </p>
+                    <p class="userName">관리자</p>
+                </div>
+
+                <!-- S:main_menu -->
+                <nav id="main-menu">
+    
+                    <ul>
+                        <li>
+                            <h3>
+                                <a href="dashboard.html">
+                                    <i class='bx bxs-dashboard' ></i>
+                                    <span>Dashboard</span></a>
+                            </h3>
+    
+                        </li>
+                        <li >
+                            <h3>
+                                <a href="sub.html">
+                                    <i class='bx bxs-carousel'></i>
+                                    <span>App</span></a>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="sub.html">
+                                        <i class='bx bx-subdirectory-right' ></i>Widgets</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html">
+                                        <i class='bx bx-subdirectory-right' ></i>Weather</a>
+                                </li>
+                            </ul>
+                        </li>
+    
+                        <li>
+                            <h3>
+                                <a href="sub.html">
+                                    <i class='bx bx-intersect' ></i>
+                                    <span>UI Elements</span></a>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="sub.html">
+                                        <i class='bx bx-subdirectory-right' ></i>게시판관리</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html">
+                                        <i class='bx bx-subdirectory-right' ></i>게시물관리</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="sub.html">
+                                    <i class='bx bxs-file'></i>
+                                    <span>Forms</span></a>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="sub.html">
+                                        <i class='bx bx-subdirectory-right' ></i>input</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="sub.html">
+                                    <i class='bx bx-table' ></i>
+                                    <span>Tables</span></a>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="sub.html">
+                                        <i class='bx bx-subdirectory-right' ></i>카테고리그룹관리</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html">
+                                        <i class='bx bx-subdirectory-right' ></i>카테고리그룹등록</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html">
+                                        <i class='bx bx-subdirectory-right' ></i>카테고리관리</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html">
+                                        <i class='bx bx-subdirectory-right' ></i>카테고리등록</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+    
+                </nav>
+                <!-- E:main_menu -->
+            </aside>
+            <section class="view">
+
+                <h2 class="stitle">
+                    <i class='bx bxs-message-alt-edit'></i>SubPage
+                </h2>
+
+                <div class="toolarea">
+                    <button title="도움말"><i class='bx bx-info-circle' ></i>도움말</button>
+                    <button title="다운로드"><i class='bx bxs-download' ></i>다운로드</button>
+                    <button title="프린트"><i class='bx bxs-printer' ></i>프린트</button>
+                </div>
+
+                <div class="sub">
+
+                    <h3 class="btitle"">
+                        입력폼
+                    </h3>
+
+                    <div class="rows">
+                        <input type="text">
+                        <input class="main" type="text">
+                        <select>
+                            <option>sdf asdf asd</option>
+                        </select>
+                        <select class="main">
+                            <option>sdf asdf asd</option>
+                        </select>
+                        <textarea class="main"></textarea>
+
+
+                        <input type="checkbox" id="check1">
+                        <label for="check1"><i class='bx bxs-checkbox-checked'></i>체크박스</label>
+
+                        <input type="checkbox" id="radio1">
+                        <label for="radio1"><i class='bx bx-radio-circle-marked' ></i>라디오버튼</label>
+
+                    </div>
+    
+
+
+                    <h3 class="btitle"">
+                        테이블
+                    </h3>
+
+
+                    <div class="rows">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>흠</th>
+                                    <th>흠</th>
+                                    <th>흠</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>음</td>
+                                    <td class="center">음</td>
+                                    <td class="right">음</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+            </section>
+
+        </div>
+        <!-- E:mainContent -->
+        <footer id="footer">
+            <p class="copyright">© INFOMIND</p>
+        </footer>
+    </body>
+
+</html>
