@@ -104,6 +104,7 @@ a {
 }
 button {
     outline:none;
+    border-radius:0;
 }
 
 /*font*/
@@ -276,7 +277,8 @@ body {
         position:relative;
         z-index:100;
         background:#fff;
-        height:50px;
+        height:38px;
+        @include ani(0.4s);
 
         button.menu {
             @include pmz(0,0);
@@ -284,27 +286,27 @@ body {
             border:none;
             background:$color-main;
             font-size:0;
-            width:50px;
-            height:50px;
+            width:38px;
+            height:38px;
             @include ani(0.4s);
 
             i.bar {
                 display:block;
                 position:absolute;
-                left:15px;
-                width:20px;
+                left:12px;
+                width:15px;
                 height:1px;
                 background:#fff;
                 @include ani(0.4s);
 
                 &:first-of-type {
-                    top:18px;
+                    top:12px;
                     transform: rotate(45deg);
                     @include ani(0.4s);
                 }
 
                 &:last-of-type {
-                    top:32px;
+                    top:22px;
                     transform: rotate(-45deg);
                 }
             }
@@ -312,14 +314,15 @@ body {
 
         h1 {
             @include pmz(0,0);
-            line-height:50px;
+            line-height:38px;
             vertical-align:top;
             display:inline-block;
             
             a {
                 display:block;
-                font-size:20px;
+                font-size:18px;
                 color:#333;
+                font-weight:bolder;
                 @include pmz(0 10px,0);
 
                 small {
@@ -333,6 +336,8 @@ body {
         p.welcome {
             position:absolute;
             right:110px;
+            line-height:38px;
+            margin:0;
             top:0;
             color:$color-main - 30%;
 
@@ -349,9 +354,11 @@ body {
             right:0;
             top:0;
             @include pmz(0 10px,0);
-            line-height:50px;
-            color:#fff;
-            background:$color-main;
+            line-height:38px;
+            color:$color-main;
+            font-weight:bolder;
+            background:#eee;
+            @include ani(0.4s);
 
             i {
                 position:relative;
@@ -376,19 +383,19 @@ body {
             z-index:400;
             color:#fff;
             display:inline-block;
-            width:50px;
+            width:38px;
             @include pmz(0,0);
             @include ani(0.4s);
     
             div.profile {
-                margin:20px 0;
+                margin:3px 0 10px;
     
                 p.photo {
                     margin:0 auto 10px;
-                    width:30px;
-                    height:30px;
+                    width:38px;
+                    height:38px;
                     overflow:hidden;
-                    border-radius:50%;
+                    border-radius:0;
                     @include ani(0.4s);
         
                     img {
@@ -405,7 +412,7 @@ body {
     
             }
     
-            nav#main-menu {
+            nav#main-menu.typeA {
     
                 &>ul {
                     list-style:none;
@@ -421,8 +428,8 @@ body {
                                 overflow:hidden;
                                 font-size:16px;
                                 color:#fff;
-                                width:50px;
-                                @include pmz(12px 0 12px 14px,0);
+                                width:38px;
+                                @include pmz(12px 0 12px 6px,0);
                                 @include ani(0.4s);
                                 
                                 i {
@@ -464,24 +471,71 @@ body {
             flex: 1;
             background:#efefef;
             min-height:calc(100vh - 50px);
-            padding:20px;
 
-            h2.stitle {
-                @include pmz(0,0 0 10px 0);
-                font-size:26px;
+            ul.tab-navigation {
+                list-style:none;
+                margin:0;
+                padding:1px 0 0;
+                font-size:0;
+                background:#222;
 
-                i {
-                    margin-right:8px;
-                    color:$color-main - #222;
-                    font-size:36px;
-                    vertical-align:middle;
+                li {
+                    position:relative;
+                    display:inline-block;
+                    width:calc(100% / 10);
+                    padding:2px 2px 0;
+
+                    &:first-child {
+                        padding-left:0;
+                    }
+
+                    &:last-child {
+                        padding-right:0;
+                    }
+
+                    a {
+                        background:rgba(255,255,255,0.2);
+                        display:block;
+                        text-align:center;
+                        font-size:14px;
+                        text-align:center;
+                        line-height:32px;
+                        padding:0 20px 0 10px;
+                        color:#999;
+                        @include ellipse;
+                    }
+
+                    button.close {
+                        position:absolute;
+                        right:2px;
+                        top:2px;
+                        border:none;
+                        background:none;
+                        color:#ccc;
+
+
+                        i {
+                            font-size:14px;
+                            padding:4px 0;
+                        }
+                    }
+
+
+                    &.on {
+                        a {
+                            background:#efefef;
+                        }
+                        button.close {
+                            color:#000;
+                        }
+                    }
                 }
             }
 
             div.toolarea {
                 position:absolute;
                 right:20px;
-                top:24px;
+                top:56px;
                 font-size:0;
 
                 button {
@@ -502,9 +556,22 @@ body {
                 }
             }
 
-            div.dashboard {
+            div.subView {
                 display: block;
                 font-size:0;
+                padding:20px;
+
+                h2.stitle {
+                    @include pmz(0,0 0 12px 0);
+                    font-size:22px;
+    
+                    i {
+                        margin-right:8px;
+                        color:$color-main - #222;
+                        font-size:30px;
+                        vertical-align:middle;
+                    }
+                }
 
                 div.rows {
                     @include pmz(10px 0,0);
@@ -809,6 +876,26 @@ body {
 
     &.open {
         header {
+
+            background:$color-main;
+
+            h1 {
+                a {
+                    color:#fff;
+
+                    small {
+                        color:$color-main + #999;
+                    }
+                }
+            }
+
+            p.welcome {
+                color:#fff;
+                strong {
+                    color:$color-main + #bbb;
+
+                }
+            }
             
             button.menu {
                 width:210px;
@@ -820,20 +907,20 @@ body {
                 i.bar {
                     display:block;
                     position:absolute;
-                    left:170px;
-                    width:20px;
+                    left:180px;
+                    width:15px;
                     height:1px;
                     background:#fff;
                     @include ani(0.4s);
     
                     &:first-of-type {
-                        top:18px;
+                        top:12px;
                         transform: rotate(-45deg);
                         @include ani(0.4s);
                     }
     
                     &:last-of-type {
-                        top:32px;
+                        top:22px;
                         transform: rotate(45deg);
                         @include ani(0.4s);
                     }
@@ -841,6 +928,10 @@ body {
 
             }
 
+            button.logout {
+                color:#fff;
+                background:$color-main - #333;
+            }
         }
         div#content {
 
@@ -855,6 +946,7 @@ body {
                         @include ani(0.4s);
                         width:60px;
                         height:60px;
+                        border-radius:50%;
                     }
                     p.userName {
                         opacity:1;
@@ -862,7 +954,7 @@ body {
                     }
                 }
     
-                nav#main-menu {
+                nav#main-menu.typeA {
         
                     &>ul {
         
@@ -881,6 +973,11 @@ body {
 
                                     &:hover {
                                         width:auto;
+                                    }
+
+                                    &.on {
+                                        color:$color-main + #666;
+                                        font-weight:bolder;
                                     }
                                 }
                             }
@@ -908,6 +1005,12 @@ body {
 
                                             &:hover {
                                                 color:rgba(255,255,255,1);
+                                            }
+
+                                            &.on {
+                                                font-weight:bolder;
+                                                color:rgba(255,255,255,1);
+                                                text-decoration:underline;
                                             }
                                         }
                                     }

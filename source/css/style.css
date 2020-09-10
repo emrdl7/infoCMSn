@@ -456,6 +456,7 @@ a {
 
 button {
   outline: none;
+  border-radius: 0;
 }
 
 /*font*/
@@ -617,11 +618,11 @@ body.login div.custom-checkbox label i {
 }
 
 body.login div.custom-checkbox input:checked + label {
-  color: #0075bc;
+  color: #786355;
 }
 
 body.login div.custom-checkbox input:checked + label i {
-  color: #0075bc;
+  color: #786355;
 }
 
 body.login button {
@@ -630,7 +631,7 @@ body.login button {
   height: 56px;
   border: none;
   color: #fff;
-  background: #0075bc;
+  background: #786355;
   border-radius: 5px;
   font-size: 18px;
   font-weight: 800;
@@ -639,7 +640,7 @@ body.login button {
 }
 
 body.login button:hover {
-  background: #0061a8;
+  background: #644f41;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
@@ -677,7 +678,9 @@ body header {
   position: relative;
   z-index: 100;
   background: #fff;
-  height: 50px;
+  height: 38px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 body header button.menu {
@@ -685,10 +688,10 @@ body header button.menu {
   padding: 0;
   vertical-align: top;
   border: none;
-  background: #0075bc;
+  background: #786355;
   font-size: 0;
-  width: 50px;
-  height: 50px;
+  width: 38px;
+  height: 38px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -696,8 +699,8 @@ body header button.menu {
 body header button.menu i.bar {
   display: block;
   position: absolute;
-  left: 15px;
-  width: 20px;
+  left: 12px;
+  width: 15px;
   height: 1px;
   background: #fff;
   -webkit-transition: all 0.4s ease;
@@ -705,7 +708,7 @@ body header button.menu i.bar {
 }
 
 body header button.menu i.bar:first-of-type {
-  top: 18px;
+  top: 12px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transition: all 0.4s ease;
@@ -713,7 +716,7 @@ body header button.menu i.bar:first-of-type {
 }
 
 body header button.menu i.bar:last-of-type {
-  top: 32px;
+  top: 22px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -721,15 +724,16 @@ body header button.menu i.bar:last-of-type {
 body header h1 {
   margin: 0;
   padding: 0;
-  line-height: 50px;
+  line-height: 38px;
   vertical-align: top;
   display: inline-block;
 }
 
 body header h1 a {
   display: block;
-  font-size: 20px;
+  font-size: 18px;
   color: #333;
+  font-weight: bolder;
   margin: 0;
   padding: 0 10px;
 }
@@ -738,14 +742,16 @@ body header h1 a small {
   font-size: 0.8em;
   margin: 0;
   padding: 0 0 0 6px;
-  color: #006bb2;
+  color: #6e594b;
 }
 
 body header p.welcome {
   position: absolute;
   right: 110px;
+  line-height: 38px;
+  margin: 0;
   top: 0;
-  color: #00579e;
+  color: #5a4537;
 }
 
 body header p.welcome strong {
@@ -761,9 +767,12 @@ body header button.logout {
   top: 0;
   margin: 0;
   padding: 0 10px;
-  line-height: 50px;
-  color: #fff;
-  background: #0075bc;
+  line-height: 38px;
+  color: #786355;
+  font-weight: bolder;
+  background: #eee;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 body header button.logout i {
@@ -776,7 +785,7 @@ body div#content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #000023;
+  background: black;
 }
 
 body div#content aside {
@@ -784,7 +793,7 @@ body div#content aside {
   z-index: 400;
   color: #fff;
   display: inline-block;
-  width: 50px;
+  width: 38px;
   margin: 0;
   padding: 0;
   -webkit-transition: all 0.4s ease;
@@ -792,15 +801,15 @@ body div#content aside {
 }
 
 body div#content aside div.profile {
-  margin: 20px 0;
+  margin: 3px 0 10px;
 }
 
 body div#content aside div.profile p.photo {
   margin: 0 auto 10px;
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 0;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -817,31 +826,31 @@ body div#content aside div.profile p.userName {
   transition: all 0.4s ease;
 }
 
-body div#content aside nav#main-menu > ul {
+body div#content aside nav#main-menu.typeA > ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-body div#content aside nav#main-menu > ul > li h3 {
+body div#content aside nav#main-menu.typeA > ul > li h3 {
   margin: 0;
   padding: 0;
 }
 
-body div#content aside nav#main-menu > ul > li h3 a {
+body div#content aside nav#main-menu.typeA > ul > li h3 a {
   white-space: nowrap;
   display: block;
   overflow: hidden;
   font-size: 16px;
   color: #fff;
-  width: 50px;
+  width: 38px;
   margin: 0;
-  padding: 12px 0 12px 14px;
+  padding: 12px 0 12px 6px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
-body div#content aside nav#main-menu > ul > li h3 a i {
+body div#content aside nav#main-menu.typeA > ul > li h3 a i {
   font-size: 20px;
   color: #bbb;
   position: relative;
@@ -849,17 +858,17 @@ body div#content aside nav#main-menu > ul > li h3 a i {
   margin-right: 12px;
 }
 
-body div#content aside nav#main-menu > ul > li h3 a:hover {
+body div#content aside nav#main-menu.typeA > ul > li h3 a:hover {
   position: relative;
-  background: #004289;
+  background: #453022;
   width: 210px;
 }
 
-body div#content aside nav#main-menu > ul > li h3 a:hover i {
+body div#content aside nav#main-menu.typeA > ul > li h3 a:hover i {
   color: #fff;
 }
 
-body div#content aside nav#main-menu > ul > li ul {
+body div#content aside nav#main-menu.typeA > ul > li ul {
   max-height: 0;
   opacity: 0;
   -webkit-transition: all 0.4s ease;
@@ -877,26 +886,71 @@ body div#content section.view {
           flex: 1;
   background: #efefef;
   min-height: calc(100vh - 50px);
-  padding: 20px;
 }
 
-body div#content section.view h2.stitle {
-  margin: 0 0 10px 0;
-  padding: 0;
-  font-size: 26px;
+body div#content section.view ul.tab-navigation {
+  list-style: none;
+  margin: 0;
+  padding: 1px 0 0;
+  font-size: 0;
+  background: #222;
 }
 
-body div#content section.view h2.stitle i {
-  margin-right: 8px;
-  color: #00539a;
-  font-size: 36px;
-  vertical-align: middle;
+body div#content section.view ul.tab-navigation li {
+  position: relative;
+  display: inline-block;
+  width: calc(100% / 10);
+  padding: 2px 2px 0;
+}
+
+body div#content section.view ul.tab-navigation li:first-child {
+  padding-left: 0;
+}
+
+body div#content section.view ul.tab-navigation li:last-child {
+  padding-right: 0;
+}
+
+body div#content section.view ul.tab-navigation li a {
+  background: rgba(255, 255, 255, 0.2);
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  text-align: center;
+  line-height: 32px;
+  padding: 0 20px 0 10px;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body div#content section.view ul.tab-navigation li button.close {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  border: none;
+  background: none;
+  color: #ccc;
+}
+
+body div#content section.view ul.tab-navigation li button.close i {
+  font-size: 14px;
+  padding: 4px 0;
+}
+
+body div#content section.view ul.tab-navigation li.on a {
+  background: #efefef;
+}
+
+body div#content section.view ul.tab-navigation li.on button.close {
+  color: #000;
 }
 
 body div#content section.view div.toolarea {
   position: absolute;
   right: 20px;
-  top: 24px;
+  top: 56px;
   font-size: 0;
 }
 
@@ -918,70 +972,84 @@ body div#content section.view div.toolarea button:hover {
   color: #fff;
 }
 
-body div#content section.view div.dashboard {
+body div#content section.view div.subView {
   display: block;
   font-size: 0;
+  padding: 20px;
 }
 
-body div#content section.view div.dashboard div.rows {
+body div#content section.view div.subView h2.stitle {
+  margin: 0 0 12px 0;
+  padding: 0;
+  font-size: 22px;
+}
+
+body div#content section.view div.subView h2.stitle i {
+  margin-right: 8px;
+  color: #564133;
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+body div#content section.view div.subView div.rows {
   margin: 0;
   padding: 10px 0;
 }
 
-body div#content section.view div.dashboard div.rows div.widget {
+body div#content section.view div.subView div.rows div.widget {
   display: inline-block;
   vertical-align: top;
 }
 
-body div#content section.view div.dashboard div.rows div.widget.c02 {
+body div#content section.view div.subView div.rows div.widget.c02 {
   width: calc((100% / 12) * 2);
 }
 
-body div#content section.view div.dashboard div.rows div.widget.c03 {
+body div#content section.view div.subView div.rows div.widget.c03 {
   width: calc((100% / 12) * 3);
 }
 
-body div#content section.view div.dashboard div.rows div.widget.c04 {
+body div#content section.view div.subView div.rows div.widget.c04 {
   width: calc((100% / 12) * 4);
 }
 
-body div#content section.view div.dashboard div.rows div.widget.c05 {
+body div#content section.view div.subView div.rows div.widget.c05 {
   width: calc((100% / 12) * 5);
 }
 
-body div#content section.view div.dashboard div.rows div.widget.c06 {
+body div#content section.view div.subView div.rows div.widget.c06 {
   width: calc((100% / 12) * 6);
 }
 
-body div#content section.view div.dashboard div.rows div.widget.c07 {
+body div#content section.view div.subView div.rows div.widget.c07 {
   width: calc((100% / 12) * 7);
 }
 
-body div#content section.view div.dashboard div.rows div.widget.c08 {
+body div#content section.view div.subView div.rows div.widget.c08 {
   width: calc((100% / 12) * 8);
 }
 
-body div#content section.view div.dashboard div.rows div.widget.c09 {
+body div#content section.view div.subView div.rows div.widget.c09 {
   width: calc((100% / 12) * 9);
 }
 
-body div#content section.view div.dashboard div.rows div.widget.c10 {
+body div#content section.view div.subView div.rows div.widget.c10 {
   width: calc((100% / 12) * 10);
 }
 
-body div#content section.view div.dashboard div.rows div.widget.c11 {
+body div#content section.view div.subView div.rows div.widget.c11 {
   width: calc((100% / 12) * 7);
 }
 
-body div#content section.view div.dashboard div.rows div.widget.c12 {
+body div#content section.view div.subView div.rows div.widget.c12 {
   width: calc((100% / 12) * 7);
 }
 
-body div#content section.view div.dashboard div.rows div.widget + div {
+body div#content section.view div.subView div.rows div.widget + div {
   padding-left: 10px;
 }
 
-body div#content section.view div.dashboard div.rows div.widget div.inline {
+body div#content section.view div.subView div.rows div.widget div.inline {
   font-size: 14px;
   background: #fff;
   border-radius: 10px;
@@ -991,7 +1059,7 @@ body div#content section.view div.dashboard div.rows div.widget div.inline {
   overflow: hidden;
 }
 
-body div#content section.view div.dashboard div.rows div.widget div.inline h3 {
+body div#content section.view div.subView div.rows div.widget div.inline h3 {
   margin: 0;
   padding: 0 10px;
   line-height: 42px;
@@ -1000,53 +1068,53 @@ body div#content section.view div.dashboard div.rows div.widget div.inline h3 {
   font-size: 16px;
 }
 
-body div#content section.view div.dashboard div.rows div.widget div.inline div.box {
+body div#content section.view div.subView div.rows div.widget div.inline div.box {
   margin: 0;
   padding: 10px;
 }
 
-body div#content section.view div.dashboard div.rows div.widget div.inline div.box.weather {
+body div#content section.view div.subView div.rows div.widget div.inline div.box.weather {
   text-align: center;
   margin: 0;
   padding: 20px 0 0;
 }
 
-body div#content section.view div.dashboard div.rows div.widget div.inline div.box.weather i {
+body div#content section.view div.subView div.rows div.widget div.inline div.box.weather i {
   font-size: 120px;
 }
 
-body div#content section.view div.dashboard div.rows div.widget div.inline div.box.weather p {
+body div#content section.view div.subView div.rows div.widget div.inline div.box.weather p {
   font-size: 26px;
   font-weight: 800;
 }
 
-body div#content section.view div.dashboard div.rows div.widget.h02 div.inline {
+body div#content section.view div.subView div.rows div.widget.h02 div.inline {
   min-height: 280px;
 }
 
-body div#content section.view div.dashboard div.rows div.widget.wall div.inline div.box {
+body div#content section.view div.subView div.rows div.widget.wall div.inline div.box {
   margin: 0;
   padding: 30px;
 }
 
-body div#content section.view div.dashboard div.rows div.widget.wall div.inline div.box h4 {
+body div#content section.view div.subView div.rows div.widget.wall div.inline div.box h4 {
   font-size: 52px;
   margin: 0;
   padding: 0;
   font-weight: 200;
 }
 
-body div#content section.view div.dashboard div.rows div.widget.main div.inline {
-  background: #0075bc;
+body div#content section.view div.subView div.rows div.widget.main div.inline {
+  background: #786355;
   color: #fff;
 }
 
-body div#content section.view div.dashboard div.rows div.widget.gray div.inline {
+body div#content section.view div.subView div.rows div.widget.gray div.inline {
   background: #555;
   color: #fff;
 }
 
-body div#content section.view div.dashboard div.rows div.widget.black div.inline {
+body div#content section.view div.subView div.rows div.widget.black div.inline {
   background: #222;
   color: #fff;
 }
@@ -1065,7 +1133,7 @@ body div#content section.view div.sub {
 
 body div#content section.view div.sub h3.btitle {
   font-size: 18px;
-  color: #00539a;
+  color: #564133;
   margin: 0 0 20px 0;
   padding: 0 0 16px 0;
   border-bottom: 1px solid #222;
@@ -1092,7 +1160,7 @@ body div#content section.view div.sub select {
 body div#content section.view div.sub input[type="text"].main,
 body div#content section.view div.sub input[type="passwd"].main,
 body div#content section.view div.sub select.main {
-  border-color: #0075bc;
+  border-color: #786355;
 }
 
 body div#content section.view div.sub input[type="text"]:hover, body div#content section.view div.sub input[type="text"]:focus,
@@ -1117,7 +1185,7 @@ body div#content section.view div.sub textarea {
 }
 
 body div#content section.view div.sub textarea.main {
-  border-color: #0075bc;
+  border-color: #786355;
 }
 
 body div#content section.view div.sub textarea:hover, body div#content section.view div.sub textarea:focus {
@@ -1146,16 +1214,16 @@ body div#content section.view div.sub label i {
 }
 
 body div#content section.view div.sub input:checked + label {
-  color: #0075bc;
+  color: #786355;
 }
 
 body div#content section.view div.sub input:checked + label i {
-  color: #0075bc;
+  color: #786355;
 }
 
 body div#content section.view div.sub table {
   width: 100%;
-  border-top: 2px solid #0075bc;
+  border-top: 2px solid #786355;
 }
 
 body div#content section.view div.sub table th,
@@ -1191,7 +1259,7 @@ body footer#footer {
   line-height: 50px;
   text-align: center;
   color: #fff;
-  background: #003178;
+  background: #341f11;
 }
 
 body footer#footer p {
@@ -1199,9 +1267,29 @@ body footer#footer p {
   padding: 0;
 }
 
+body.open header {
+  background: #786355;
+}
+
+body.open header h1 a {
+  color: #fff;
+}
+
+body.open header h1 a small {
+  color: #fffcee;
+}
+
+body.open header p.welcome {
+  color: #fff;
+}
+
+body.open header p.welcome strong {
+  color: white;
+}
+
 body.open header button.menu {
   width: 210px;
-  background: #004289;
+  background: #453022;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -1209,8 +1297,8 @@ body.open header button.menu {
 body.open header button.menu i.bar {
   display: block;
   position: absolute;
-  left: 170px;
-  width: 20px;
+  left: 180px;
+  width: 15px;
   height: 1px;
   background: #fff;
   -webkit-transition: all 0.4s ease;
@@ -1218,7 +1306,7 @@ body.open header button.menu i.bar {
 }
 
 body.open header button.menu i.bar:first-of-type {
-  top: 18px;
+  top: 12px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   -webkit-transition: all 0.4s ease;
@@ -1226,11 +1314,16 @@ body.open header button.menu i.bar:first-of-type {
 }
 
 body.open header button.menu i.bar:last-of-type {
-  top: 32px;
+  top: 22px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+
+body.open header button.logout {
+  color: #fff;
+  background: #453022;
 }
 
 body.open div#content aside {
@@ -1248,6 +1341,7 @@ body.open div#content aside div.profile p.photo {
   transition: all 0.4s ease;
   width: 60px;
   height: 60px;
+  border-radius: 50%;
 }
 
 body.open div#content aside div.profile p.userName {
@@ -1256,23 +1350,28 @@ body.open div#content aside div.profile p.userName {
   transition: all 0.4s ease;
 }
 
-body.open div#content aside nav#main-menu > ul > li h3 a {
+body.open div#content aside nav#main-menu.typeA > ul > li h3 a {
   color: #ccc;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   width: 210px;
 }
 
-body.open div#content aside nav#main-menu > ul > li h3 a i {
+body.open div#content aside nav#main-menu.typeA > ul > li h3 a i {
   font-size: 20px;
   color: #fff;
 }
 
-body.open div#content aside nav#main-menu > ul > li h3 a:hover {
+body.open div#content aside nav#main-menu.typeA > ul > li h3 a:hover {
   width: auto;
 }
 
-body.open div#content aside nav#main-menu > ul > li.active ul {
+body.open div#content aside nav#main-menu.typeA > ul > li h3 a.on {
+  color: #dec9bb;
+  font-weight: bolder;
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li.active ul {
   max-height: 1000px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -1281,19 +1380,25 @@ body.open div#content aside nav#main-menu > ul > li.active ul {
   opacity: 1;
 }
 
-body.open div#content aside nav#main-menu > ul > li.active ul li a {
+body.open div#content aside nav#main-menu.typeA > ul > li.active ul li a {
   color: rgba(255, 255, 255, 0.7);
   display: block;
   padding: 6px 0;
   white-space: nowrap;
 }
 
-body.open div#content aside nav#main-menu > ul > li.active ul li a i {
+body.open div#content aside nav#main-menu.typeA > ul > li.active ul li a i {
   opacity: 0.4;
   margin-right: 6px;
 }
 
-body.open div#content aside nav#main-menu > ul > li.active ul li a:hover {
+body.open div#content aside nav#main-menu.typeA > ul > li.active ul li a:hover {
   color: white;
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li.active ul li a.on {
+  font-weight: bolder;
+  color: white;
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */
