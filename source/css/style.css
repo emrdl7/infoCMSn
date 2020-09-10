@@ -618,11 +618,11 @@ body.login div.custom-checkbox label i {
 }
 
 body.login div.custom-checkbox input:checked + label {
-  color: #786355;
+  color: #0075bc;
 }
 
 body.login div.custom-checkbox input:checked + label i {
-  color: #786355;
+  color: #0075bc;
 }
 
 body.login button {
@@ -631,7 +631,7 @@ body.login button {
   height: 56px;
   border: none;
   color: #fff;
-  background: #786355;
+  background: #0075bc;
   border-radius: 5px;
   font-size: 18px;
   font-weight: 800;
@@ -640,7 +640,7 @@ body.login button {
 }
 
 body.login button:hover {
-  background: #644f41;
+  background: #0061a8;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
@@ -688,7 +688,7 @@ body header button.menu {
   padding: 0;
   vertical-align: top;
   border: none;
-  background: #786355;
+  background: #0075bc;
   font-size: 0;
   width: 38px;
   height: 38px;
@@ -742,7 +742,7 @@ body header h1 a small {
   font-size: 0.8em;
   margin: 0;
   padding: 0 0 0 6px;
-  color: #6e594b;
+  color: #006bb2;
 }
 
 body header p.welcome {
@@ -751,7 +751,7 @@ body header p.welcome {
   line-height: 38px;
   margin: 0;
   top: 0;
-  color: #5a4537;
+  color: #00579e;
 }
 
 body header p.welcome strong {
@@ -768,7 +768,7 @@ body header button.logout {
   margin: 0;
   padding: 0 10px;
   line-height: 38px;
-  color: #786355;
+  color: #0075bc;
   font-weight: bolder;
   background: #eee;
   -webkit-transition: all 0.4s ease;
@@ -785,7 +785,7 @@ body div#content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: black;
+  background: #000023;
 }
 
 body div#content aside {
@@ -802,6 +802,8 @@ body div#content aside {
 
 body div#content aside div.profile {
   margin: 3px 0 10px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 body div#content aside div.profile p.photo {
@@ -820,6 +822,11 @@ body div#content aside div.profile p.photo img {
 }
 
 body div#content aside div.profile p.userName {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
   text-align: center;
   opacity: 0;
   -webkit-transition: all 0.4s ease;
@@ -860,7 +867,7 @@ body div#content aside nav#main-menu.typeA > ul > li h3 a i {
 
 body div#content aside nav#main-menu.typeA > ul > li h3 a:hover {
   position: relative;
-  background: #453022;
+  background: #004289;
   width: 210px;
 }
 
@@ -986,7 +993,7 @@ body div#content section.view div.subView h2.stitle {
 
 body div#content section.view div.subView h2.stitle i {
   margin-right: 8px;
-  color: #564133;
+  color: #00539a;
   font-size: 30px;
   vertical-align: middle;
 }
@@ -1105,7 +1112,7 @@ body div#content section.view div.subView div.rows div.widget.wall div.inline di
 }
 
 body div#content section.view div.subView div.rows div.widget.main div.inline {
-  background: #786355;
+  background: #0075bc;
   color: #fff;
 }
 
@@ -1133,7 +1140,7 @@ body div#content section.view div.sub {
 
 body div#content section.view div.sub h3.btitle {
   font-size: 18px;
-  color: #564133;
+  color: #00539a;
   margin: 0 0 20px 0;
   padding: 0 0 16px 0;
   border-bottom: 1px solid #222;
@@ -1160,7 +1167,7 @@ body div#content section.view div.sub select {
 body div#content section.view div.sub input[type="text"].main,
 body div#content section.view div.sub input[type="passwd"].main,
 body div#content section.view div.sub select.main {
-  border-color: #786355;
+  border-color: #0075bc;
 }
 
 body div#content section.view div.sub input[type="text"]:hover, body div#content section.view div.sub input[type="text"]:focus,
@@ -1185,7 +1192,7 @@ body div#content section.view div.sub textarea {
 }
 
 body div#content section.view div.sub textarea.main {
-  border-color: #786355;
+  border-color: #0075bc;
 }
 
 body div#content section.view div.sub textarea:hover, body div#content section.view div.sub textarea:focus {
@@ -1214,16 +1221,16 @@ body div#content section.view div.sub label i {
 }
 
 body div#content section.view div.sub input:checked + label {
-  color: #786355;
+  color: #0075bc;
 }
 
 body div#content section.view div.sub input:checked + label i {
-  color: #786355;
+  color: #0075bc;
 }
 
 body div#content section.view div.sub table {
   width: 100%;
-  border-top: 2px solid #786355;
+  border-top: 2px solid #0075bc;
 }
 
 body div#content section.view div.sub table th,
@@ -1259,7 +1266,7 @@ body footer#footer {
   line-height: 50px;
   text-align: center;
   color: #fff;
-  background: #341f11;
+  background: #003178;
 }
 
 body footer#footer p {
@@ -1268,7 +1275,7 @@ body footer#footer p {
 }
 
 body.open header {
-  background: #786355;
+  background: #0075bc;
 }
 
 body.open header h1 a {
@@ -1276,7 +1283,7 @@ body.open header h1 a {
 }
 
 body.open header h1 a small {
-  color: #fffcee;
+  color: #99ffff;
 }
 
 body.open header p.welcome {
@@ -1284,12 +1291,12 @@ body.open header p.welcome {
 }
 
 body.open header p.welcome strong {
-  color: white;
+  color: #bbffff;
 }
 
 body.open header button.menu {
   width: 210px;
-  background: #453022;
+  background: #004289;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -1323,7 +1330,7 @@ body.open header button.menu i.bar:last-of-type {
 
 body.open header button.logout {
   color: #fff;
-  background: #453022;
+  background: #004289;
 }
 
 body.open div#content aside {
@@ -1333,7 +1340,7 @@ body.open div#content aside {
 }
 
 body.open div#content aside div.profile {
-  margin: 20px 0;
+  margin: 20px 0 10px;
 }
 
 body.open div#content aside div.profile p.photo {
@@ -1348,10 +1355,11 @@ body.open div#content aside div.profile p.userName {
   opacity: 1;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  font-size: 14px;
 }
 
 body.open div#content aside nav#main-menu.typeA > ul > li h3 a {
-  color: #ccc;
+  color: #eee;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   width: 210px;
@@ -1367,7 +1375,7 @@ body.open div#content aside nav#main-menu.typeA > ul > li h3 a:hover {
 }
 
 body.open div#content aside nav#main-menu.typeA > ul > li h3 a.on {
-  color: #dec9bb;
+  color: #66dbff;
   font-weight: bolder;
 }
 

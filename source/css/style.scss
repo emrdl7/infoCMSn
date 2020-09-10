@@ -389,6 +389,7 @@ body {
     
             div.profile {
                 margin:3px 0 10px;
+                @include ani(0.4s);
     
                 p.photo {
                     margin:0 auto 10px;
@@ -405,6 +406,9 @@ body {
                 }
     
                 p.userName {
+                    width:100%;
+                    @include ellipse;
+                    margin:0;
                     text-align:center;
                     opacity:0;
                     @include ani(0.4s);
@@ -940,7 +944,7 @@ body {
                 @include ani(0.4s);
     
                 div.profile {
-                    margin:20px 0;
+                    margin:20px 0 10px;
         
                     p.photo {
                         @include ani(0.4s);
@@ -951,6 +955,7 @@ body {
                     p.userName {
                         opacity:1;
                         @include ani(0.4s);
+                        font-size:14px;
                     }
                 }
     
@@ -962,7 +967,7 @@ body {
                             h3 {
         
                                 a {
-                                    color:#ccc;
+                                    color:#eee;
                                     @include ani(0.4s);
                                     width:210px;
                                     
