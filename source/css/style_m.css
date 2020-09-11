@@ -514,7 +514,7 @@ input[type="password"]::placeholder {
 
 /* style */
 body {
-  min-width: 1180px;
+  min-width: 320px;
   height: 100vh;
   /* header */
 }
@@ -678,20 +678,23 @@ body header {
   position: relative;
   z-index: 100;
   background: #fff;
-  height: 38px;
+  height: 50px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  text-align: center;
 }
 
 body header button.menu {
+  position: absolute;
+  left: 0;
+  top: 0;
   margin: 0;
   padding: 0;
-  vertical-align: top;
   border: none;
-  background: #0075bc;
+  background: none;
   font-size: 0;
-  width: 38px;
-  height: 38px;
+  width: 50px;
+  height: 50px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -699,16 +702,16 @@ body header button.menu {
 body header button.menu i.bar {
   display: block;
   position: absolute;
-  left: 12px;
-  width: 15px;
-  height: 1px;
-  background: #fff;
+  left: 16px;
+  width: 12px;
+  height: 3px;
+  background: #0075bc;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
 body header button.menu i.bar:first-of-type {
-  top: 12px;
+  top: 20px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transition: all 0.4s ease;
@@ -716,15 +719,14 @@ body header button.menu i.bar:first-of-type {
 }
 
 body header button.menu i.bar:last-of-type {
-  top: 22px;
+  top: 27px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
 body header h1 {
-  margin: 0;
+  margin: 10px 0 0;
   padding: 0;
-  line-height: 38px;
   vertical-align: top;
   display: inline-block;
 }
@@ -739,25 +741,15 @@ body header h1 a {
 }
 
 body header h1 a small {
-  font-size: 0.8em;
+  display: block;
+  font-size: 12px;
   margin: 0;
   padding: 0 0 0 6px;
   color: #006bb2;
 }
 
 body header p.welcome {
-  position: absolute;
-  right: 110px;
-  line-height: 38px;
-  margin: 0;
-  top: 0;
-  color: #00579e;
-}
-
-body header p.welcome strong {
-  text-decoration: none;
-  padding-right: 4px;
-  color: #333;
+  display: none;
 }
 
 body header button.logout {
@@ -767,33 +759,31 @@ body header button.logout {
   top: 0;
   margin: 0;
   padding: 0 10px;
-  line-height: 38px;
+  font-size: 0;
+  line-height: 50px;
   color: #0075bc;
-  font-weight: bolder;
-  background: #eee;
+  background: none;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
 body header button.logout i {
   position: relative;
-  top: 1px;
+  top: 10px;
   margin-right: 2px;
-}
-
-body div#content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: #000023;
+  font-size: 30px;
 }
 
 body div#content aside {
-  position: relative;
+  position: absolute;
   z-index: 400;
   color: #fff;
   display: inline-block;
-  width: 38px;
+  overflow: hidden;
+  background: #000023;
+  width: 0;
+  top: 50px;
+  bottom: 0;
   margin: 0;
   padding: 0;
   -webkit-transition: all 0.4s ease;
@@ -888,11 +878,7 @@ body div#content aside nav#main-menu.typeA > ul > li ul {
 
 body div#content section.view {
   position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   background: #efefef;
-  min-height: calc(100vh - 50px);
 }
 
 body div#content section.view ul.tab-navigation {
@@ -906,15 +892,11 @@ body div#content section.view ul.tab-navigation {
 body div#content section.view ul.tab-navigation li {
   position: relative;
   display: inline-block;
-  width: calc(100% / 9);
-  padding: 2px 2px 0;
+  width: calc(100% / 3);
+  padding: 2px 2px 0 0;
 }
 
-body div#content section.view ul.tab-navigation li:first-child {
-  padding-left: 0;
-}
-
-body div#content section.view ul.tab-navigation li:last-child {
+body div#content section.view ul.tab-navigation li:nth-child(3n) {
   padding-right: 0;
 }
 
@@ -982,7 +964,7 @@ body div#content section.view div.toolarea button:hover {
 body div#content section.view div.subView {
   display: block;
   font-size: 0;
-  padding: 20px;
+  padding: 20px 10px 10px;
 }
 
 body div#content section.view div.subView h2.stitle {
@@ -1006,54 +988,8 @@ body div#content section.view div.subView div.rows {
 body div#content section.view div.subView div.rows div.widget {
   display: inline-block;
   vertical-align: top;
-}
-
-body div#content section.view div.subView div.rows div.widget.c02 {
-  width: calc((100% / 12) * 2);
-}
-
-body div#content section.view div.subView div.rows div.widget.c03 {
-  width: calc((100% / 12) * 3);
-}
-
-body div#content section.view div.subView div.rows div.widget.c04 {
-  width: calc((100% / 12) * 4);
-}
-
-body div#content section.view div.subView div.rows div.widget.c05 {
-  width: calc((100% / 12) * 5);
-}
-
-body div#content section.view div.subView div.rows div.widget.c06 {
-  width: calc((100% / 12) * 6);
-}
-
-body div#content section.view div.subView div.rows div.widget.c07 {
-  width: calc((100% / 12) * 7);
-}
-
-body div#content section.view div.subView div.rows div.widget.c08 {
-  width: calc((100% / 12) * 8);
-}
-
-body div#content section.view div.subView div.rows div.widget.c09 {
-  width: calc((100% / 12) * 9);
-}
-
-body div#content section.view div.subView div.rows div.widget.c10 {
-  width: calc((100% / 12) * 10);
-}
-
-body div#content section.view div.subView div.rows div.widget.c11 {
-  width: calc((100% / 12) * 7);
-}
-
-body div#content section.view div.subView div.rows div.widget.c12 {
-  width: calc((100% / 12) * 7);
-}
-
-body div#content section.view div.subView div.rows div.widget + div {
-  padding-left: 10px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 body div#content section.view div.subView div.rows div.widget div.inline {
@@ -1305,15 +1241,15 @@ body.open header button.menu i.bar {
   display: block;
   position: absolute;
   left: 180px;
-  width: 15px;
-  height: 1px;
+  width: 12px;
+  height: 3px;
   background: #fff;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
 body.open header button.menu i.bar:first-of-type {
-  top: 12px;
+  top: 20px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   -webkit-transition: all 0.4s ease;
@@ -1321,7 +1257,7 @@ body.open header button.menu i.bar:first-of-type {
 }
 
 body.open header button.menu i.bar:last-of-type {
-  top: 22px;
+  top: 27px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transition: all 0.4s ease;
@@ -1409,4 +1345,4 @@ body.open div#content aside nav#main-menu.typeA > ul > li.active ul li a.on {
   color: white;
   text-decoration: underline;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style_m.css.map */
