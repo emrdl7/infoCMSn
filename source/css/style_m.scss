@@ -524,10 +524,9 @@ body {
             }
 
             div.toolarea {
-                position:absolute;
-                right:20px;
-                top:56px;
+                text-align:center;
                 font-size:0;
+                padding:10px 0;
 
                 button {
                     background:rgba(0,0,0,0.1);
@@ -663,7 +662,6 @@ body {
             div.sub {
                 font-size:14px;
                 background:#fff;
-                border-radius:10px;
                 min-height:320px;
                 @include pmz(20px,0);
                 @include drop-shadow (0,1px,4px,0,0.1);
@@ -877,7 +875,6 @@ body {
 
             button.logout {
                 color:#fff;
-                background:$color-main - #333;
             }
         }
         div#content {

@@ -937,10 +937,9 @@ body div#content section.view ul.tab-navigation li.on button.close {
 }
 
 body div#content section.view div.toolarea {
-  position: absolute;
-  right: 20px;
-  top: 56px;
+  text-align: center;
   font-size: 0;
+  padding: 10px 0;
 }
 
 body div#content section.view div.toolarea button {
@@ -1065,7 +1064,6 @@ body div#content section.view div.subView div.rows div.widget.black div.inline {
 body div#content section.view div.sub {
   font-size: 14px;
   background: #fff;
-  border-radius: 10px;
   min-height: 320px;
   margin: 0;
   padding: 20px;
@@ -1266,7 +1264,6 @@ body.open header button.menu i.bar:last-of-type {
 
 body.open header button.logout {
   color: #fff;
-  background: #004289;
 }
 
 body.open div#content aside {
