@@ -523,17 +523,29 @@ body {
                 }
             }
 
+
+
             div.toolarea {
+
+                padding:0 0 20px;
                 text-align:center;
                 font-size:0;
-                padding:10px 0;
 
                 button {
+                    vertical-align:top;
                     background:rgba(0,0,0,0.1);
                     @include pmz(3px,0 0 0 4px);
                     border:none;
                     color:rgba(0,0,0,0.3);
                     border-radius:5px;
+                    width:34px;
+                    height:34px;
+
+                    svg {
+                        fill:rgba(0,0,0,0.3);
+                        width:100%;
+                        height:auto;
+                    }
 
                     i {
                         font-size:28px;
@@ -542,9 +554,80 @@ body {
                     &:hover {
                         background:$color-gray;
                         color:#fff;
+
+                        svg {
+                            fill:#fff;
+                        }
+                    }
+
+
+                    &.color-main {
+                        background:$color-main;
+
+                        i {
+                            color:#fff;
+                        }
+
+                        &:hover {
+                            background:$color-main - #222;
+                        }
+                    }
+
+                    &.color-gray {
+                        background:$color-gray;
+
+                        i {
+                            color:#fff;
+                        }
+
+                        &:hover {
+                            background:$color-gray - #111;
+                        }
                     }
                 }
             }
+
+            nav.navigation {
+                text-align:center;
+                padding:20px 0 10px;
+
+                ol {
+                    padding:0;
+                    margin:0;
+
+                    li {
+                        display:inline-block;
+                        font-size:15px;
+
+                        a {
+                            color:#555;
+                        }
+
+                        &::after {
+                            content:"/";
+                        }
+
+                        &.active {
+                            font-weight:bolder;
+                            color:#222;
+
+                            &:after {
+                                display:none;
+                            }
+                        }
+                        
+                    }
+                }
+
+
+            }
+
+
+
+
+
+
+
 
             div.subView {
                 display: block;
@@ -843,6 +926,9 @@ body {
             }
             
             button.menu {
+                position:fixed;
+                top:0;
+                left:0;
                 width:210px;
                 background:$color-main - #333;
                 @include ani(0.4s);
@@ -880,6 +966,10 @@ body {
         div#content {
 
             aside {
+                position:fixed;
+                left:0;
+                top:50px;
+                bottom:0;
                 width:210px;
                 @include ani(0.4s);
     

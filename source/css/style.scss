@@ -539,15 +539,24 @@ body {
             div.toolarea {
                 position:absolute;
                 right:20px;
-                top:56px;
+                top:76px;
                 font-size:0;
 
                 button {
+                    vertical-align:top;
                     background:rgba(0,0,0,0.1);
                     @include pmz(3px,0 0 0 4px);
                     border:none;
                     color:rgba(0,0,0,0.3);
                     border-radius:5px;
+                    width:34px;
+                    height:34px;
+
+                    svg {
+                        fill:rgba(0,0,0,0.3);
+                        width:100%;
+                        height:auto;
+                    }
 
                     i {
                         font-size:28px;
@@ -556,8 +565,73 @@ body {
                     &:hover {
                         background:$color-gray;
                         color:#fff;
+
+                        svg {
+                            fill:#fff;
+                        }
+                    }
+
+
+                    &.color-main {
+                        background:$color-main;
+
+                        i {
+                            color:#fff;
+                        }
+
+                        &:hover {
+                            background:$color-main - #222;
+                        }
+                    }
+
+                    &.color-gray {
+                        background:$color-gray;
+
+                        i {
+                            color:#fff;
+                        }
+
+                        &:hover {
+                            background:$color-gray - #111;
+                        }
                     }
                 }
+            }
+
+            nav.navigation {
+                position: absolute;
+                right: 20px;
+                top: 50px;
+
+                ol {
+                    padding:0;
+                    margin:0;
+
+                    li {
+                        display:inline-block;
+                        font-size:15px;
+
+                        a {
+                            color:#555;
+                        }
+
+                        &::after {
+                            content:"/";
+                        }
+
+                        &.active {
+                            font-weight:bolder;
+                            color:#222;
+
+                            &:after {
+                                display:none;
+                            }
+                        }
+                        
+                    }
+                }
+
+
             }
 
             div.subView {
@@ -566,7 +640,7 @@ body {
                 padding:20px;
 
                 h2.stitle {
-                    @include pmz(0,0 0 12px 0);
+                    @include pmz(0,0 0 18px 0);
                     font-size:22px;
     
                     i {

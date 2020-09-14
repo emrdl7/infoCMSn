@@ -957,17 +957,26 @@ body div#content section.view ul.tab-navigation li.on button.close {
 body div#content section.view div.toolarea {
   position: absolute;
   right: 20px;
-  top: 56px;
+  top: 76px;
   font-size: 0;
 }
 
 body div#content section.view div.toolarea button {
+  vertical-align: top;
   background: rgba(0, 0, 0, 0.1);
   margin: 0 0 0 4px;
   padding: 3px;
   border: none;
   color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
+  width: 34px;
+  height: 34px;
+}
+
+body div#content section.view div.toolarea button svg {
+  fill: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: auto;
 }
 
 body div#content section.view div.toolarea button i {
@@ -979,6 +988,67 @@ body div#content section.view div.toolarea button:hover {
   color: #fff;
 }
 
+body div#content section.view div.toolarea button:hover svg {
+  fill: #fff;
+}
+
+body div#content section.view div.toolarea button.color-main {
+  background: #0075bc;
+}
+
+body div#content section.view div.toolarea button.color-main i {
+  color: #fff;
+}
+
+body div#content section.view div.toolarea button.color-main:hover {
+  background: #00539a;
+}
+
+body div#content section.view div.toolarea button.color-gray {
+  background: #555;
+}
+
+body div#content section.view div.toolarea button.color-gray i {
+  color: #fff;
+}
+
+body div#content section.view div.toolarea button.color-gray:hover {
+  background: #444444;
+}
+
+body div#content section.view nav.navigation {
+  position: absolute;
+  right: 20px;
+  top: 50px;
+}
+
+body div#content section.view nav.navigation ol {
+  padding: 0;
+  margin: 0;
+}
+
+body div#content section.view nav.navigation ol li {
+  display: inline-block;
+  font-size: 15px;
+}
+
+body div#content section.view nav.navigation ol li a {
+  color: #555;
+}
+
+body div#content section.view nav.navigation ol li::after {
+  content: "/";
+}
+
+body div#content section.view nav.navigation ol li.active {
+  font-weight: bolder;
+  color: #222;
+}
+
+body div#content section.view nav.navigation ol li.active:after {
+  display: none;
+}
+
 body div#content section.view div.subView {
   display: block;
   font-size: 0;
@@ -986,7 +1056,7 @@ body div#content section.view div.subView {
 }
 
 body div#content section.view div.subView h2.stitle {
-  margin: 0 0 12px 0;
+  margin: 0 0 18px 0;
   padding: 0;
   font-size: 22px;
 }

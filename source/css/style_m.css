@@ -937,18 +937,27 @@ body div#content section.view ul.tab-navigation li.on button.close {
 }
 
 body div#content section.view div.toolarea {
+  padding: 0 0 20px;
   text-align: center;
   font-size: 0;
-  padding: 10px 0;
 }
 
 body div#content section.view div.toolarea button {
+  vertical-align: top;
   background: rgba(0, 0, 0, 0.1);
   margin: 0 0 0 4px;
   padding: 3px;
   border: none;
   color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
+  width: 34px;
+  height: 34px;
+}
+
+body div#content section.view div.toolarea button svg {
+  fill: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: auto;
 }
 
 body div#content section.view div.toolarea button i {
@@ -958,6 +967,66 @@ body div#content section.view div.toolarea button i {
 body div#content section.view div.toolarea button:hover {
   background: #555;
   color: #fff;
+}
+
+body div#content section.view div.toolarea button:hover svg {
+  fill: #fff;
+}
+
+body div#content section.view div.toolarea button.color-main {
+  background: #0075bc;
+}
+
+body div#content section.view div.toolarea button.color-main i {
+  color: #fff;
+}
+
+body div#content section.view div.toolarea button.color-main:hover {
+  background: #00539a;
+}
+
+body div#content section.view div.toolarea button.color-gray {
+  background: #555;
+}
+
+body div#content section.view div.toolarea button.color-gray i {
+  color: #fff;
+}
+
+body div#content section.view div.toolarea button.color-gray:hover {
+  background: #444444;
+}
+
+body div#content section.view nav.navigation {
+  text-align: center;
+  padding: 20px 0 10px;
+}
+
+body div#content section.view nav.navigation ol {
+  padding: 0;
+  margin: 0;
+}
+
+body div#content section.view nav.navigation ol li {
+  display: inline-block;
+  font-size: 15px;
+}
+
+body div#content section.view nav.navigation ol li a {
+  color: #555;
+}
+
+body div#content section.view nav.navigation ol li::after {
+  content: "/";
+}
+
+body div#content section.view nav.navigation ol li.active {
+  font-weight: bolder;
+  color: #222;
+}
+
+body div#content section.view nav.navigation ol li.active:after {
+  display: none;
 }
 
 body div#content section.view div.subView {
@@ -1229,6 +1298,9 @@ body.open header p.welcome strong {
 }
 
 body.open header button.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 210px;
   background: #004289;
   -webkit-transition: all 0.4s ease;
@@ -1267,6 +1339,10 @@ body.open header button.logout {
 }
 
 body.open div#content aside {
+  position: fixed;
+  left: 0;
+  top: 50px;
+  bottom: 0;
   width: 210px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
