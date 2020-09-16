@@ -1156,8 +1156,6 @@ body div#content aside {
   color: #fff;
   display: inline-block;
   width: 38px;
-  margin: 0;
-  padding: 0;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -1208,13 +1206,14 @@ body div#content aside nav#main-menu.typeA > ul > li h3 {
 
 body div#content aside nav#main-menu.typeA > ul > li h3 a {
   white-space: nowrap;
+  font-weight: 600;
   display: block;
   overflow: hidden;
   font-size: 16px;
   color: #fff;
   width: 38px;
+  padding: 8px 0 8px 6px;
   margin: 0;
-  padding: 12px 0 12px 6px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -1237,11 +1236,8 @@ body div#content aside nav#main-menu.typeA > ul > li h3 a:hover i {
   color: #fff;
 }
 
-body div#content aside nav#main-menu.typeA > ul > li ul {
+body div#content aside nav#main-menu.typeA > ul > li > ul {
   max-height: 0;
-  opacity: 0;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
   overflow: hidden;
   list-style: none;
   margin: 0;
@@ -1561,7 +1557,7 @@ body.open div#content aside {
 }
 
 body.open div#content aside div.profile {
-  margin: 20px 0 10px;
+  margin: 20px 0 20px;
 }
 
 body.open div#content aside div.profile p.photo {
@@ -1594,40 +1590,87 @@ body.open div#content aside nav#main-menu.typeA > ul > li h3 a:hover {
   width: auto;
 }
 
-body.open div#content aside nav#main-menu.typeA > ul > li h3 a.on {
+body.open div#content aside nav#main-menu.typeA > ul > li.active h3 a {
   color: #66dbff;
   font-weight: bolder;
 }
 
-body.open div#content aside nav#main-menu.typeA > ul > li.active ul {
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul {
+  position: relative;
   max-height: 1000px;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  padding: 10px 30px 10px 34px;
   margin: 0;
-  padding: 10px 30px;
   opacity: 1;
+  background: #002067;
 }
 
-body.open div#content aside nav#main-menu.typeA > ul > li.active ul li a {
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  width: 2px;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a {
+  position: relative;
   color: rgba(255, 255, 255, 0.7);
   display: block;
   padding: 6px 0;
   white-space: nowrap;
 }
 
-body.open div#content aside nav#main-menu.typeA > ul > li.active ul li a i {
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  width: 8px;
+  height: 2px;
+  left: -18px;
+  top: 15px;
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a i {
   opacity: 0.4;
   margin-right: 6px;
 }
 
-body.open div#content aside nav#main-menu.typeA > ul > li.active ul li a:hover {
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a:hover {
   color: white;
 }
 
-body.open div#content aside nav#main-menu.typeA > ul > li.active ul li a.on {
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a.on {
   font-weight: bolder;
   color: white;
   text-decoration: underline;
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li ul {
+  list-style: none;
+  display: none;
+  max-height: 1000px;
+  padding: 10px;
+  margin: 0;
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li ul.on {
+  display: block;
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li ul li a {
+  font-size: 14px;
+  display: block;
+  padding: 2px 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li ul li a i {
+  margin-right: 6px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 body.open div#content section.view {

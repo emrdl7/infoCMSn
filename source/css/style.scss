@@ -818,7 +818,6 @@ div.widget {
             color:#fff;
             display:inline-block;
             width:38px;
-            @include pmz(0,0);
             @include ani(0.4s);
     
             div.profile {
@@ -862,12 +861,14 @@ div.widget {
     
                             a {
                                 white-space:nowrap;
+                                font-weight:600;
                                 display:block;
                                 overflow:hidden;
                                 font-size:16px;
                                 color:#fff;
                                 width:38px;
-                                @include pmz(12px 0 12px 6px,0);
+                                padding:8px 0 8px 6px;
+                                margin:0;
                                 @include ani(0.4s);
                                 
                                 i {
@@ -890,10 +891,8 @@ div.widget {
                             }
                         }
     
-                        ul {
+                       &>ul {
                             max-height:0;
-                            opacity:0;
-                            @include ani(0.4s);
                             overflow:hidden;
                             list-style:none;
                             @include pmz(0 30px,0);
@@ -1234,7 +1233,7 @@ div.widget {
                 @include ani(0.4s);
     
                 div.profile {
-                    margin:20px 0 10px;
+                    margin:20px 0 20px;
         
                     p.photo {
                         @include ani(0.4s);
@@ -1268,29 +1267,62 @@ div.widget {
                                     &:hover {
                                         width:auto;
                                     }
-
-                                    &.on {
-                                        color:$color-main + #666;
-                                        font-weight:bolder;
-                                    }
                                 }
                             }
         
 
                             &.active {
 
-                                ul {
-                                    max-height:1000px;
-                                    @include ani(0.4s);
-                                    @include pmz(10px 30px,0);
-                                    opacity:1;
+                                h3{
+                                    a {
+                                        
+                                        color:$color-main + #666;
+                                        font-weight:bolder;
 
-                                    li {
-                                        a {
+                                    }
+                                }
+
+                                &>ul {
+                                    position:relative;
+                                    max-height:1000px;
+                                    padding:10px 30px 10px 34px;
+                                    margin:0;
+                                    opacity:1;
+                                    background:$color-main - #555;
+
+                                    &::before {
+                                        content:"";
+                                        display:block;
+                                        position:absolute;
+                                        background:rgba(255,255,255,0.3);
+                                        width:2px;
+                                        left:15px;
+                                        top:0;
+                                        bottom:0;
+
+                                    }
+
+                                    &>li {
+                                        &>a {
+                                            position:relative;
                                             color:rgba(255,255,255,0.7);
                                             display:block;
                                             padding:6px 0;
                                             white-space:nowrap;
+
+                                            
+
+                                            &::before {
+                                                content:"";
+                                                display:block;
+                                                position:absolute;
+                                                background:rgba(255, 255, 255, 0.3);
+                                                width:8px;
+                                                height:2px;
+                                                left:-18px;
+                                                top:15px;
+
+                                            }
 
                                             i {
                                                 opacity:0.4;
@@ -1305,6 +1337,32 @@ div.widget {
                                                 font-weight:bolder;
                                                 color:rgba(255,255,255,1);
                                                 text-decoration:underline;
+                                            }
+                                        }
+
+                                        ul {
+                                            list-style:none;
+                                            display:none;
+                                            max-height:1000px;
+                                            padding:10px;
+                                            margin:0;
+
+                                            &.on {
+                                                display:block;
+                                            }
+
+                                            li {
+                                                a {
+                                                    font-size:14px;
+                                                    display:block;
+                                                    padding:2px 0;
+                                                    color:rgba(255,255,255,0.8);
+
+                                                    i {
+                                                        margin-right:6px;
+                                                        color:rgba(255,255,255,0.6);
+                                                    }
+                                                }
                                             }
                                         }
                                     }

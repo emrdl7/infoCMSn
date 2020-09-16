@@ -4,6 +4,8 @@ $(document).ready(function() {
         $("body").toggleClass("open");
         
         $("nav#main-menu ul li").removeClass("active");
+        $("nav#main-menu ul li ul li a").removeClass("on");
+        $("nav#main-menu ul li ul li ul").removeClass("on");
 
     });
 
@@ -21,12 +23,35 @@ $(document).ready(function() {
     $("nav#main-menu h3").on("click", function () {
         $("nav#main-menu ul li").removeClass("active");
         $(this).parent().addClass("active");
+        
 
         if ($(this).parent().find("ul").length) {
             $("body").addClass("open");
         }
 
     });
+
+
+    
+    $("nav#main-menu>ul>li>ul>li").each(function () {
+
+        if ($(this).find("ul").length) {
+
+            $(this).find(">a").attr("href", "#");
+
+        }
+    });
+
+
+    $("nav#main-menu>ul>li>ul>li>a").on("click", function () {
+        $("nav#main-menu>ul>li>ul>li>a").removeClass("on");
+        $("nav#main-menu>ul>li>ul>li>ul").removeClass("on");
+        $(this).addClass("on")
+        $(this).parent().find("ul").addClass("on");
+
+
+    });
+
 
 
 
