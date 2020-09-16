@@ -8,72 +8,51 @@ $min-width: 320px;
 $img-url: "../images";
 $screen-size-pc : 1200px;
 
-// .pagenation {
-//     display:inline-block;
-//     text-align:center;
-//     @include zero;
+.pagenation {
+    display:inline-block;
+    text-align:center;
+    @include zero;
+    margin:20px 0 30px;
+    width: 100%;
 
-//     margin: rem(20px 0 30px);
-//     width: 100%;
+    a {
+        background: white;
+    }
 
-//     a {
-//         background: white;
-//     }
+    a,
+    strong {
+        overflow:hidden;
+        display:inline-block;
+        vertical-align:top;
+        font-size:14px;
+        color: #555;
+        border: 1px solid #ccc;
+        width: 32px;
+        height: 32px;
+        margin: 0 2px;
+        padding:4px 0 0;
+        border-radius: 10px;
 
-//     a,
-//     strong {
-//         display:inline-block;
-//         vertical-align:top;
-//         font: rem(10px)/rem(22px); // font-size/line-height
-//         color: #555;
-//         border: 1px solid #e2e2e2;
-//         width: rem(22px);
-//         height: rem(22px);
-//         margin: rem(0 1px);
+        &.jump,
+        &.move {
+            @include zero;
+            background:#e4e4e4;
 
-//         @media only screen and ($screen-size-pc) {
-//             font: 14px/32px; // font-size/line-height
-//             width: 32px;
-//             height: 32px;
-//             margin: 0 2px;
-//         }
+            i {
+                font-size:20px;
+            }
+        }
 
-//         &.jump,
-//         &.move {
-//             @include zero;
+    }
 
-//             i {
-//                 font-size: rem(10px);
-                
-//                 @media only screen and ($screen-size-pc) {
-//                     font-size: 14px;
-//                 }
-
-//             }
-//         }
-
-//         &.jump {
-//             width:auto;
-//             background:#efefef;
-//             padding: rem(0 10px);
-
-//             i {
-//                 &::before {
-//                     @include pmz(0,0);
-//                     width:auto;
-//                 }
-//             }
-//         }
-//     }
-
-//     .active,
-//     strong {
-//         background: $color-main;
-//         color: white;
-//         font-weight:normal;
-//         border-color: transparent;
-//     }
-// }
+    .active,
+    strong {
+        background: $color-main;
+        color: white;
+        font-weight:normal;
+        border-color: transparent;
+    }
+}
 
 * {
     @include box-sizing;
