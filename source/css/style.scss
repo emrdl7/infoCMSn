@@ -798,6 +798,7 @@ div.widget {
             display:inline-block;
             width:38px;
             @include ani(0.4s);
+            overflow-y:scroll;
     
             div.profile {
                 margin:3px 0 10px;
@@ -839,6 +840,7 @@ div.widget {
                             @include pmz(0,0);
     
                             a {
+                                position:relative;
                                 white-space:nowrap;
                                 font-weight:600;
                                 display:block;
@@ -867,6 +869,30 @@ div.widget {
                                         color:#fff;
                                     }
                                 }
+
+                                &::before,
+                                &::after {
+                                    content:"";
+                                    position:absolute;
+                                    top:20px;
+                                    display:block;
+                                    width:6px;
+                                    height:2px;
+                                    background:rgba(255,255,255,0.4);
+                                    @include ani(0.2s);
+                                }
+                            
+                                &::before {
+                                    transform: rotate(45deg);
+                                    right:14px;
+                                }
+                            
+                                &::after {
+                                    transform: rotate(-45deg);
+                                    right:10px;
+                                }
+                            
+
                             }
                         }
     
@@ -892,6 +918,7 @@ div.widget {
             div.tab-navigation {
                 background:#333;
                 position:relative;
+                margin:-30px -20px 20px;
 
                 button.btn {
                     position:absolute;
@@ -1073,7 +1100,7 @@ div.widget {
             div.subView {
                 display: block;
                 font-size:0;
-                padding:20px;
+                padding:30px 20px 20px;
 
                 h2.stitle {
                     @include pmz(0,0 0 18px 0);
@@ -1229,8 +1256,10 @@ div.widget {
                 nav#main-menu.typeA {
         
                     &>ul {
+                        border-top:1px solid rgba(255,255,255,0.2);
         
                         &>li {
+                            border-bottom:1px solid rgba(255,255,255,0.2);
                             h3 {
         
                                 a {
@@ -1251,21 +1280,41 @@ div.widget {
         
 
                             &.active {
+                                
 
                                 h3{
                                     a {
                                         
                                         color:$color-main + #666;
                                         font-weight:bolder;
+                                        position:relative;
+                                        background:$color-main - #333;
+                                        width:210px;
+        
+                                        i {
+                                            color:#fff;
+                                        }
 
+                            
+                                            &::before {
+                                                transform: rotate(-45deg);
+                                                background:#fff;
+                                            }
+                                        
+                                            &::after {
+                                                transform: rotate(45deg);
+                                                background:#fff;
+                                            }
+                                    
+        
                                     }
                                 }
 
                                 &>ul {
                                     position:relative;
                                     max-height:1000px;
-                                    padding:10px 30px 10px 34px;
                                     margin:0;
+                                    padding:0;
                                     opacity:1;
                                     background:$color-main - #555;
 
@@ -1273,6 +1322,7 @@ div.widget {
                                         content:"";
                                         display:block;
                                         position:absolute;
+                                        z-index:10;
                                         background:rgba(255,255,255,0.3);
                                         width:2px;
                                         left:15px;
@@ -1282,26 +1332,56 @@ div.widget {
                                     }
 
                                     &>li {
+                                        position:relative;
+                                        
+
+
+                                    
+
+                                    &::before {
+                                        content:"";
+                                        display:block;
+                                        position:absolute;
+                                        z-index:10;
+                                        background:rgba(255, 255, 255, 0.3);
+                                        width:8px;
+                                        height:2px;
+                                        left:17px;
+                                        top:19px;
+
+                                    }
+
                                         &>a {
                                             position:relative;
                                             color:rgba(255,255,255,0.7);
                                             display:block;
-                                            padding:6px 0;
+
+                                            padding:10px 30px 10px 34px;
                                             white-space:nowrap;
 
-                                            
-
-                                            &::before {
+                                            &::before,
+                                            &::after {
                                                 content:"";
-                                                display:block;
                                                 position:absolute;
-                                                background:rgba(255, 255, 255, 0.3);
-                                                width:8px;
+                                                z-index:10;
+                                                top:20px;
+                                                display:block;
+                                                width:6px;
                                                 height:2px;
-                                                left:-18px;
-                                                top:15px;
-
+                                                background:rgba(255,255,255,0.4);
+                                                @include ani(0.2s);
                                             }
+                                        
+                                            &::before {
+                                                transform: rotate(45deg);
+                                                right:14px;
+                                            }
+                                        
+                                            &::after {
+                                                transform: rotate(-45deg);
+                                                right:10px;
+                                            }
+        
 
                                             i {
                                                 opacity:0.4;
@@ -1309,13 +1389,21 @@ div.widget {
                                             }
 
                                             &:hover {
-                                                color:rgba(255,255,255,1);
+                                                background:$color-main - #999;
                                             }
 
                                             &.on {
                                                 font-weight:bolder;
                                                 color:rgba(255,255,255,1);
-                                                text-decoration:underline;
+                                                background:$color-main - #666;
+
+                                                &::before {
+                                                    transform: rotate(-45deg);
+                                                }
+                                            
+                                                &::after {
+                                                    transform: rotate(45deg);
+                                                }
                                             }
                                         }
 
@@ -1323,8 +1411,9 @@ div.widget {
                                             list-style:none;
                                             display:none;
                                             max-height:1000px;
-                                            padding:10px;
+                                            padding:10px 10px 10px 26px;
                                             margin:0;
+                                            background:$color-main - #bbb;
 
                                             &.on {
                                                 display:block;

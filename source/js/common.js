@@ -21,8 +21,20 @@ $(document).ready(function() {
 
 
     $("nav#main-menu h3").on("click", function () {
-        $("nav#main-menu ul li").removeClass("active");
-        $(this).parent().addClass("active");
+
+        if($(this).parent().hasClass("active")) {
+
+            $(this).parent().removeClass("active");
+
+        } else {
+            $("nav#main-menu>ul>li").removeClass("active");
+            $(this).parent().addClass("active");
+
+        }
+
+        
+        $("nav#main-menu>ul>li>ul>li>a").removeClass("on");
+        $("nav#main-menu>ul>li>ul>li>ul").removeClass("on");
         
 
         if ($(this).parent().find("ul").length) {
@@ -44,10 +56,31 @@ $(document).ready(function() {
 
 
     $("nav#main-menu>ul>li>ul>li>a").on("click", function () {
-        $("nav#main-menu>ul>li>ul>li>a").removeClass("on");
-        $("nav#main-menu>ul>li>ul>li>ul").removeClass("on");
-        $(this).addClass("on")
-        $(this).parent().find("ul").addClass("on");
+
+
+
+
+
+        if($(this).hasClass("on")) {
+            
+            $(this).parent().find("ul").removeClass("on");
+            $(this).removeClass("on");
+
+        } else {
+
+
+            $("nav#main-menu>ul>li>ul>li>a").removeClass("on");
+            $("nav#main-menu>ul>li>ul>li>ul").removeClass("on");
+            $(this).addClass("on")
+            $(this).parent().find("ul").addClass("on");
+
+        }
+
+
+
+
+
+
 
 
     });

@@ -440,7 +440,7 @@ th {
 
 .pagenation .active,
 .pagenation strong {
-  background: #0075bc;
+  background: #959623;
   color: white;
   font-weight: normal;
   border-color: transparent;
@@ -614,11 +614,11 @@ body.login div.custom-checkbox label i {
 }
 
 body.login div.custom-checkbox input:checked + label {
-  color: #0075bc;
+  color: #959623;
 }
 
 body.login div.custom-checkbox input:checked + label i {
-  color: #0075bc;
+  color: #959623;
 }
 
 body.login button {
@@ -627,7 +627,7 @@ body.login button {
   height: 56px;
   border: none;
   color: #fff;
-  background: #0075bc;
+  background: #959623;
   border-radius: 5px;
   font-size: 18px;
   font-weight: 800;
@@ -636,7 +636,7 @@ body.login button {
 }
 
 body.login button:hover {
-  background: #0061a8;
+  background: #81820f;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
@@ -727,7 +727,7 @@ body input[type="text"].main,
 body input[type="passwd"].main,
 body input[type="date"].main,
 body select.main {
-  border-color: #0075bc;
+  border-color: #959623;
 }
 
 body input[type="text"]:focus, body input[type="text"]:hover,
@@ -850,7 +850,7 @@ body textarea {
 }
 
 body textarea.main {
-  border-color: #0075bc;
+  border-color: #959623;
 }
 
 body textarea:focus, body textarea:hover {
@@ -882,12 +882,12 @@ body input[type="checkbox"] + label i {
 }
 
 body input:checked + label {
-  color: #0075bc;
+  color: #959623;
   font-weight: 600;
 }
 
 body input:checked + label i {
-  color: #0075bc;
+  color: #959623;
 }
 
 body .button {
@@ -901,7 +901,7 @@ body .button {
 }
 
 body .button.main {
-  background: #0075bc;
+  background: #959623;
   color: #fff;
   border-color: transparent;
 }
@@ -1070,7 +1070,7 @@ body div.widget.wall div.inline div.box h4 {
 }
 
 body div.widget.main div.inline {
-  background: #0075bc;
+  background: #959623;
   color: #fff;
 }
 
@@ -1098,7 +1098,7 @@ body header button.menu {
   padding: 0;
   vertical-align: top;
   border: none;
-  background: #0075bc;
+  background: #959623;
   font-size: 0;
   width: 38px;
   height: 38px;
@@ -1152,7 +1152,7 @@ body header h1 a small {
   font-size: 0.8em;
   margin: 0;
   padding: 0 0 0 6px;
-  color: #006bb2;
+  color: #8b8c19;
 }
 
 body header p.welcome {
@@ -1161,7 +1161,7 @@ body header p.welcome {
   line-height: 38px;
   margin: 0;
   top: 0;
-  color: #00579e;
+  color: #777805;
 }
 
 body header p.welcome strong {
@@ -1178,7 +1178,7 @@ body header button.logout {
   margin: 0;
   padding: 0 10px;
   line-height: 38px;
-  color: #0075bc;
+  color: #959623;
   font-weight: bolder;
   background: #eee;
   -webkit-transition: all 0.4s ease;
@@ -1195,7 +1195,7 @@ body div#content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #000023;
+  background: black;
 }
 
 body div#content aside {
@@ -1206,6 +1206,7 @@ body div#content aside {
   width: 38px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  overflow-y: scroll;
 }
 
 body div#content aside div.profile {
@@ -1253,6 +1254,7 @@ body div#content aside nav#main-menu.typeA > ul > li h3 {
 }
 
 body div#content aside nav#main-menu.typeA > ul > li h3 a {
+  position: relative;
   white-space: nowrap;
   font-weight: 600;
   display: block;
@@ -1276,12 +1278,36 @@ body div#content aside nav#main-menu.typeA > ul > li h3 a i {
 
 body div#content aside nav#main-menu.typeA > ul > li h3 a:hover {
   position: relative;
-  background: #004289;
+  background: #626300;
   width: 210px;
 }
 
 body div#content aside nav#main-menu.typeA > ul > li h3 a:hover i {
   color: #fff;
+}
+
+body div#content aside nav#main-menu.typeA > ul > li h3 a::before, body div#content aside nav#main-menu.typeA > ul > li h3 a::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  display: block;
+  width: 6px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+body div#content aside nav#main-menu.typeA > ul > li h3 a::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  right: 14px;
+}
+
+body div#content aside nav#main-menu.typeA > ul > li h3 a::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  right: 10px;
 }
 
 body div#content aside nav#main-menu.typeA > ul > li > ul {
@@ -1305,6 +1331,7 @@ body div#content section.view {
 body div#content section.view div.tab-navigation {
   background: #333;
   position: relative;
+  margin: -30px -20px 20px;
 }
 
 body div#content section.view div.tab-navigation button.btn {
@@ -1421,7 +1448,7 @@ body div#content section.view div.toolarea button:hover svg {
 }
 
 body div#content section.view div.toolarea button.color-main {
-  background: #0075bc;
+  background: #959623;
 }
 
 body div#content section.view div.toolarea button.color-main i {
@@ -1429,7 +1456,7 @@ body div#content section.view div.toolarea button.color-main i {
 }
 
 body div#content section.view div.toolarea button.color-main:hover {
-  background: #00539a;
+  background: #737401;
 }
 
 body div#content section.view div.toolarea button.color-gray {
@@ -1480,7 +1507,7 @@ body div#content section.view nav.navigation ol li.active:after {
 body div#content section.view div.subView {
   display: block;
   font-size: 0;
-  padding: 20px;
+  padding: 30px 20px 20px;
 }
 
 body div#content section.view div.subView h2.stitle {
@@ -1491,7 +1518,7 @@ body div#content section.view div.subView h2.stitle {
 
 body div#content section.view div.subView h2.stitle i {
   margin-right: 8px;
-  color: #00539a;
+  color: #737401;
   font-size: 30px;
   vertical-align: middle;
 }
@@ -1531,7 +1558,7 @@ body footer#footer {
   line-height: 50px;
   text-align: center;
   color: #fff;
-  background: #003178;
+  background: #515200;
 }
 
 body footer#footer p {
@@ -1540,7 +1567,7 @@ body footer#footer p {
 }
 
 body.open header {
-  background: #0075bc;
+  background: #959623;
 }
 
 body.open header h1 a {
@@ -1548,7 +1575,7 @@ body.open header h1 a {
 }
 
 body.open header h1 a small {
-  color: #99ffff;
+  color: #ffffbc;
 }
 
 body.open header p.welcome {
@@ -1556,12 +1583,12 @@ body.open header p.welcome {
 }
 
 body.open header p.welcome strong {
-  color: #bbffff;
+  color: #ffffde;
 }
 
 body.open header button.menu {
   width: 210px;
-  background: #004289;
+  background: #626300;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -1595,7 +1622,7 @@ body.open header button.menu i.bar:last-of-type {
 
 body.open header button.logout {
   color: #fff;
-  background: #004289;
+  background: #626300;
 }
 
 body.open div#content aside {
@@ -1622,6 +1649,14 @@ body.open div#content aside div.profile p.userName {
   font-size: 14px;
 }
 
+body.open div#content aside nav#main-menu.typeA > ul {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 body.open div#content aside nav#main-menu.typeA > ul > li h3 a {
   color: #eee;
   -webkit-transition: all 0.4s ease;
@@ -1639,23 +1674,43 @@ body.open div#content aside nav#main-menu.typeA > ul > li h3 a:hover {
 }
 
 body.open div#content aside nav#main-menu.typeA > ul > li.active h3 a {
-  color: #66dbff;
+  color: #fbfc89;
   font-weight: bolder;
+  position: relative;
+  background: #626300;
+  width: 210px;
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li.active h3 a i {
+  color: #fff;
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li.active h3 a::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background: #fff;
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li.active h3 a::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: #fff;
 }
 
 body.open div#content aside nav#main-menu.typeA > ul > li.active > ul {
   position: relative;
   max-height: 1000px;
-  padding: 10px 30px 10px 34px;
   margin: 0;
+  padding: 0;
   opacity: 1;
-  background: #002067;
+  background: #404100;
 }
 
 body.open div#content aside nav#main-menu.typeA > ul > li.active > ul::before {
   content: "";
   display: block;
   position: absolute;
+  z-index: 10;
   background: rgba(255, 255, 255, 0.3);
   width: 2px;
   left: 15px;
@@ -1663,23 +1718,53 @@ body.open div#content aside nav#main-menu.typeA > ul > li.active > ul::before {
   bottom: 0;
 }
 
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li {
+  position: relative;
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.3);
+  width: 8px;
+  height: 2px;
+  left: 17px;
+  top: 19px;
+}
+
 body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a {
   position: relative;
   color: rgba(255, 255, 255, 0.7);
   display: block;
-  padding: 6px 0;
+  padding: 10px 30px 10px 34px;
   white-space: nowrap;
 }
 
-body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a::before {
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a::before, body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a::after {
   content: "";
-  display: block;
   position: absolute;
-  background: rgba(255, 255, 255, 0.3);
-  width: 8px;
+  z-index: 10;
+  top: 20px;
+  display: block;
+  width: 6px;
   height: 2px;
-  left: -18px;
-  top: 15px;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  right: 14px;
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  right: 10px;
 }
 
 body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a i {
@@ -1688,21 +1773,32 @@ body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a i
 }
 
 body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a:hover {
-  color: white;
+  background: black;
 }
 
 body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a.on {
   font-weight: bolder;
   color: white;
-  text-decoration: underline;
+  background: #2f3000;
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a.on::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li > a.on::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li ul {
   list-style: none;
   display: none;
   max-height: 1000px;
-  padding: 10px;
+  padding: 10px 10px 10px 26px;
   margin: 0;
+  background: black;
 }
 
 body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li ul.on {
