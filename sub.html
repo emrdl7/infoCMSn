@@ -14,6 +14,7 @@
 
         <!-- javaScript -->
         <script src="source/js/jquery-1.11.3.min.js"></script>
+        <script src="source/js/slick.min.js"></script>
         <script src="source/js/common.js"></script>
 
     </head>
@@ -154,18 +155,28 @@
                 <!-- E:main_menu -->
             </aside>
             <section class="view">
+                <div class="tab-navigation">
+                    <div class="tabs">
+                        <div class="item" class="on"><a href="#">탭메뉴1</a><button class="close"><i class='bx bx-x'></i></button></div>
+                        <div class="item"><a href="#">탭메뉴2</a><button class="close"><i class='bx bx-x'></i></button></div>
+                        <div class="item"><a href="#">탭메뉴3</a><button class="close"><i class='bx bx-x'></i></button></div>
+                        <div class="item"><a href="#">탭메뉴4</a><button class="close"><i class='bx bx-x'></i></button></div>
+                        <div class="item"><a href="#">탭메뉴5</a><button class="close"><i class='bx bx-x'></i></button></div>
+                        <div class="item"><a href="#">탭메뉴6</a><button class="close"><i class='bx bx-x'></i></button></div>
+                        <div class="item"><a href="#">탭메뉴7</a><button class="close"><i class='bx bx-x'></i></button></div>
+                        <div class="item"><a href="#">탭메뉴8</a><button class="close"><i class='bx bx-x'></i></button></div>
+                        <div class="item"><a href="#">탭메뉴9</a><button class="close"><i class='bx bx-x'></i></button></div>
+                        <div class="item"><a href="#">탭메뉴10</a><button class="close"><i class='bx bx-x'></i></button></div>
+                        <div class="item"><a href="#">탭메뉴11</a><button class="close"><i class='bx bx-x'></i></button></div>
+                        <div class="item"><a href="#">탭메뉴12</a><button class="close"><i class='bx bx-x'></i></button></div>
+                        <div class="item"><a href="#">탭메뉴13</a><button class="close"><i class='bx bx-x'></i></button></div>
+                        <div class="item"><a href="#">탭메뉴14</a><button class="close"><i class='bx bx-x'></i></button></div>
+                    </div>
 
-                <ul class="tab-navigation">
-                    <li class="on"><a href="#">탭메뉴1</a><button class="close"><i class='bx bx-x'></i></button></li>
-                    <li><a href="#">탭메뉴2</a><button class="close"><i class='bx bx-x'></i></button></li>
-                    <li><a href="#">탭메뉴3</a><button class="close"><i class='bx bx-x'></i></button></li>
-                    <li><a href="#">탭메뉴4</a><button class="close"><i class='bx bx-x'></i></button></li>
-                    <li><a href="#">탭메뉴5</a><button class="close"><i class='bx bx-x'></i></button></li>
-                    <li><a href="#">탭메뉴6</a><button class="close"><i class='bx bx-x'></i></button></li>
-                    <li><a href="#">탭메뉴7</a><button class="close"><i class='bx bx-x'></i></button></li>
-                    <li><a href="#">탭메뉴8</a><button class="close"><i class='bx bx-x'></i></button></li>
-                    <li><a href="#">탭메뉴9</a><button class="close"><i class='bx bx-x'></i></button></li>
-                </ul>
+                    <button class="btn left"><i class='bx bx-chevron-left' ></i></button>
+
+                    <button class="btn right"><i class='bx bx-chevron-right' ></i></button>
+                </div>
 
 
                 <nav class="navigation">
@@ -204,36 +215,85 @@
                 <div class="sub subView">
 
                     <h2 class="stitle">
-                        <i class='bx bxs-dashboard' ></i>Dashboard</h2>
+                        <i class='bx bxs-dashboard' ></i>리스트 샘플</h2>
     
 
 
 
 
                     <h3 class="btitle"">
-                        입력폼
+                        검색
                     </h3>
+                    
+                    <div class="white-box">
 
-                    <div class="rows">
-                        <input type="text">
-                        <input class="main" type="text">
-                        <select>
-                            <option>sdf asdf asd</option>
-                        </select>
-                        <select class="main">
-                            <option>sdf asdf asd</option>
-                        </select>
-                        <textarea class="main"></textarea>
+                        <div class="rows">
+
+                            <!--
+                            
+                                width 클래스
+                                w40 : 40px
+                                w100 : 100px
+                                w150 : 150px
+                                w200 : 200px
+                                w400 : 400px
+                                wfull : 100%
+                            
+                            -->
+
+                            <label class="before">야옹</label>
+                            <input class="w40" type="text">
+
+                            <label class="before">야옹</label>
+                            <input class="w100" class="main" type="text">
+
+                            <label class="before">야옹</label>
+                            <input class="w100" class="main" type="date">
+
+                            <label class="before">야옹</label>
+                            <span class="select-outline">
+                                <select>
+                                    <option>sdf asdf asd</option>
+                                </select>
+                            </span>
+
+                            <label class="before">야옹</label>
+                            <span class="select-outline">
+                                <select class="main">
+                                    <option>sdf asdf asd</option>
+                                </select>
+                            </span>
+
+                            <button class="button"><i class='bx bx-slider-alt'></i>버튼</button>
+
+                            <button class="button main"><i class='bx bx-slider-alt'></i>버튼</button>
+
+                            <button class="button sub"><i class='bx bx-slider-alt'></i>버튼</button>
+
+                        </div>
 
 
-                        <input type="checkbox" id="check1">
-                        <label for="check1"><i class='bx bxs-checkbox-checked'></i>체크박스</label>
 
-                        <input type="checkbox" id="radio1">
-                        <label for="radio1"><i class='bx bx-radio-circle-marked' ></i>라디오버튼</label>
+                        <div class="rows">
+                            <textarea class="main"></textarea>
+                        </div>
+
+
+
+                        <div class="rows">
+
+                            <input type="checkbox" id="check1">
+                            <label for="check1"><i class='bx bxs-checkbox-checked'></i>체크박스</label>
+
+                            <input type="checkbox" id="radio1">
+                            <label for="radio1"><i class='bx bx-radio-circle-marked' ></i>라디오버튼</label>
+                        </div>
+
 
                     </div>
-    
+
+
+
 
 
                     <h3 class="btitle"">
@@ -241,10 +301,14 @@
                     </h3>
 
 
-                    <div class="rows">
+                    <div class="rows white-box">
                         <table>
                             <thead>
                                 <tr>
+                                    <th>흠</th>
+                                    <th>흠</th>
+                                    <th>흠</th>
+                                    <th>흠</th>
                                     <th>흠</th>
                                     <th>흠</th>
                                     <th>흠</th>
@@ -254,6 +318,46 @@
                                 <tr>
                                     <td>음</td>
                                     <td class="center">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                </tr>
+                                <tr>
+                                    <td>음</td>
+                                    <td class="center">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                </tr>
+                                <tr>
+                                    <td>음</td>
+                                    <td class="center">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                </tr>
+                                <tr>
+                                    <td>음</td>
+                                    <td class="center">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                </tr>
+                                <tr>
+                                    <td>음</td>
+                                    <td class="center">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
+                                    <td class="right">음</td>
                                     <td class="right">음</td>
                                 </tr>
                             </tbody>

@@ -4,6 +4,7 @@ $(document).ready(function() {
         $("body").toggleClass("open");
         
         $("nav#main-menu ul li").removeClass("active");
+
     });
 
 
@@ -27,6 +28,16 @@ $(document).ready(function() {
 
     });
 
+
+
+    $('.tab-navigation div.tabs').slick({
+        infinite: true,
+        slidesToShow: 8,
+        slidesToScroll: 1,
+        variableWidth: true,
+        nextArrow: $('.tab-navigation .right'),
+        prevArrow: $('.tab-navigation .left')
+    });
 
 
 

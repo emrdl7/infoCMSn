@@ -4,6 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -396,67 +397,10 @@ th {
   padding: 0;
 }
 
-@font-face {
-  font-family: 'NanumSquare';
-  font-weight: 400;
-  src: url(../font/NanumSquareR.eot);
-  src: url(../font/NanumSquareR.eot?#iefix) format("embedded-opentype"), url(../font/NanumSquareR.woff) format("woff"), url(../font/NanumSquareR.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'NanumSquare';
-  font-weight: 700;
-  src: url(../font/NanumSquareB.eot);
-  src: url(../font/NanumSquareB.eot?#iefix) format("embedded-opentype"), url(../font/NanumSquareB.woff) format("woff"), url(../font/NanumSquareB.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'NanumSquare';
-  font-weight: 800;
-  src: url(../font/NanumSquareEB.eot);
-  src: url(../font/NanumSquareEB.eot?#iefix) format("embedded-opentype"), url(../font/NanumSquareEB.woff) format("woff"), url(../font/NanumSquareEB.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'NanumSquare';
-  font-weight: 300;
-  src: url(../font/NanumSquareL.eot);
-  src: url(../font/NanumSquareL.eot?#iefix) format("embedded-opentype"), url(../font/NanumSquareL.woff) format("woff"), url(../font/NanumSquareL.ttf) format("truetype");
-}
-
 /* basic */
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-input,
-select,
-textarea {
-  border-radius: 0;
-  background-clip: padding-box;
-  /*
-    @media all and (max-width: 1199px) {
-        appearance: none;
-        -moz-appearance: none;
-        -ms-appearance: none;
-        -webkit-appearance: none;
-
-        &::-ms-expand {
-            display: none;
-        }
-    }
-*/
-}
-
-a {
-  text-decoration: none;
-  color: #333;
-}
-
-button {
-  outline: none;
-  border-radius: 0;
 }
 
 /*font*/
@@ -468,7 +412,7 @@ html {
 }
 
 body {
-  font-family: "NanumSquare", "Malgun Gothic", "apple sd gothic neo", sans-serif;
+  font-family: "Noto Sans KR", "Malgun Gothic", "apple sd gothic neo", sans-serif;
   color: #333;
 }
 
@@ -477,19 +421,19 @@ input[type="password"] {
 }
 
 input[type="password"]::-webkit-input-placeholder {
-  font-family: "NanumSquare", "Malgun Gothic", "apple sd gothic neo", sans-serif;
+  font-family: "Noto Sans KR", "Malgun Gothic", "apple sd gothic neo", sans-serif;
 }
 
 input[type="password"]:-ms-input-placeholder {
-  font-family: "NanumSquare", "Malgun Gothic", "apple sd gothic neo", sans-serif;
+  font-family: "Noto Sans KR", "Malgun Gothic", "apple sd gothic neo", sans-serif;
 }
 
 input[type="password"]::-ms-input-placeholder {
-  font-family: "NanumSquare", "Malgun Gothic", "apple sd gothic neo", sans-serif;
+  font-family: "Noto Sans KR", "Malgun Gothic", "apple sd gothic neo", sans-serif;
 }
 
 input[type="password"]::placeholder {
-  font-family: "NanumSquare", "Malgun Gothic", "apple sd gothic neo", sans-serif;
+  font-family: "Noto Sans KR", "Malgun Gothic", "apple sd gothic neo", sans-serif;
 }
 
 .sr-only {
@@ -516,6 +460,10 @@ input[type="password"]::placeholder {
 body {
   min-width: 1180px;
   height: 100vh;
+  /* default input */
+  /* default btn */
+  /* default layout */
+  /* widget layout */
   /* header */
 }
 
@@ -674,6 +622,420 @@ body .container {
   }
 }
 
+body input,
+body select,
+body textarea {
+  border-radius: 0;
+  background-clip: padding-box;
+  /*
+    @media all and (max-width: 1199px) {
+        appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -webkit-appearance: none;
+
+        &::-ms-expand {
+            display: none;
+        }
+    }
+*/
+}
+
+body a {
+  text-decoration: none;
+  color: #333;
+}
+
+body button {
+  outline: none;
+  border-radius: 0;
+}
+
+body label.before {
+  line-height: 36px;
+  padding: 0 6px 0 0;
+  font-weight: bold;
+}
+
+body input + label.before,
+body span.select-outline + label.before {
+  margin-left: 14px;
+}
+
+body input[type="text"],
+body input[type="passwd"],
+body input[type="date"],
+body select {
+  vertical-align: top;
+  outline: none;
+  border: 1px solid #ccc;
+  height: 36px;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin: 0;
+}
+
+body input[type="text"].main,
+body input[type="passwd"].main,
+body input[type="date"].main,
+body select.main {
+  border-color: #0075bc;
+}
+
+body input[type="text"]:focus, body input[type="text"]:hover,
+body input[type="passwd"]:focus,
+body input[type="passwd"]:hover,
+body input[type="date"]:focus,
+body input[type="date"]:hover,
+body select:focus,
+body select:hover {
+  border-color: #555;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+body input[type="text"].w40,
+body input[type="passwd"].w40,
+body input[type="date"].w40,
+body select.w40 {
+  width: 40px;
+}
+
+body input[type="text"].w100,
+body input[type="passwd"].w100,
+body input[type="date"].w100,
+body select.w100 {
+  width: 100px;
+}
+
+body input[type="text"].w150,
+body input[type="passwd"].w150,
+body input[type="date"].w150,
+body select.w150 {
+  width: 150px;
+}
+
+body input[type="text"].w200,
+body input[type="passwd"].w200,
+body input[type="date"].w200,
+body select.w200 {
+  width: 200px;
+}
+
+body input[type="text"].w400,
+body input[type="passwd"].w400,
+body input[type="date"].w400,
+body select.w400 {
+  width: 400px;
+}
+
+body input[type="text"].wfull,
+body input[type="passwd"].wfull,
+body input[type="date"].wfull,
+body select.wfull {
+  width: 100%;
+}
+
+body span.select-outline {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+body span.select-outline select {
+  appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  display: inline-block;
+  padding: 0 30px 0 10px;
+}
+
+body span.select-outline select::-ms-expand {
+  display: none;
+}
+
+body span.select-outline::before, body span.select-outline::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  display: block;
+  width: 8px;
+  height: 1px;
+  background: #222;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+body span.select-outline::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  right: 12px;
+}
+
+body span.select-outline::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  right: 6px;
+}
+
+body span.select-outline:focus-within::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+body span.select-outline:focus-within::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body textarea {
+  vertical-align: top;
+  outline: none;
+  border: 1px solid #ddd;
+  background: #f4f4f4;
+  min-height: 80px;
+  padding: 10px;
+  margin: 0;
+  border-radius: 5px;
+  width: 100%;
+}
+
+body textarea.main {
+  border-color: #0075bc;
+}
+
+body textarea:focus, body textarea:hover {
+  border-color: #555;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+body input[type="radio"],
+body input[type="checkbox"] {
+  display: none;
+}
+
+body input[type="radio"] + label,
+body input[type="checkbox"] + label {
+  position: relative;
+  font-size: 14px;
+  margin: 20px 0;
+  padding: 0 10px 0 28px;
+}
+
+body input[type="radio"] + label i,
+body input[type="checkbox"] + label i {
+  position: absolute;
+  left: 0;
+  top: -2px;
+  color: #ccc;
+  font-size: 26px;
+}
+
+body input:checked + label {
+  color: #0075bc;
+  font-weight: 600;
+}
+
+body input:checked + label i {
+  color: #0075bc;
+}
+
+body .button {
+  vertical-align: top;
+  outline: none;
+  border: 1px solid #ccc;
+  height: 36px;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin: 0;
+}
+
+body .button.main {
+  background: #0075bc;
+  color: #fff;
+  border-color: transparent;
+}
+
+body .button.sub {
+  background: #555;
+  color: #fff;
+  border-color: transparent;
+}
+
+body .button i {
+  position: relative;
+  top: 2px;
+  margin: 0 4px 0 0;
+  font-size: 16px;
+}
+
+body table {
+  width: 100%;
+}
+
+body table td,
+body table th {
+  border-right: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+body table td:last-of-type,
+body table th:last-of-type {
+  border-right: none;
+}
+
+body table thead tr th {
+  padding: 8px 0;
+  background: #f4f4f4;
+}
+
+body table tbody tr td {
+  padding: 8px;
+}
+
+body table tbody tr td.center {
+  text-align: center;
+}
+
+body table tbody tr td.right {
+  text-align: right;
+}
+
+body div.rows {
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+body div.rows:last-of-type {
+  border: none;
+}
+
+body div.widget {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 20px;
+}
+
+body div.widget.c02 {
+  width: calc((100% / 12) * 2);
+}
+
+body div.widget.c03 {
+  width: calc((100% / 12) * 3);
+}
+
+body div.widget.c04 {
+  width: calc((100% / 12) * 4);
+}
+
+body div.widget.c05 {
+  width: calc((100% / 12) * 5);
+}
+
+body div.widget.c06 {
+  width: calc((100% / 12) * 6);
+}
+
+body div.widget.c07 {
+  width: calc((100% / 12) * 7);
+}
+
+body div.widget.c08 {
+  width: calc((100% / 12) * 8);
+}
+
+body div.widget.c09 {
+  width: calc((100% / 12) * 9);
+}
+
+body div.widget.c10 {
+  width: calc((100% / 12) * 10);
+}
+
+body div.widget.c11 {
+  width: calc((100% / 12) * 7);
+}
+
+body div.widget.c12 {
+  width: calc((100% / 12) * 7);
+}
+
+body div.widget + div {
+  padding-left: 10px;
+}
+
+body div.widget div.inline {
+  font-size: 14px;
+  background: #fff;
+  border-radius: 10px;
+  min-height: 170px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+body div.widget div.inline h3 {
+  margin: 0;
+  padding: 0 10px;
+  line-height: 42px;
+  background: rgba(0, 0, 0, 0.02);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 16px;
+}
+
+body div.widget div.inline div.box {
+  margin: 0;
+  padding: 10px;
+}
+
+body div.widget div.inline div.box.weather {
+  text-align: center;
+  margin: 0;
+  padding: 20px 0 0;
+}
+
+body div.widget div.inline div.box.weather i {
+  font-size: 120px;
+}
+
+body div.widget div.inline div.box.weather p {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+body div.widget.h02 div.inline {
+  min-height: 280px;
+}
+
+body div.widget.wall div.inline div.box {
+  margin: 0;
+  padding: 30px;
+}
+
+body div.widget.wall div.inline div.box h4 {
+  font-size: 52px;
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
+}
+
+body div.widget.main div.inline {
+  background: #0075bc;
+  color: #fff;
+}
+
+body div.widget.gray div.inline {
+  background: #555;
+  color: #fff;
+}
+
+body div.widget.black div.inline {
+  background: #222;
+  color: #fff;
+}
+
 body header {
   position: relative;
   z-index: 100;
@@ -807,11 +1169,11 @@ body div#content aside div.profile {
 }
 
 body div#content aside div.profile p.photo {
-  margin: 0 auto 10px;
-  width: 38px;
-  height: 38px;
+  margin: 40px auto 10px;
+  width: 28px;
+  height: 28px;
   overflow: hidden;
-  border-radius: 0;
+  border-radius: 50%;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -892,39 +1254,59 @@ body div#content section.view {
       -ms-flex: 1;
           flex: 1;
   background: #efefef;
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 38px);
+  width: calc(100vw - 38px);
 }
 
-body div#content section.view ul.tab-navigation {
-  list-style: none;
-  margin: 0;
-  padding: 1px 0 0;
+body div#content section.view div.tab-navigation {
+  background: #333;
+  position: relative;
+}
+
+body div#content section.view div.tab-navigation button.btn {
+  position: absolute;
+  z-index: 100;
+  padding: 0;
+  top: 2px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #333;
+  color: #fff;
+  font-size: 28px;
+}
+
+body div#content section.view div.tab-navigation button.btn.left {
+  left: 0;
+}
+
+body div#content section.view div.tab-navigation button.btn.right {
+  right: 0;
+}
+
+body div#content section.view div.tab-navigation div.tabs {
+  width: 100%;
+  overflow: hidden;
+  padding: 1px 40px 0;
   font-size: 0;
-  background: #222;
+  height: 42px;
 }
 
-body div#content section.view ul.tab-navigation li {
+body div#content section.view div.tab-navigation div.tabs div.item {
   position: relative;
   display: inline-block;
-  width: calc(100% / 9);
+  width: calc((100vw - 118px) / 9);
+  min-width: calc((1200px - 140px) / 9);
   padding: 2px 2px 0;
 }
 
-body div#content section.view ul.tab-navigation li:first-child {
-  padding-left: 0;
-}
-
-body div#content section.view ul.tab-navigation li:last-child {
-  padding-right: 0;
-}
-
-body div#content section.view ul.tab-navigation li a {
+body div#content section.view div.tab-navigation div.tabs div.item a {
   background: rgba(255, 255, 255, 0.2);
   display: block;
   text-align: center;
   font-size: 14px;
   text-align: center;
-  line-height: 32px;
+  line-height: 41px;
   padding: 0 20px 0 10px;
   color: #999;
   overflow: hidden;
@@ -932,7 +1314,7 @@ body div#content section.view ul.tab-navigation li a {
   white-space: nowrap;
 }
 
-body div#content section.view ul.tab-navigation li button.close {
+body div#content section.view div.tab-navigation div.tabs div.item button.close {
   position: absolute;
   right: 2px;
   top: 2px;
@@ -941,16 +1323,17 @@ body div#content section.view ul.tab-navigation li button.close {
   color: #ccc;
 }
 
-body div#content section.view ul.tab-navigation li button.close i {
+body div#content section.view div.tab-navigation div.tabs div.item button.close i {
   font-size: 14px;
   padding: 4px 0;
 }
 
-body div#content section.view ul.tab-navigation li.on a {
+body div#content section.view div.tab-navigation div.tabs div.item.on a {
   background: #efefef;
+  color: #222;
 }
 
-body div#content section.view ul.tab-navigation li.on button.close {
+body div#content section.view div.tab-navigation div.tabs div.item.on button.close {
   color: #000;
 }
 
@@ -1068,267 +1451,34 @@ body div#content section.view div.subView h2.stitle i {
   vertical-align: middle;
 }
 
-body div#content section.view div.subView div.rows {
-  margin: 0;
-  padding: 10px 0;
-}
-
-body div#content section.view div.subView div.rows div.widget {
-  display: inline-block;
-  vertical-align: top;
-}
-
-body div#content section.view div.subView div.rows div.widget.c02 {
-  width: calc((100% / 12) * 2);
-}
-
-body div#content section.view div.subView div.rows div.widget.c03 {
-  width: calc((100% / 12) * 3);
-}
-
-body div#content section.view div.subView div.rows div.widget.c04 {
-  width: calc((100% / 12) * 4);
-}
-
-body div#content section.view div.subView div.rows div.widget.c05 {
-  width: calc((100% / 12) * 5);
-}
-
-body div#content section.view div.subView div.rows div.widget.c06 {
-  width: calc((100% / 12) * 6);
-}
-
-body div#content section.view div.subView div.rows div.widget.c07 {
-  width: calc((100% / 12) * 7);
-}
-
-body div#content section.view div.subView div.rows div.widget.c08 {
-  width: calc((100% / 12) * 8);
-}
-
-body div#content section.view div.subView div.rows div.widget.c09 {
-  width: calc((100% / 12) * 9);
-}
-
-body div#content section.view div.subView div.rows div.widget.c10 {
-  width: calc((100% / 12) * 10);
-}
-
-body div#content section.view div.subView div.rows div.widget.c11 {
-  width: calc((100% / 12) * 7);
-}
-
-body div#content section.view div.subView div.rows div.widget.c12 {
-  width: calc((100% / 12) * 7);
-}
-
-body div#content section.view div.subView div.rows div.widget + div {
-  padding-left: 10px;
-}
-
-body div#content section.view div.subView div.rows div.widget div.inline {
-  font-size: 14px;
-  background: #fff;
-  border-radius: 10px;
-  min-height: 170px;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-body div#content section.view div.subView div.rows div.widget div.inline h3 {
-  margin: 0;
-  padding: 0 10px;
-  line-height: 42px;
-  background: rgba(0, 0, 0, 0.02);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  font-size: 16px;
-}
-
-body div#content section.view div.subView div.rows div.widget div.inline div.box {
-  margin: 0;
-  padding: 10px;
-}
-
-body div#content section.view div.subView div.rows div.widget div.inline div.box.weather {
-  text-align: center;
-  margin: 0;
-  padding: 20px 0 0;
-}
-
-body div#content section.view div.subView div.rows div.widget div.inline div.box.weather i {
-  font-size: 120px;
-}
-
-body div#content section.view div.subView div.rows div.widget div.inline div.box.weather p {
-  font-size: 26px;
-  font-weight: 800;
-}
-
-body div#content section.view div.subView div.rows div.widget.h02 div.inline {
-  min-height: 280px;
-}
-
-body div#content section.view div.subView div.rows div.widget.wall div.inline div.box {
-  margin: 0;
-  padding: 30px;
-}
-
-body div#content section.view div.subView div.rows div.widget.wall div.inline div.box h4 {
-  font-size: 52px;
-  margin: 0;
-  padding: 0;
-  font-weight: 200;
-}
-
-body div#content section.view div.subView div.rows div.widget.main div.inline {
-  background: #0075bc;
-  color: #fff;
-}
-
-body div#content section.view div.subView div.rows div.widget.gray div.inline {
-  background: #555;
-  color: #fff;
-}
-
-body div#content section.view div.subView div.rows div.widget.black div.inline {
-  background: #222;
-  color: #fff;
-}
-
 body div#content section.view div.sub {
   font-size: 14px;
-  background: #fff;
-  border-radius: 10px;
   min-height: 320px;
   margin: 0;
-  padding: 20px;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
   overflow: hidden;
 }
 
 body div#content section.view div.sub h3.btitle {
-  font-size: 18px;
-  color: #00539a;
-  margin: 0 0 20px 0;
-  padding: 0 0 16px 0;
-  border-bottom: 1px solid #222;
-}
-
-body div#content section.view div.sub div.rows {
-  margin: 0 0 30px;
-  padding: 0;
-}
-
-body div#content section.view div.sub input[type="text"],
-body div#content section.view div.sub input[type="passwd"],
-body div#content section.view div.sub select {
-  vertical-align: top;
-  outline: none;
-  border: 1px solid #ccc;
-  height: 36px;
-  border-radius: 5px;
-  margin: 0 0 10px 0;
-  padding: 0 10px 0;
-  min-width: 200px;
-}
-
-body div#content section.view div.sub input[type="text"].main,
-body div#content section.view div.sub input[type="passwd"].main,
-body div#content section.view div.sub select.main {
-  border-color: #0075bc;
-}
-
-body div#content section.view div.sub input[type="text"]:hover, body div#content section.view div.sub input[type="text"]:focus,
-body div#content section.view div.sub input[type="passwd"]:hover,
-body div#content section.view div.sub input[type="passwd"]:focus,
-body div#content section.view div.sub select:hover,
-body div#content section.view div.sub select:focus {
-  border-color: #555;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-}
-
-body div#content section.view div.sub textarea {
-  vertical-align: top;
-  outline: none;
-  border: 1px solid #ddd;
-  min-height: 50px;
-  margin: 0 0 10px 0;
-  padding: 10px;
-  border-radius: 5px;
-  width: 100%;
-}
-
-body div#content section.view div.sub textarea.main {
-  border-color: #0075bc;
-}
-
-body div#content section.view div.sub textarea:hover, body div#content section.view div.sub textarea:focus {
-  border-color: #555;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-}
-
-body div#content section.view div.sub input {
-  display: none;
-}
-
-body div#content section.view div.sub label {
-  position: relative;
   font-size: 16px;
-  margin: 20px 0;
-  padding: 0 10px 0 28px;
+  font-weight: 400;
+  background: black;
+  margin: 0;
+  padding: 10px;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
 }
 
-body div#content section.view div.sub label i {
-  position: absolute;
-  left: 0;
-  top: -4px;
-  color: #ccc;
-  font-size: 26px;
-}
-
-body div#content section.view div.sub input:checked + label {
-  color: #0075bc;
-}
-
-body div#content section.view div.sub input:checked + label i {
-  color: #0075bc;
-}
-
-body div#content section.view div.sub table {
+body div#content section.view div.sub div.white-box {
+  display: inline-block;
   width: 100%;
-  border-top: 2px solid #0075bc;
-}
-
-body div#content section.view div.sub table th,
-body div#content section.view div.sub table td {
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-}
-
-body div#content section.view div.sub table th:last-of-type,
-body div#content section.view div.sub table td:last-of-type {
-  border-right: none;
-}
-
-body div#content section.view div.sub table thead tr th {
-  padding: 12px 0;
-  background: #f4f4f4;
-}
-
-body div#content section.view div.sub table tbody tr td {
-  padding: 16px;
-}
-
-body div#content section.view div.sub table tbody tr td.center {
-  text-align: center;
-}
-
-body div#content section.view div.sub table tbody tr td.right {
-  text-align: right;
+  background: #fff;
+  padding: 0;
+  margin: 0 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 0 0 8px 8px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 body footer#footer {
@@ -1418,7 +1568,6 @@ body.open div#content aside div.profile p.photo {
   transition: all 0.4s ease;
   width: 60px;
   height: 60px;
-  border-radius: 50%;
 }
 
 body.open div#content aside div.profile p.userName {
@@ -1478,5 +1627,9 @@ body.open div#content aside nav#main-menu.typeA > ul > li.active ul li a.on {
   font-weight: bolder;
   color: white;
   text-decoration: underline;
+}
+
+body.open div#content section.view {
+  width: calc(100vw - 210px);
 }
 /*# sourceMappingURL=style.css.map */
