@@ -1309,6 +1309,7 @@ body div#content section.view div.tab-navigation div.tabs div.item a {
   line-height: 41px;
   padding: 0 20px 0 10px;
   color: #999;
+  outline: none;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

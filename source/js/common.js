@@ -31,7 +31,7 @@ $(document).ready(function() {
 
 
     $('.tab-navigation div.tabs').slick({
-        infinite: true,
+        infinite: false,
         slidesToShow: 8,
         slidesToScroll: 1,
         variableWidth: true,
