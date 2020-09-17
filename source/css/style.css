@@ -954,35 +954,66 @@ body .btn-set.align div.right {
   text-align: right;
 }
 
-body table {
+body table.basic {
   width: 100%;
 }
 
-body table td,
-body table th {
-  border-right: 1px solid #e4e4e4;
-  border-bottom: 1px solid #e4e4e4;
+body table.basic td,
+body table.basic th {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
-body table td:last-of-type,
-body table th:last-of-type {
+body table.basic td:last-of-type,
+body table.basic th:last-of-type {
   border-right: none;
 }
 
-body table thead tr th {
+body table.basic thead tr th {
   padding: 8px 0;
-  background: #f4f4f4;
+  background: #e4e4e4;
 }
 
-body table tbody tr td {
+body table.basic tbody tr td {
   padding: 8px;
 }
 
-body table tbody tr td.center {
+body table.basic tbody tr td.center {
   text-align: center;
 }
 
-body table tbody tr td.right {
+body table.basic tbody tr td.right {
+  text-align: right;
+}
+
+body table.landscape {
+  width: 100%;
+}
+
+body table.landscape td,
+body table.landscape th {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+body table.landscape th {
+  padding: 8px 0;
+  background: #e4e4e4;
+}
+
+body table.landscape td {
+  padding: 8px;
+}
+
+body table.landscape td:last-of-type {
+  border-right: none;
+}
+
+body table.landscape td.center {
+  text-align: center;
+}
+
+body table.landscape td.right {
   text-align: right;
 }
 

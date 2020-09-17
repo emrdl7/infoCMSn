@@ -518,13 +518,13 @@ input:checked + label {
 
 
 
-table {
+table.basic {
     width: 100%;
 
     td,
     th {
-        border-right: 1px solid #e4e4e4;
-        border-bottom: 1px solid #e4e4e4;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
 
         &:last-of-type {
             border-right: none;
@@ -535,7 +535,7 @@ table {
         tr {
             th {
                 padding: 8px 0;
-                background: #f4f4f4;
+                background: #e4e4e4;
             }
         }
     }
@@ -557,6 +557,40 @@ table {
 
 }
 
+
+
+table.landscape {
+    width: 100%;
+
+    td,
+    th {
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+
+    }
+
+
+    th {
+        padding: 8px 0;
+        background: #e4e4e4;
+    }
+    td {
+        padding: 8px;
+
+        &:last-of-type {
+            border-right: none;
+        }
+
+        &.center {
+            text-align: center;
+        }
+
+        &.right {
+            text-align: right;
+        }
+    }
+
+}
 
 
 
