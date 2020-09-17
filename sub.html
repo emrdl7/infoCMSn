@@ -15,6 +15,11 @@
         <!-- javaScript -->
         <script src="source/js/jquery-1.11.3.min.js"></script>
         <script src="source/js/slick.min.js"></script>
+
+
+        <!-- 테스트용 임시 -->
+        <script src="source/temp_editor/ckeditor.js"></script>
+
         <script src="source/js/common.js"></script>
 
     </head>
@@ -248,7 +253,7 @@
                             
                                 width 클래스
                                 w40 : 40px
-                                w100 : 100px
+                                w100 : 100pxa
                                 w150 : 150px
                                 w200 : 200px
                                 w400 : 400px
@@ -256,23 +261,23 @@
                             
                             -->
 
-                            <label class="before">야옹</label>
+                            <label class="before">Label</label>
                             <input class="w40" type="text">
 
-                            <label class="before">야옹</label>
+                            <label class="before">Label</label>
                             <input class="w100" class="main" type="text">
 
-                            <label class="before">야옹</label>
+                            <label class="before">Label</label>
                             <input class="w100" class="main" type="date">
 
-                            <label class="before">야옹</label>
+                            <label class="before">Label</label>
                             <span class="select-outline">
                                 <select>
                                     <option>sdf asdf asd</option>
                                 </select>
                             </span>
 
-                            <label class="before">야옹</label>
+                            <label class="before">Label</label>
                             <span class="select-outline">
                                 <select class="main">
                                     <option>sdf asdf asd</option>
@@ -311,75 +316,109 @@
 
 
 
+
+
+
+
+
+                    <h3 class="btitle"">
+                        문서작성
+                    </h3>
+                    
+                    <div class="white-box">
+
+
+
+                            <form>
+                                <textarea name="editor1" id="editor1" rows="30" cols="80">
+                                    This is my textarea to be replaced with CKEditor 4.
+                                </textarea>
+                                <script>
+                                    // Replace the <textarea id="editor1"> with a CKEditor 4
+                                    // instance, using default configuration.
+                                    CKEDITOR.replace( 'editor1' );
+                                </script>
+                            </form>
+
+
+
+
+                    </div>
+
+
+
+
+
+
                     <h3 class="btitle"">
                         테이블
                     </h3>
 
 
-                    <div class="rows white-box">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>흠</th>
-                                    <th>흠</th>
-                                    <th>흠</th>
-                                    <th>흠</th>
-                                    <th>흠</th>
-                                    <th>흠</th>
-                                    <th>흠</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>음</td>
-                                    <td class="center">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                </tr>
-                                <tr>
-                                    <td>음</td>
-                                    <td class="center">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                </tr>
-                                <tr>
-                                    <td>음</td>
-                                    <td class="center">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                </tr>
-                                <tr>
-                                    <td>음</td>
-                                    <td class="center">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                </tr>
-                                <tr>
-                                    <td>음</td>
-                                    <td class="center">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                    <td class="right">음</td>
-                                </tr>
-                            </tbody>
+                    <div class="white-box">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>흠</th>
+                                        <th>흠</th>
+                                        <th>흠</th>
+                                        <th>흠</th>
+                                        <th>흠</th>
+                                        <th>흠</th>
+                                        <th>흠</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>음</td>
+                                        <td class="center">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                    </tr>
+                                    <tr>
+                                        <td>음</td>
+                                        <td class="center">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                    </tr>
+                                    <tr>
+                                        <td>음</td>
+                                        <td class="center">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                    </tr>
+                                    <tr>
+                                        <td>음</td>
+                                        <td class="center">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                    </tr>
+                                    <tr>
+                                        <td>음</td>
+                                        <td class="center">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                        <td class="right">음</td>
+                                    </tr>
+                                </tbody>
 
-                        </table>
-
+                            </table>
                     </div>
+
 
 
                     <article class="pagenation">

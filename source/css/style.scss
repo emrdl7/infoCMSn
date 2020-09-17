@@ -863,7 +863,7 @@ div.widget {
     
                                 &:hover {
                                     position:relative;
-                                    background:$color-main - #333;
+                                    background:rgba(0,0,0,0.4);
                                     width:210px;
     
                                     i {
@@ -896,7 +896,7 @@ div.widget {
             div.tab-navigation {
                 background:#333;
                 position:relative;
-                margin:-30px -20px 20px;
+                margin:-30px -20px 30px;
 
                 button.btn {
                     position:absolute;
@@ -980,7 +980,7 @@ div.widget {
             div.toolarea {
                 position:absolute;
                 right:20px;
-                top:76px;
+                top:84px;
                 font-size:0;
 
                 button {
@@ -1042,7 +1042,7 @@ div.widget {
             nav.navigation {
                 position: absolute;
                 right: 20px;
-                top: 50px;
+                top: 48px;
 
                 ol {
                     padding:0;
@@ -1116,6 +1116,7 @@ div.widget {
                     margin:0 0 20px;
                     border:1px solid #ccc;
                     border-radius:0 0 8px 8px;
+                    overflow:hidden;
                     @include drop-shadow (0,1px,4px,0,0.1);
 
 
@@ -1288,7 +1289,7 @@ div.widget {
                                         color:$color-main + #666;
                                         font-weight:bolder;
                                         position:relative;
-                                        background:$color-main - #333;
+                                        background:rgba(255,255,255,0.2);
                                         width:210px;
         
                                         i {
@@ -1316,7 +1317,7 @@ div.widget {
                                     margin:0;
                                     padding:0;
                                     opacity:1;
-                                    background:$color-main - #555;
+                                    background:rgba(0,0,0,0.5);
 
                                     &::before {
                                         content:"";
@@ -1389,13 +1390,13 @@ div.widget {
                                             }
 
                                             &:hover {
-                                                background:$color-main - #999;
+                                                background:rgba(255,255,255,0.05);
                                             }
 
                                             &.on {
                                                 font-weight:bolder;
                                                 color:rgba(255,255,255,1);
-                                                background:$color-main - #666;
+                                                background:rgba(255,255,255,0.1);
 
                                                 &::before {
                                                     transform: rotate(-45deg);
