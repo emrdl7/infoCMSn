@@ -897,7 +897,8 @@ body .button {
   height: 36px;
   border-radius: 5px;
   padding: 0 10px;
-  margin: 0;
+  margin: 0 2px;
+  font-size: 14px;
 }
 
 body .button.main {
@@ -917,6 +918,40 @@ body .button i {
   top: 2px;
   margin: 0 4px 0 0;
   font-size: 16px;
+}
+
+body .btn-set {
+  margin: 10px;
+  font-size: 0;
+}
+
+body .btn-set.center {
+  text-align: center;
+}
+
+body .btn-set.right {
+  text-align: right;
+}
+
+body .btn-set.big .button {
+  height: 44px;
+  padding: 0 20px;
+  min-width: 160px;
+  font-size: 16px;
+}
+
+body .btn-set.align div {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+
+body .btn-set.align div.left {
+  text-align: left;
+}
+
+body .btn-set.align div.right {
+  text-align: right;
 }
 
 body table {
@@ -1259,7 +1294,7 @@ body div#content aside nav#main-menu.typeA > ul > li h3 a {
   font-weight: 600;
   display: block;
   overflow: hidden;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
   width: 38px;
   padding: 8px 0 8px 6px;
@@ -1302,6 +1337,8 @@ body div#content section.view {
   background: #efefef;
   min-height: calc(100vh - 38px);
   width: calc(100vw - 38px);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 body div#content section.view div.tab-navigation {
@@ -1604,8 +1641,6 @@ body.open header button.logout {
 
 body.open div#content aside {
   width: 210px;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
 }
 
 body.open div#content aside div.profile {
