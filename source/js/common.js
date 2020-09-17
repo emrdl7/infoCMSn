@@ -11,6 +11,20 @@ $(document).ready(function() {
 
 
 
+    $(".modal-open").on("click", function(){
+        $("#modal."+ $(this).attr("data")).addClass("open");
+
+    });
+
+    $("#modal .close").on("click", function(){
+        $(this).parent().parent().parent().removeClass("open");
+    });
+
+
+
+
+
+
     
     $("nav#main-menu h3").each(function () {
         if ($(this).parent().find("ul").length) {
