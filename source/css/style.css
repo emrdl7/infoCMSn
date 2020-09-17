@@ -1408,6 +1408,19 @@ body div#content aside nav#main-menu.typeA > ul > li h3 a i {
   margin-right: 12px;
 }
 
+body div#content aside nav#main-menu.typeA > ul > li h3 a::before, body div#content aside nav#main-menu.typeA > ul > li h3 a::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  display: block;
+  width: 6px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: 0;
+}
+
 body div#content aside nav#main-menu.typeA > ul > li h3 a:hover {
   position: relative;
   background: rgba(0, 0, 0, 0.4);
@@ -1783,15 +1796,7 @@ body.open div#content aside nav#main-menu.typeA > ul > li h3 a:hover {
 }
 
 body.open div#content aside nav#main-menu.typeA > ul > li h3 a::before, body.open div#content aside nav#main-menu.typeA > ul > li h3 a::after {
-  content: "";
-  position: absolute;
-  top: 20px;
-  display: block;
-  width: 6px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.4);
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  opacity: 1;
 }
 
 body.open div#content aside nav#main-menu.typeA > ul > li h3 a::before {

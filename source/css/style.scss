@@ -1014,6 +1014,19 @@ div.widget {
                                     top:3px;
                                     margin-right:12px;
                                 }
+    
+                                &::before,
+                                &::after {
+                                    content:"";
+                                    position:absolute;
+                                    top:20px;
+                                    display:block;
+                                    width:6px;
+                                    height:2px;
+                                    background:rgba(255,255,255,0.4);
+                                    @include ani(0.2s);
+                                    opacity:0;
+                                }
                             
     
                                 &:hover {
@@ -1412,14 +1425,7 @@ div.widget {
     
                                     &::before,
                                     &::after {
-                                        content:"";
-                                        position:absolute;
-                                        top:20px;
-                                        display:block;
-                                        width:6px;
-                                        height:2px;
-                                        background:rgba(255,255,255,0.4);
-                                        @include ani(0.2s);
+                                        opacity:1;
                                     }
                                 
                                     &::before {
