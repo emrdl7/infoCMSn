@@ -521,6 +521,20 @@ button {
   border-radius: 0;
 }
 
+button.pop-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  background: none;
+  font-size: 0;
+  padding: 4px 5px 0;
+}
+
+button.pop-close i {
+  font-size: 32px;
+}
+
 label.before {
   line-height: 36px;
   padding: 0 6px 0 0;
@@ -713,31 +727,43 @@ input:checked + label i {
 }
 
 /* default btn */
-.button {
+.button,
+.btn {
+  display: inline-block;
   vertical-align: top;
   outline: none;
   border: 1px solid #ccc;
   background: #fff;
-  height: 36px;
+  line-height: 34px;
   border-radius: 5px;
-  padding: 0 10px;
+  padding: 0 20px;
   margin: 0 2px;
   font-size: 14px;
 }
 
-.button.main {
+.button.main,
+.btn.main {
   background: #0075bc;
   color: #fff;
   border-color: transparent;
 }
 
-.button.sub {
+.button.sub,
+.btn.sub {
   background: #555;
   color: #fff;
   border-color: transparent;
 }
 
-.button i {
+.button.btn-xs,
+.btn.btn-xs {
+  height: 20px;
+  line-height: 1;
+  font-size: 12px;
+}
+
+.button i,
+.btn i {
   position: relative;
   top: 2px;
   margin: 0 4px 0 0;
@@ -778,35 +804,44 @@ input:checked + label i {
   text-align: right;
 }
 
-table.basic {
+table.basic,
+table.board_list {
   width: 100%;
 }
 
 table.basic td,
-table.basic th {
+table.basic th,
+table.board_list td,
+table.board_list th {
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
 
 table.basic td:last-of-type,
-table.basic th:last-of-type {
+table.basic th:last-of-type,
+table.board_list td:last-of-type,
+table.board_list th:last-of-type {
   border-right: none;
 }
 
-table.basic thead tr th {
+table.basic thead tr th,
+table.board_list thead tr th {
   padding: 8px 0;
   background: #e4e4e4;
 }
 
-table.basic tbody tr td {
+table.basic tbody tr td,
+table.board_list tbody tr td {
   padding: 8px;
 }
 
-table.basic tbody tr td.center {
+table.basic tbody tr td.center,
+table.board_list tbody tr td.center {
   text-align: center;
 }
 
-table.basic tbody tr td.right {
+table.basic tbody tr td.right,
+table.board_list tbody tr td.right {
   text-align: right;
 }
 
@@ -841,8 +876,16 @@ table.landscape td.right {
   text-align: right;
 }
 
+span.pilsu {
+  position: relative;
+  top: 7px;
+  color: #843534;
+  font-size: 20px;
+}
+
 /* default layout */
 div.rows {
+  position: relative;
   padding: 10px 20px;
   border-bottom: 1px solid #ccc;
 }
@@ -986,9 +1029,54 @@ html {
 body {
   font-family: "Noto Sans KR", "Malgun Gothic", "apple sd gothic neo", sans-serif;
   color: #333;
+  position: relative;
   min-width: 1180px;
   height: 100vh;
   /* header */
+}
+
+body.error-page {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-flex;
+  -webkit-align-item: center;
+  -webkit-justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body.error-page h1 {
+  font-size: 140px;
+  line-height: 1;
+  margin: 0;
+}
+
+body.error-page h1 i {
+  display: block;
+  font-size: 220px;
+}
+
+body.error-page h1 small {
+  font-size: 30px;
+  display: block;
+  margin-top: 20px;
+}
+
+body.error-page button.btn {
+  line-height: 60px;
+  width: 200px;
+  font-size: 20px;
+  margin: 60px 0;
 }
 
 body.login {
@@ -1112,7 +1200,7 @@ body.login button {
 }
 
 body.login button:hover {
-  background: #0061a8;
+  background: #003656;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
@@ -1124,26 +1212,82 @@ body.login p.copyright {
 }
 
 body .container {
-  position: relative;
-  display: inline-block;
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
   text-align: left;
   vertical-align: top;
-  margin: 0;
-  padding: 0 10px;
+  padding: 0;
 }
 
-@media only screen and (1200px) {
-  body .container {
-    position: relative;
-    display: inline-block;
-    margin: 0 auto;
-    width: 1200px;
-    height: 100%;
-    padding: 0;
-  }
+body div.sub {
+  font-size: 14px;
+  min-height: 320px;
+  overflow: hidden;
+}
+
+body div.sub h3.btitle {
+  font-size: 16px;
+  font-weight: 400;
+  background: black;
+  margin: 0;
+  padding: 10px;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+}
+
+body div.sub div.white-box {
+  display: inline-block;
+  width: 100%;
+  background: #fff;
+  padding: 0;
+  margin: 0 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+body div.sub div.white-box.toolbar {
+  border-radius: 8px;
+}
+
+body div.sub div.white-box.toolbar div.rows {
+  padding: 10px;
+}
+
+body div.sub div.white-box div.tree {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  overflow: scroll;
+  width: 260px;
+  height: 490px;
+  padding: 5px;
+  background: #eee;
+  border: 1px solid #ddd;
+  line-height: 24px;
+}
+
+body div.sub div.white-box div.tree * {
+  vertical-align: top;
+}
+
+body div.sub div.white-box table.tree-table {
+  margin-left: 320px;
+  width: calc(100% - 320px);
+}
+
+body div.sub div.white-box table.tree-table tbody tr th {
+  text-align: left;
+  font-size: 16px;
+  width: 180px;
+}
+
+body div.sub div.white-box table.tree-table tbody tr td {
+  padding: 4px 0;
+}
+
+body div.sub div.white-box table.tree-table tbody tr td textarea {
+  width: 100%;
 }
 
 body header {
@@ -1214,7 +1358,7 @@ body header h1 a small {
   font-size: 0.8em;
   margin: 0;
   padding: 0 0 0 6px;
-  color: #006bb2;
+  color: #005589;
 }
 
 body header p.welcome {
@@ -1223,7 +1367,7 @@ body header p.welcome {
   line-height: 38px;
   margin: 0;
   top: 0;
-  color: #00579e;
+  color: #001623;
 }
 
 body header p.welcome strong {
@@ -1268,11 +1412,11 @@ body div#content aside {
   width: 38px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  overflow-y: scroll;
 }
 
 body div#content aside div.profile {
   margin: 3px 0 10px;
+  height: 90px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -1308,6 +1452,11 @@ body div#content aside nav#main-menu.typeA > ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  border-top: 1px solid transparent;
+}
+
+body div#content aside nav#main-menu.typeA > ul > li {
+  border-bottom: 1px solid transparent;
 }
 
 body div#content aside nav#main-menu.typeA > ul > li h3 {
@@ -1335,7 +1484,9 @@ body div#content aside nav#main-menu.typeA > ul > li h3 a i {
   color: #bbb;
   position: relative;
   top: 3px;
-  margin-right: 12px;
+  margin-right: 16px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 body div#content aside nav#main-menu.typeA > ul > li h3 a::before, body div#content aside nav#main-menu.typeA > ul > li h3 a::after {
@@ -1377,8 +1528,19 @@ body div#content section.view {
   background: #efefef;
   min-height: calc(100vh - 38px);
   width: calc(100vw - 38px);
+  overflow-x: hidden;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+
+body div#content section.view div.dashboard {
+  display: block;
+  font-size: 0;
+  padding: 30px 20px 20px;
+}
+
+body div#content section.view iframe {
+  border: none;
 }
 
 body div#content section.view div.tab-navigation {
@@ -1527,40 +1689,15 @@ body div#content section.view div.toolarea button.color-gray:hover {
 body div#content section.view nav.navigation {
   position: absolute;
   right: 20px;
-  top: 48px;
-}
-
-body div#content section.view nav.navigation ol {
-  padding: 0;
-  margin: 0;
-}
-
-body div#content section.view nav.navigation ol li {
-  display: inline-block;
+  top: 0;
   font-size: 15px;
-}
-
-body div#content section.view nav.navigation ol li a {
   color: #555;
 }
 
-body div#content section.view nav.navigation ol li::after {
-  content: "/";
-}
-
-body div#content section.view nav.navigation ol li.active {
-  font-weight: bolder;
-  color: #222;
-}
-
-body div#content section.view nav.navigation ol li.active:after {
-  display: none;
-}
-
-body div#content section.view div.subView {
-  display: block;
-  font-size: 0;
-  padding: 30px 20px 20px;
+body div#content section.view nav.navigation i {
+  position: relative;
+  top: 1px;
+  margin-right: 6px;
 }
 
 body div#content section.view div.subView h2.stitle {
@@ -1574,37 +1711,6 @@ body div#content section.view div.subView h2.stitle i {
   color: #00539a;
   font-size: 30px;
   vertical-align: middle;
-}
-
-body div#content section.view div.sub {
-  font-size: 14px;
-  min-height: 320px;
-  margin: 0;
-  padding: 30px 20px;
-  overflow: hidden;
-}
-
-body div#content section.view div.sub h3.btitle {
-  font-size: 16px;
-  font-weight: 400;
-  background: black;
-  margin: 0;
-  padding: 10px;
-  color: #fff;
-  border-radius: 8px 8px 0 0;
-}
-
-body div#content section.view div.sub div.white-box {
-  display: inline-block;
-  width: 100%;
-  background: #fff;
-  padding: 0;
-  margin: 0 0 20px;
-  border: 1px solid #ccc;
-  border-radius: 0 0 8px 8px;
-  overflow: hidden;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 body footer#footer {
@@ -1684,7 +1790,7 @@ body.open div#content aside {
 }
 
 body.open div#content aside div.profile {
-  margin: 20px 0 20px;
+  margin: 40px auto 10px;
 }
 
 body.open div#content aside div.profile p.photo {
@@ -1702,11 +1808,11 @@ body.open div#content aside div.profile p.userName {
 }
 
 body.open div#content aside nav#main-menu.typeA > ul {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 body.open div#content aside nav#main-menu.typeA > ul > li {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 body.open div#content aside nav#main-menu.typeA > ul > li h3 a {
@@ -1717,8 +1823,8 @@ body.open div#content aside nav#main-menu.typeA > ul > li h3 a {
 }
 
 body.open div#content aside nav#main-menu.typeA > ul > li h3 a i {
-  font-size: 20px;
   color: #fff;
+  margin-right: 5px;
 }
 
 body.open div#content aside nav#main-menu.typeA > ul > li h3 a:hover {
@@ -1887,5 +1993,14 @@ body.open div#content aside nav#main-menu.typeA > ul > li.active > ul > li ul li
 
 body.open div#content section.view {
   width: calc(100vw - 210px);
+}
+
+body.pop {
+  min-width: 100%;
+}
+
+body.pop div#content section.view {
+  width: 100%;
+  padding: 20px;
 }
 /*# sourceMappingURL=style.css.map */

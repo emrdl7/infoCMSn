@@ -521,6 +521,20 @@ button {
   border-radius: 0;
 }
 
+button.pop-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  background: none;
+  font-size: 0;
+  padding: 4px 5px 0;
+}
+
+button.pop-close i {
+  font-size: 32px;
+}
+
 label.before {
   line-height: 36px;
   padding: 0 6px 0 0;
@@ -713,31 +727,43 @@ input:checked + label i {
 }
 
 /* default btn */
-.button {
+.button,
+.btn {
+  display: inline-block;
   vertical-align: top;
   outline: none;
   border: 1px solid #ccc;
   background: #fff;
-  height: 36px;
+  line-height: 34px;
   border-radius: 5px;
-  padding: 0 10px;
+  padding: 0 20px;
   margin: 0 2px;
   font-size: 14px;
 }
 
-.button.main {
+.button.main,
+.btn.main {
   background: #0075bc;
   color: #fff;
   border-color: transparent;
 }
 
-.button.sub {
+.button.sub,
+.btn.sub {
   background: #555;
   color: #fff;
   border-color: transparent;
 }
 
-.button i {
+.button.btn-xs,
+.btn.btn-xs {
+  height: 20px;
+  line-height: 1;
+  font-size: 12px;
+}
+
+.button i,
+.btn i {
   position: relative;
   top: 2px;
   margin: 0 4px 0 0;
@@ -778,35 +804,44 @@ input:checked + label i {
   text-align: right;
 }
 
-table.basic {
+table.basic,
+table.board_list {
   width: 100%;
 }
 
 table.basic td,
-table.basic th {
+table.basic th,
+table.board_list td,
+table.board_list th {
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
 
 table.basic td:last-of-type,
-table.basic th:last-of-type {
+table.basic th:last-of-type,
+table.board_list td:last-of-type,
+table.board_list th:last-of-type {
   border-right: none;
 }
 
-table.basic thead tr th {
+table.basic thead tr th,
+table.board_list thead tr th {
   padding: 8px 0;
   background: #e4e4e4;
 }
 
-table.basic tbody tr td {
+table.basic tbody tr td,
+table.board_list tbody tr td {
   padding: 8px;
 }
 
-table.basic tbody tr td.center {
+table.basic tbody tr td.center,
+table.board_list tbody tr td.center {
   text-align: center;
 }
 
-table.basic tbody tr td.right {
+table.basic tbody tr td.right,
+table.board_list tbody tr td.right {
   text-align: right;
 }
 
@@ -841,8 +876,16 @@ table.landscape td.right {
   text-align: right;
 }
 
+span.pilsu {
+  position: relative;
+  top: 7px;
+  color: #843534;
+  font-size: 20px;
+}
+
 /* default layout */
 div.rows {
+  position: relative;
   padding: 10px 20px;
   border-bottom: 1px solid #ccc;
 }
@@ -1009,20 +1052,6 @@ div.widget.black div.inline {
   padding: 0 10px;
   line-height: 42px;
   color: #fff;
-}
-
-#modal .modal_content h3 button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  border: none;
-  background: none;
-  font-size: 0;
-  padding: 4px 5px 0;
-}
-
-#modal .modal_content h3 button i {
-  font-size: 32px;
 }
 
 #modal.open {

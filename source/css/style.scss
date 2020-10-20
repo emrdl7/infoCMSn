@@ -1,4 +1,4 @@
-// out: ./style.css, compress: true, sourceMap: false
+// out: ./styl.css, compress: true, sourceMap: false
 @import "normalize", "rem", "font", "color", "mixin", "default";
 //@import "fontello.css";
 
@@ -16,9 +16,40 @@ html {
 body {
     font-family: $myfont, "Malgun Gothic", "apple sd gothic neo", sans-serif;
     color: $text-color;
-
+    position:relative;
     min-width:1180px;
     height:100vh;
+
+    &.error-page {
+        text-align:center;
+        @include flex;
+        flex-direction: column;
+
+        h1 {
+            font-size:140px;
+            line-height:1;
+            margin:0;
+
+            i {
+                display:block;
+                font-size:220px;
+            }
+
+            small {
+                font-size:30px;
+                display:block;
+                margin-top:20px;
+            }
+
+        }
+
+        button.btn {
+            line-height:60px;
+            width:200px;
+            font-size:20px;
+            margin:60px 0;
+        }
+    }
 
     &.login {
         display:flex;
@@ -108,7 +139,7 @@ body {
             @include ani();
 
             &:hover {
-                background:$color-main - 20%;
+                background:darken($color-main, 20%);
                 @include ani();
             }
         }
@@ -123,16 +154,106 @@ body {
     }
 
     .container {
-        @include container(100%);
         text-align:left;
         vertical-align:top;
-        @include pmz(0 10px,0);
+        padding: 0;
 
-        @media only screen and ($screen-size-pc) {
-            @include container($screen-size-pc);
-            padding: 0;
-        }
     }
+
+
+
+
+
+
+
+
+    div.sub {
+        font-size:14px;
+        min-height:320px;
+        overflow:hidden;
+
+        h3.btitle {
+            font-size:16px;
+            font-weight:400;
+            background:$color-main - #ccc;
+            @include pmz(10px,0);
+            color:#fff;
+            border-radius:8px 8px 0 0;
+        }
+
+        div.white-box {
+            display:inline-block;
+            width:100%;
+            background:#fff;
+            padding:0;
+            margin:0 0 20px;
+            border:1px solid #ccc;
+            border-radius:0 0 8px 8px;
+            overflow:hidden;
+            @include drop-shadow (0,1px,4px,0,0.1);
+
+            &.toolbar {
+                border-radius:8px;
+
+                div.rows {
+                    padding:10px;
+                }
+            }
+
+            div.tree {
+                position:absolute;
+                left:20px;
+                top:10px;
+                overflow:scroll;
+                width:260px;
+                height:490px;
+                padding:5px;
+                background:#eee;
+                border:1px solid #ddd;
+                line-height:24px;
+            }
+
+            div.tree * {
+                vertical-align:top;
+            }
+
+            table.tree-table {
+                margin-left:320px;
+                width: calc(100% - 320px);
+
+                    tbody {
+                        tr {
+                            th {
+                                text-align:left;
+                                font-size:16px;
+                                width:180px;
+                            }
+                            td {
+                                padding:4px 0;
+
+                                textarea {
+                                    width:100%;
+                                }
+                            }
+                        }
+                    }
+            }
+
+
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -194,7 +315,7 @@ body {
                 small {
                     font-size:0.8em;
                     @include pmz(0 0 0 6px,0);
-                    color:$color-main - 10%;
+                    color:darken($color-main, 10%);
                 }
             }
         }
@@ -205,7 +326,7 @@ body {
             line-height:38px;
             margin:0;
             top:0;
-            color:$color-main - 30%;
+            color:darken($color-main, 30%);
 
             strong {
                 text-decoration:none;
@@ -251,10 +372,10 @@ body {
             display:inline-block;
             width:38px;
             @include ani(0.4s);
-            overflow-y:scroll;
     
             div.profile {
                 margin:3px 0 10px;
+                height:90px;
                 @include ani(0.4s);
     
                 p.photo {
@@ -287,8 +408,11 @@ body {
                 &>ul {
                     list-style:none;
                     @include pmz(0,0);
+                    border-top:1px solid transparent;
     
                     &>li {
+                        border-bottom:1px solid transparent;
+
                         h3 {
                             @include pmz(0,0);
     
@@ -310,7 +434,8 @@ body {
                                     color:#bbb;
                                     position:relative;
                                     top:3px;
-                                    margin-right:12px;
+                                    margin-right:16px;
+                                    @include ani(0.4s);
                                 }
     
                                 &::before,
@@ -358,7 +483,26 @@ body {
             background:#efefef;
             min-height:calc(100vh - 38px);
             width:calc(100vw - 38px);
+            overflow-x:hidden;
             @include ani(0.4s);
+
+            div.dashboard {
+                display: block;
+                font-size:0;
+                padding:30px 20px 20px;
+            }
+
+
+
+
+
+            iframe {
+                border:none;
+            }
+
+
+
+
 
             div.tab-navigation {
                 background:#333;
@@ -509,43 +653,20 @@ body {
             nav.navigation {
                 position: absolute;
                 right: 20px;
-                top: 48px;
+                top: 0;
+                font-size:15px;
+                color:#555;
 
-                ol {
-                    padding:0;
-                    margin:0;
-
-                    li {
-                        display:inline-block;
-                        font-size:15px;
-
-                        a {
-                            color:#555;
-                        }
-
-                        &::after {
-                            content:"/";
-                        }
-
-                        &.active {
-                            font-weight:bolder;
-                            color:#222;
-
-                            &:after {
-                                display:none;
-                            }
-                        }
-                        
-                    }
+                i {
+                    position:relative;
+                    top:1px;
+                    margin-right:6px;
                 }
 
 
             }
 
             div.subView {
-                display: block;
-                font-size:0;
-                padding:30px 20px 20px;
 
                 h2.stitle {
                     @include pmz(0,0 0 18px 0);
@@ -558,39 +679,6 @@ body {
                         vertical-align:middle;
                     }
                 }
-            }
-
-            div.sub {
-                font-size:14px;
-                min-height:320px;
-                @include pmz(30px 20px,0);
-                overflow:hidden;
-
-                h3.btitle {
-                    font-size:16px;
-                    font-weight:400;
-                    background:$color-main - #ccc;
-                    @include pmz(10px,0);
-                    color:#fff;
-                    border-radius:8px 8px 0 0;
-                }
-
-                div.white-box {
-                    display:inline-block;
-                    width:100%;
-                    background:#fff;
-                    padding:0;
-                    margin:0 0 20px;
-                    border:1px solid #ccc;
-                    border-radius:0 0 8px 8px;
-                    overflow:hidden;
-                    @include drop-shadow (0,1px,4px,0,0.1);
-
-
-                }
-
-
-
             }
 
 
@@ -684,7 +772,7 @@ body {
                 width:210px;
     
                 div.profile {
-                    margin:20px 0 20px;
+                    margin:40px auto 10px;
         
                     p.photo {
                         @include ani(0.4s);
@@ -701,10 +789,10 @@ body {
                 nav#main-menu.typeA {
         
                     &>ul {
-                        border-top:1px solid rgba(255,255,255,0.2);
+                        border-color:rgba(255,255,255,0.2);
         
                         &>li {
-                            border-bottom:1px solid rgba(255,255,255,0.2);
+                            border-color:rgba(255,255,255,0.2);
                             h3 {
         
                                 a {
@@ -713,8 +801,8 @@ body {
                                     width:210px;
                                     
                                     i {
-                                        font-size:20px;
                                         color:#fff;
+                                        margin-right:5px;
                                     }
 
                                     &:hover {
@@ -902,8 +990,18 @@ body {
             }
 
             section.view {
-                
-            width:calc(100vw - 210px);
+                width:calc(100vw - 210px);
+            }
+        }
+    }
+
+    &.pop {
+        min-width:100%;
+
+        div#content {
+            section.view {
+                width: 100%;
+                padding:20px;
             }
         }
     }
