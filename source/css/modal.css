@@ -498,17 +498,17 @@ textarea {
   border-radius: 0;
   background-clip: padding-box;
   /*
-    @media all and (max-width: 1199px) {
-        appearance: none;
-        -moz-appearance: none;
-        -ms-appearance: none;
-        -webkit-appearance: none;
+        @media all and (max-width: 1199px) {
+            appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            -webkit-appearance: none;
 
-        &::-ms-expand {
-            display: none;
+            &::-ms-expand {
+                display: none;
+            }
         }
-    }
-*/
+    */
 }
 
 a {
@@ -673,28 +673,6 @@ span.select-outline:focus-within::after {
           transform: rotate(45deg);
 }
 
-textarea {
-  vertical-align: top;
-  outline: none;
-  border: 1px solid #ddd;
-  background: #f4f4f4;
-  min-height: 80px;
-  padding: 10px;
-  margin: 0;
-  border-radius: 5px;
-  width: 100%;
-}
-
-textarea.main {
-  border-color: #0075bc;
-}
-
-textarea:focus, textarea:hover {
-  border-color: #555;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-}
-
 input[type="radio"],
 input[type="checkbox"] {
   display: none;
@@ -724,6 +702,70 @@ input:checked + label {
 
 input:checked + label i {
   color: #0075bc;
+}
+
+textarea {
+  vertical-align: top;
+  outline: none;
+  border: 1px solid #ddd;
+  background: #f4f4f4;
+  min-height: 80px;
+  padding: 10px;
+  margin: 0;
+  border-radius: 5px;
+  width: 100%;
+}
+
+textarea.main {
+  border-color: #0075bc;
+}
+
+textarea:focus, textarea:hover {
+  border-color: #555;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:-moz-read-only,
+input[type="passwd"]:-moz-read-only,
+input[type="date"]:-moz-read-only,
+textarea:-moz-read-only {
+  background: #f4f4f4;
+  border: none;
+  color: #222;
+  font-weight: 600;
+}
+
+input[type="text"]:read-only,
+input[type="passwd"]:read-only,
+input[type="date"]:read-only,
+textarea:read-only {
+  background: #f4f4f4;
+  border: none;
+  color: #222;
+  font-weight: 600;
+}
+
+input[type="text"]:-moz-read-only:focus, input[type="text"]:-moz-read-only:hover,
+input[type="passwd"]:-moz-read-only:focus,
+input[type="passwd"]:-moz-read-only:hover,
+input[type="date"]:-moz-read-only:focus,
+input[type="date"]:-moz-read-only:hover,
+textarea:-moz-read-only:focus,
+textarea:-moz-read-only:hover {
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+
+input[type="text"]:read-only:focus, input[type="text"]:read-only:hover,
+input[type="passwd"]:read-only:focus,
+input[type="passwd"]:read-only:hover,
+input[type="date"]:read-only:focus,
+input[type="date"]:read-only:hover,
+textarea:read-only:focus,
+textarea:read-only:hover {
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 
 /* default btn */
@@ -760,6 +802,16 @@ input:checked + label i {
   height: 20px;
   line-height: 1;
   font-size: 12px;
+}
+
+.button u,
+.btn u {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0 0 0 4px;
+  opacity: 0.8;
+  font-size: 0.8em;
+  font-weight: 200;
 }
 
 .button i,
@@ -815,6 +867,7 @@ table.board_list td,
 table.board_list th {
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  width: auto;
 }
 
 table.basic td:last-of-type,
@@ -822,6 +875,29 @@ table.basic th:last-of-type,
 table.board_list td:last-of-type,
 table.board_list th:last-of-type {
   border-right: none;
+}
+
+table.basic td input[type="checkbox"],
+table.basic th input[type="checkbox"],
+table.board_list td input[type="checkbox"],
+table.board_list th input[type="checkbox"] {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+table.basic td.w60,
+table.basic th.w60,
+table.board_list td.w60,
+table.board_list th.w60 {
+  width: 60px;
+}
+
+table.basic td.w120,
+table.basic th.w120,
+table.board_list td.w120,
+table.board_list th.w120 {
+  width: 120px;
 }
 
 table.basic thead tr th,
@@ -874,6 +950,22 @@ table.landscape td.center {
 
 table.landscape td.right {
   text-align: right;
+}
+
+div.board-tools {
+  position: relative;
+  margin: 20px;
+  background: #efefef;
+  border-radius: 10px;
+  padding: 20px 20px 20px 140px;
+}
+
+div.board-tools h4 {
+  position: absolute;
+  left: 20px;
+  top: 24px;
+  margin: 0;
+  font-size: 16px;
 }
 
 span.pilsu {

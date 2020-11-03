@@ -92,18 +92,18 @@ input,
 select,
 textarea {
     @include border-radius(0);
-/*
-    @media all and (max-width: 1199px) {
-        appearance: none;
-        -moz-appearance: none;
-        -ms-appearance: none;
-        -webkit-appearance: none;
+    /*
+        @media all and (max-width: 1199px) {
+            appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            -webkit-appearance: none;
 
-        &::-ms-expand {
-            display: none;
+            &::-ms-expand {
+                display: none;
+            }
         }
-    }
-*/
+    */
 }
 
 
@@ -168,7 +168,7 @@ select {
     &:focus,
     &:hover {
         border-color: $color-gray;
-        @include drop-shadow (0,1px,4px,0,0.1);
+        @include drop-shadow(0,1px,4px,0,0.1);
     }
 
     &.w40 {
@@ -206,15 +206,15 @@ span.select-outline {
         -moz-appearance: none;
         -ms-appearance: none;
         -webkit-appearance: none;
-    
+
         &::-ms-expand {
             display: none;
         }
-    
+
         display:inline-block;
         padding:0 30px 0 10px;
     }
-    
+
     &::before,
     &::after {
         content:"";
@@ -242,7 +242,7 @@ span.select-outline {
         &::before {
             transform: rotate(-45deg);
         }
-    
+
         &::after {
             transform: rotate(45deg);
         }
@@ -250,27 +250,6 @@ span.select-outline {
     }
 }
 
-textarea {
-    vertical-align: top;
-    outline: none;
-    border: 1px solid #ddd;
-    background:#f4f4f4;
-    min-height: 80px;
-    padding:10px;
-    margin:0;
-    border-radius: 5px;
-    width: 100%;
-
-    &.main {
-        border-color: $color-main;
-    }
-
-    &:focus,
-    &:hover {
-        border-color: $color-gray;
-        @include drop-shadow (0,1px,4px,0,0.1);
-    }
-}
 
 input[type="radio"],
 input[type="checkbox"] {
@@ -301,7 +280,44 @@ input:checked + label {
     }
 }
 
+textarea {
+    vertical-align: top;
+    outline: none;
+    border: 1px solid #ddd;
+    background:#f4f4f4;
+    min-height: 80px;
+    padding:10px;
+    margin:0;
+    border-radius: 5px;
+    width: 100%;
 
+    &.main {
+        border-color: $color-main;
+    }
+
+    &:focus,
+    &:hover {
+        border-color: $color-gray;
+        @include drop-shadow (0,1px,4px,0,0.1);
+    }
+}
+
+
+input[type="text"]:read-only,
+input[type="passwd"]:read-only,
+input[type="date"]:read-only,
+textarea:read-only {
+    background:#f4f4f4;
+    border:none;
+    color:#222;
+    font-weight:600;
+
+    &:focus,
+    &:hover {
+        @include drop-shadow(0,0,0,0,0);
+    }
+
+}
 
 
 /* default btn */
@@ -334,6 +350,15 @@ input:checked + label {
         height:20px;
         line-height:1;
         font-size:12px;
+    }
+
+    u {
+        display:inline-block;
+        text-decoration:none;
+        padding:0 0 0 4px;
+        opacity:0.8;
+        font-size:0.8em;
+        font-weight:200 ;
     }
 
 
@@ -407,9 +432,24 @@ table.board_list {
     th {
         border-right: 1px solid #ccc;
         border-bottom: 1px solid #ccc;
+        width:auto;
 
         &:last-of-type {
             border-right: none;
+        }
+
+        input[type="checkbox"] {
+            display:inline-block;
+            width:20px;
+            height:20px;
+        }
+
+        &.w60 {
+            width:60px;
+        }
+
+        &.w120 {
+            width:120px;
         }
     }
 
@@ -474,6 +514,24 @@ table.landscape {
 
 }
 
+div.board-tools {
+    position:relative;
+    margin:20px;
+    background:#efefef;
+    border-radius:10px;
+    padding:20px 20px 20px 140px;
+
+    h4 {
+        position:absolute;
+        left:20px;
+        top:24px;
+        margin:0;
+        font-size:16px;
+    }
+
+
+}
+
 
 
 span.pilsu {
@@ -500,7 +558,7 @@ div.rows {
 
 /* widget layout */
 div.widget {
-    display:inline-block; 
+    display:inline-block;
     vertical-align:top;
     margin:0 0 20px;
 
@@ -571,12 +629,12 @@ div.widget {
 
         div.box {
             @include pmz(10px,0);
-            
+
 
             &.weather {
                 text-align:center;
                 @include pmz(20px 0 0,0);
-                
+
                 i {
                     font-size:120px;
                 }
@@ -623,14 +681,14 @@ div.widget {
     &.gray {
         div.inline {
             background:$color-gray;
-            color:#fff; 
+            color:#fff;
         }
     }
 
     &.black {
         div.inline {
             background:$color-black;
-            color:#fff; 
+            color:#fff;
         }
     }
 
