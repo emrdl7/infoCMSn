@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>infoCMS</title>
+
+        
+        
+        <!--CSS:SKIN-->
+        <link rel="stylesheet" type="text/css" href="./style.css"/>
+
+
+
+
+
+        <link
+            href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'
+            rel='stylesheet'>
+
+
+    </head>
+
+    <body>
+
+
+
+
+
+
+
+
+
+<!--S:SKIN 요 주석 안에 있는거만 쓰면 됨 -->
+<div class="inBoard list">
+
+
+
+    <ul class="category">
+        <li>
+            <a href="">카테고리1</a>
+        </li>
+        <li>
+            <a href="">카테고리2</a>
+        </li>
+        <li>
+            <a href="">카테고리3</a>
+        </li>
+        <li>
+            <a href="">카테고리4</a>
+        </li>
+        <li>
+            <a href="">카테고리5</a>
+        </li>
+    </ul>
+
+    <fieldset>
+        <legend>게시판 검색</legend>
+
+        <label for="category">검색범위</label>
+        <span class="select-outline">
+            <select id="category">
+                <option>sdf asdf asd</option>
+            </select>
+        </span>
+
+        <label for="search-text">검색어</label>
+        <input id="search-text" type="text">
+
+        <button class="btn"><i class='bx bx-search'></i>검색</button>
+
+    </fieldset>
+
+
+
+
+    <ul class="list">
+        <li>
+            <a href="">
+                <p class="image"><img src="https://landthumb-phinf.pstatic.net/20191202_84/isale_complex_ptp_1575253323685bARNa_JPEG/uploadfile_201912024089854.jpg"></p>
+                <h4><small>카테고리명</small>기본 게시판 게시물 제목입니다.</h4>
+                <p class="num">번호 <u>1</u></p>
+                <p class="name">작성자 <u>관리자</u></p>
+                <p class="date">작성일자 <u>2020-11-03</u></p>
+                <p class="count"">조회수 <u>1234</u></p>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <p class="image"><img src="https://landthumb-phinf.pstatic.net/20191202_84/isale_complex_ptp_1575253323685bARNa_JPEG/uploadfile_201912024089854.jpg"></p>
+                <h4><small>카테고리명</small>기본 게시판 게시물 제목입니다.</h4>
+                <p class="num">번호 <u>2</u></p>
+                <p class="name">작성자 <u>관리자</u></p>
+                <p class="date">작성일자 <u>2020-11-03</u></p>
+                <p class="count"">조회수 <u>1234</u></p>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <p class="image"><img src="https://landthumb-phinf.pstatic.net/20191202_84/isale_complex_ptp_1575253323685bARNa_JPEG/uploadfile_201912024089854.jpg"></p>
+                <h4><small>카테고리명</small>기본 게시판 게시물 제목입니다.</h4>
+                <p class="num">번호 <u>3</u></p>
+                <p class="name">작성자 <u>관리자</u></p>
+                <p class="date">작성일자 <u>2020-11-03</u></p>
+                <p class="count"">조회수 <u>1234</u></p>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <p class="image"><img src="https://landthumb-phinf.pstatic.net/20191202_84/isale_complex_ptp_1575253323685bARNa_JPEG/uploadfile_201912024089854.jpg"></p>
+                <h4><small>카테고리명</small>기본 게시판 게시물 제목입니다.</h4>
+                <p class="num"><input type="checkbox"></p>
+                <p class="name">작성자 <u>관리자</u></p>
+                <p class="date">작성일자 <u>2020-11-03</u></p>
+                <p class="count"">조회수 <u>1234</u></p>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <p class="image"><img src="https://landthumb-phinf.pstatic.net/20191202_84/isale_complex_ptp_1575253323685bARNa_JPEG/uploadfile_201912024089854.jpg"></p>
+                <h4><small>카테고리명</small>기본 게시판 게시물 제목입니다.</h4>
+                <p class="num"><input type="checkbox"></p>
+                <p class="name">작성자 <u>관리자</u></p>
+                <p class="date">작성일자 <u>2020-11-03</u></p>
+                <p class="count"">조회수 <u>1234</u></p>
+            </a>
+        </li>
+    </ul>
+
+</div>
+<!--E:SKIN-->
+
+
+
+
+
+<div class="btn-set align">
+    <div class="left">
+        <button class="button">수정</button>
+        <button class="button">삭제</button>
+        <button class="button">등록</button>
+    </div>
+    <div class="right">
+        <button class="button">수정</button>
+        <button class="button">삭제</button>
+        <button class="button main">등록</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<article class="pagenation">
+
+    <a href="?pageIndex=1" title="처음으로 이동" class="jump" onclick="linkPage(1);return false; ">처음<i class="bx bx-chevrons-left " aria-hidden="true"></i></a>
+    <a href="?pageIndex=1" title="이전 페이지로 이동" class="move" onclick="linkPage(1);return false; ">이전<i class="bx bx-chevron-left " aria-hidden="true"></i></a>
+    <strong>1</strong>
+    <a href="?pageIndex=2" onclick="linkPage(2);return false; " title="2 페이지로 이동">2</a>
+    <a href="?pageIndex=3" onclick="linkPage(3);return false; " title="3 페이지로 이동">3</a>
+    <a href="?pageIndex=4" onclick="linkPage(4);return false; " title="4 페이지로 이동">4</a>
+    <a href="?pageIndex=5" onclick="linkPage(5);return false; " title="5 페이지로 이동">5</a>
+    <a href="?pageIndex=11" title="다음 페이지로 이동" class="move" onclick="linkPage(6);return false; ">다음<i class="bx bx-chevron-right" aria-hidden="true"></i></a>
+    <a href="?pageIndex=17" title="마지막 페이지로 이동" class="jump" onclick="linkPage(17);return false; ">마지막<i class="bx bx-chevrons-right" aria-hidden="true"></i></a>
+
+
+ </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+</html>
