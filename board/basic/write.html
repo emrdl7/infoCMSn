@@ -12,7 +12,7 @@
         
         
         <!--CSS:SKIN-->
-        <link rel="stylesheet" type="text/css" href="./style.css"/>
+        <link rel="stylesheet" type="text/css" href="./board.css"/>
 
 
 
@@ -38,28 +38,32 @@
 <!--S:SKIN 요 주석 안에 있는거만 쓰면 됨 -->
 <div class="inBoard write">
 
-    <div class="bead-box">
+    <div class="board-box">
 
 
-        <label for="category">카테고리 선택</label>
-        <span class="select-outline">
-            <select id="category">
-                <option>카테고리</option>
-            </select>
+        <div class="line">
+            <label for="category">카테고리</label>
+            <span class="select-outline">
+                <select id="category">
+                    <option>카테고리</option>
+                </select>
+            </span>
+        </div>
+
+
+        <div class="line">
             <label for="title">제목</label>
             <input id="title" type="text">
-        </span>
-
-
+        </div>
 
         <ul class="info">
             <li class="name">
                 <label for="name">이름</label>
-                <input id="name" class="main" type="text">
+                <input id="name" type="text">
             </li>
             <li class="pass">
                 <label for="pass">비밀번호</label>
-                <input id="pass" class="main" type="password">
+                <input id="pass"" type="password">
             </li>
             <li class="notice">
                 <input id="notice" type="checkbox">
@@ -74,11 +78,9 @@
 
     <hr>
 
-    <div class="bead-text">
+    <div class="board-text">
         <label for="text">내용</label>
-        <textarea id="text">
-            야옹
-        </textarea>
+        <textarea id="text">야옹</textarea>
     </div>
 
 
@@ -92,10 +94,12 @@
             <li>
                 <i class='bx bx-file'></i>
                 <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
+                <button><i class='bx bx-x'></i>첨부파일 삭제</button>
             </li>
             <li>
                 <i class='bx bx-file'></i>
                 <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
+                <button><i class='bx bx-x'></i>첨부파일 삭제</button>
             </li>
         </ul>
 

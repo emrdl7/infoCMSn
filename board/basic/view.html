@@ -12,7 +12,7 @@
         
         
         <!--CSS:SKIN-->
-        <link rel="stylesheet" type="text/css" href="./style.css"/>
+        <link rel="stylesheet" type="text/css" href="./board.css"/>
 
 
 
@@ -38,7 +38,7 @@
 <!--S:SKIN 요 주석 안에 있는거만 쓰면 됨 -->
 <div class="inBoard view">
 
-    <div class="bead-box">
+    <div class="board-box">
         <h4><small>카테고리명</small> 기본 게시판 게시물 제목입니다.</h4>
         <ul class="info">
             <li class="name">작성자 <u>관리자</u></li>
@@ -49,7 +49,7 @@
 
     <hr>
 
-    <div class="bead-text">
+    <div class="board-text">
         <p>asdfasdf assdfasdf</p>
         <p>asdfasdf</p>
         <p>asdfasdf assdfasdf</p>
@@ -89,223 +89,247 @@
         </li>
     </ul>
 
+
+
+
+
+
+
+
+
+
+
+    <div class="reply">
+
+
+        <fieldset class="reply-input">
+            <legend>댓글입력폼</legend>
+            
+            <div class="line">
+                <label for="reply-name">이름</label>
+                <input id="reply-name" type="text">
+            </div>
+                
+            <div class="line">
+                <label for="reply-pass">비밀번호</label>
+                <input id="reply-pass" type="password">
+            </div>
+
+            <div class="rating">
+                <h5>별점입력</h5>
+                <input name="rating" id="rating01" type="radio"><label for="rating01">1점</label>
+                <input name="rating" id="rating02" type="radio"><label for="rating02">2점</label>
+                <input name="rating" id="rating03" type="radio"><label for="rating03">3점</label>
+                <input name="rating" id="rating04" type="radio"><label for="rating04">4점</label>
+                <input name="rating" id="rating05" type="radio"><label for="rating05">5점</label>
+            </div>
+    
+            <div class="tools"">
+                <label for="tools01">비밀글</label>
+                <input name="Secret" id="tools01" type="checkbox">
+            </div>
+    
+
+                
+            <div class="line">
+                <label for="reply-title">제목</label>
+                <input id="reply-title" type="text">
+            </div>
+    
+
+                
+            <div class="line">
+                <label for="reply-text">내용</label>
+                <textarea id="reply-text">야옹</textarea>
+            </div>
+    
+
+                
+            <button class="btn">파일첨부</button>
+            <button class="btn main"><i class='bx bxs-pencil' ></i>등록</button>
+    
+        </fieldset>
+    
+        <ul class="list">
+            <li>
+                <h5>댓글 제목입니다.</h5>
+                <div class="text">
+                    댓글 내용입니다. 댓글 내용입니다.
+                </div>
+    
+    
+                <ul class="file">
+                    <li>
+                        <i class='bx bx-file'></i>
+                        <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
+                    </li>
+                    <li>
+                        <i class='bx bx-file'></i>
+                        <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
+                    </li>
+                </ul>
+    
+                <ul class="link">
+                    <li>
+                        <i class='bx bx-link'></i>
+                        <a href="" title="http://daum.net">http://daum.net</a>
+                    </li>
+                    <li>
+                        <i class='bx bx-link'></i>
+                        <a href="" title="http://daum.net">http://daum.net</a>
+                    </li>
+                </ul>
+    
+                <div class="btn-set right">
+                    <button class="btn">수정</button>
+                    <button class="btn">삭제</button>
+                </div>
+            
+            </li>
+            <li>
+                <h5>댓글 제목입니다.</h5>
+                <div class="text">
+                    댓글 내용입니다. 댓글 내용입니다.
+                </div>
+    
+    
+                <ul class="file">
+                    <li>
+                        <i class='bx bx-file'></i>
+                        <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
+                    </li>
+                    <li>
+                        <i class='bx bx-file'></i>
+                        <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
+                    </li>
+                </ul>
+    
+                <ul class="link">
+                    <li>
+                        <i class='bx bx-link'></i>
+                        <a href="" title="http://daum.net">http://daum.net</a>
+                    </li>
+                    <li>
+                        <i class='bx bx-link'></i>
+                        <a href="" title="http://daum.net">http://daum.net</a>
+                    </li>
+                </ul>
+    
+                <div class="btn-set right">
+                    <button class="btn">수정</button>
+                    <button class="btn">삭제</button>
+                </div>
+            
+            </li>
+            <li>
+                <h5>댓글 제목입니다.</h5>
+                <div class="text">
+                    댓글 내용입니다. 댓글 내용입니다.
+                </div>
+    
+    
+                <ul class="file">
+                    <li>
+                        <i class='bx bx-file'></i>
+                        <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
+                    </li>
+                    <li>
+                        <i class='bx bx-file'></i>
+                        <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
+                    </li>
+                </ul>
+    
+                <ul class="link">
+                    <li>
+                        <i class='bx bx-link'></i>
+                        <a href="" title="http://daum.net">http://daum.net</a>
+                    </li>
+                    <li>
+                        <i class='bx bx-link'></i>
+                        <a href="" title="http://daum.net">http://daum.net</a>
+                    </li>
+                </ul>
+    
+                <div class="btn-set right">
+                    <button class="btn">수정</button>
+                    <button class="btn">삭제</button>
+                </div>
+            
+            </li>
+            <li>
+                <h5>댓글 제목입니다.</h5>
+                <div class="text">
+                    댓글 내용입니다. 댓글 내용입니다.
+                    댓글 내용입니다. 댓글 내용입니다.
+                    댓글 내용입니다. 댓글 내용입니다.
+                    댓글 내용입니다. 댓글 내용입니다.
+                    댓글 내용입니다. 댓글 내용입니다.
+                    댓글 내용입니다. 댓글 내용입니다.
+    
+                </div>
+    
+    
+                <ul class="file">
+                    <li>
+                        <i class='bx bx-file'></i>
+                        <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
+                    </li>
+                    <li>
+                        <i class='bx bx-file'></i>
+                        <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
+                    </li>
+                </ul>
+    
+                <ul class="link">
+                    <li>
+                        <i class='bx bx-link'></i>
+                        <a href="" title="http://daum.net">http://daum.net</a>
+                    </li>
+                    <li>
+                        <i class='bx bx-link'></i>
+                        <a href="" title="http://daum.net">http://daum.net</a>
+                    </li>
+                </ul>
+    
+                <div class="btn-set right">
+                    <button class="btn">수정</button>
+                    <button class="btn">삭제</button>
+                </div>
+            
+            </li>
+        </ul>
+    
+    
+    
+    </div>
+    
+    
+    <div class="btn-set align">
+        <div class="left">
+            <button class="button">수정</button>
+            <button class="button">삭제</button>
+            <button class="button main">등록</button>
+        </div>
+        <div class="right">
+            <button class="button">수정</button>
+            <button class="button">삭제</button>
+            <button class="button main">등록</button>
+        </div>
+    </div>
+    
+
+
 </div>
 
 
-<div class="reply">
 
 
-    <fieldset>
-        <legend>댓글입력폼</legend>
-
-        <label for="reply-name">이름</label>
-        <input id="reply-name" type="text">
-
-        <label for="reply-pass">비밀번호</label>
-        <input id="reply-pass" type="password">
-
-        <div class="rating">
-            <input name="rating" id="rating01" type="radio"><label for="rating01">1점</label>
-            <input name="rating" id="rating02" type="radio"><label for="rating02">2점</label>
-            <input name="rating" id="rating03" type="radio"><label for="rating03">3점</label>
-            <input name="rating" id="rating04" type="radio"><label for="rating04">4점</label>
-            <input name="rating" id="rating05" type="radio"><label for="rating05">5점</label>
-        </div>
-
-        <div class="tools"">
-            <input name="Secret" id="tools01" type="checkbox"><label for="tools01">비밀글</label>
-        </div>
-
-
-        <label for="reply-title">제목</label>
-        <input id="reply-title" type="text">
-
-
-        <label for="reply-text">내용</label>
-        <textarea id="reply-text">
-            야옹
-        </textarea>
-        <button>파일첨부</button>
-
-        <button class="button"><i class='bx bxs-pencil' ></i>등록</button>
-
-    </fieldset>
-
-    <ul class="list">
-        <li>
-            <h5>댓글 제목입니다.</h5>
-            <div class="text">
-                댓글 내용입니다. 댓글 내용입니다.
-            </div>
-
-
-            <ul class="file">
-                <li>
-                    <i class='bx bx-file'></i>
-                    <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
-                </li>
-                <li>
-                    <i class='bx bx-file'></i>
-                    <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
-                </li>
-            </ul>
-
-            <ul class="link">
-                <li>
-                    <i class='bx bx-link'></i>
-                    <a href="" title="http://daum.net">http://daum.net</a>
-                </li>
-                <li>
-                    <i class='bx bx-link'></i>
-                    <a href="" title="http://daum.net">http://daum.net</a>
-                </li>
-            </ul>
-
-            <div class="btn-set">
-                <button class="btn">수정</button>
-                <button class="btn">삭제</button>
-            </div>
-        
-        </li>
-        <li>
-            <h5>댓글 제목입니다.</h5>
-            <div class="text">
-                댓글 내용입니다. 댓글 내용입니다.
-            </div>
-
-
-            <ul class="file">
-                <li>
-                    <i class='bx bx-file'></i>
-                    <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
-                </li>
-                <li>
-                    <i class='bx bx-file'></i>
-                    <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
-                </li>
-            </ul>
-
-            <ul class="link">
-                <li>
-                    <i class='bx bx-link'></i>
-                    <a href="" title="http://daum.net">http://daum.net</a>
-                </li>
-                <li>
-                    <i class='bx bx-link'></i>
-                    <a href="" title="http://daum.net">http://daum.net</a>
-                </li>
-            </ul>
-
-            <div class="btn-set">
-                <button class="btn">수정</button>
-                <button class="btn">삭제</button>
-            </div>
-        
-        </li>
-        <li>
-            <h5>댓글 제목입니다.</h5>
-            <div class="text">
-                댓글 내용입니다. 댓글 내용입니다.
-            </div>
-
-
-            <ul class="file">
-                <li>
-                    <i class='bx bx-file'></i>
-                    <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
-                </li>
-                <li>
-                    <i class='bx bx-file'></i>
-                    <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
-                </li>
-            </ul>
-
-            <ul class="link">
-                <li>
-                    <i class='bx bx-link'></i>
-                    <a href="" title="http://daum.net">http://daum.net</a>
-                </li>
-                <li>
-                    <i class='bx bx-link'></i>
-                    <a href="" title="http://daum.net">http://daum.net</a>
-                </li>
-            </ul>
-
-            <div class="btn-set">
-                <button class="btn">수정</button>
-                <button class="btn">삭제</button>
-            </div>
-        
-        </li>
-        <li>
-            <h5>댓글 제목입니다.</h5>
-            <div class="text">
-                댓글 내용입니다. 댓글 내용입니다.
-                댓글 내용입니다. 댓글 내용입니다.
-                댓글 내용입니다. 댓글 내용입니다.
-                댓글 내용입니다. 댓글 내용입니다.
-                댓글 내용입니다. 댓글 내용입니다.
-                댓글 내용입니다. 댓글 내용입니다.
-
-            </div>
-
-
-            <ul class="file">
-                <li>
-                    <i class='bx bx-file'></i>
-                    <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
-                </li>
-                <li>
-                    <i class='bx bx-file'></i>
-                    <a href="" title="야옹야옹.hwp">야옹야옹.hwp</a>
-                </li>
-            </ul>
-
-            <ul class="link">
-                <li>
-                    <i class='bx bx-link'></i>
-                    <a href="" title="http://daum.net">http://daum.net</a>
-                </li>
-                <li>
-                    <i class='bx bx-link'></i>
-                    <a href="" title="http://daum.net">http://daum.net</a>
-                </li>
-            </ul>
-
-            <div class="btn-set">
-                <button class="btn">수정</button>
-                <button class="btn">삭제</button>
-            </div>
-        
-        </li>
-    </ul>
-
-
-
-</div>
 
 
 
 
 
 <!--E:SKIN-->
-
-
-
-
-
-<div class="btn-set align">
-    <div class="left">
-        <button class="button">수정</button>
-        <button class="button">삭제</button>
-        <button class="button main">등록</button>
-    </div>
-    <div class="right">
-        <button class="button">수정</button>
-        <button class="button">삭제</button>
-        <button class="button main">등록</button>
-    </div>
-</div>
 
 
 
