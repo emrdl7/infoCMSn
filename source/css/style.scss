@@ -61,13 +61,20 @@ body {
         width:100%;
         min-width:auto;
 
+        // h1 {
+        //     display:block;
+        //     font-size:0;
+        //     width:248px;
+        //     height:96px;
+        //     background:url('../images/logo.svg') no-repeat center / 100% auto;
+        //     @include pmz(0,0 auto 50px);
+        // }
         h1 {
             display:block;
-            font-size:0;
-            width:248px;
-            height:96px;
-            background:url('../images/logo.svg') no-repeat center / 100% auto;
-            @include pmz(0,0 auto 50px);
+            font-size:52px;
+            text-align:center;
+            color:$color-main;
+
         }
 
         div.login-tab {
