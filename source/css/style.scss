@@ -70,83 +70,131 @@ body {
             @include pmz(0,0 auto 50px);
         }
 
-        input[type="text"],
-        input[type="password"] {
-            display:block;
-            width:280px;
-            height:56px;
-            border:none;
-            color:#fff;
-            background:$color-gray;
-            outline:none;
-            border-radius:5px;
-            @include pmz(0 10px,0 auto 6px);
-            font-size:18px;
-            font-weight:800;
+        div.login-tab {
+            font-size:0;
+            border-radius:100px;
+            margin:0 0 20px;
+            padding:5px;
+            text-align:center;
+            background:#ccc;
 
-            @include ani();
-
-            &::placeholder {
-                color:#999;
+            label {
+                display:inline-block;
+                padding:10px 5px;
+                margin:0;
+                text-align:center;
+                color:#666;
+                border-radius:100px;
                 font-weight:400;
             }
 
-            &:focus {
-                @include inner-shadow(0,-4px,0, 0, 0.5);
-
-                background:$color-black;
-                @include ani();
-            }
-        }
-
-        div.custom-checkbox {
-
-            @include pmz(0,20px 0);
-            text-align:center;
-
-            input {
-                display:none;
-            }
-
-            label {
-                position:relative;
-                font-size:16px;
-                @include pmz(0 10px 0 28px,20px 0);
-
-                i {
-                    position:absolute;
-                    left:0;
-                    top:-4px;
-                    color:#ccc;
-                    font-size:26px;
-                }
-            }
-
             input:checked + label {
-                color:$color-main;
+                color:#fff;
+                background:$color-main;
+                padding:12px 5px 10px;
+                border-color:#ccc;
+            }
 
-                i {
-                    color:$color-main;
+            input:checked + label + input + label {
+                border-left-color:#555;
+            }
+
+            &.item3 {
+                label {
+                    width:calc(100% / 3);
                 }
             }
+
+            &.item2 {
+                label {
+                    width:calc(100% / 2);
+                }
+            }
+
         }
 
-        button {
-            display:block;
-            width:280px;
-            height:56px;
-            border:none;
-            color:#fff;
-            background:$color-main;
-            border-radius:5px;
-            font-size:18px;
-            font-weight:800;
-            @include ani();
+        div.outline {
+            padding:20px;
 
-            &:hover {
-                background:darken($color-main, 20%);
+            input[type="text"],
+            input[type="password"] {
+                display:block;
+                width:280px;
+                height:56px;
+                border:none;
+                color:#fff;
+                background:$color-gray;
+                outline:none;
+                border-radius:5px;
+                @include pmz(0 10px,0 auto 6px);
+                font-size:18px;
+                font-weight:800;
+    
                 @include ani();
+    
+                &::placeholder {
+                    color:#999;
+                    font-weight:400;
+                }
+    
+                &:focus {
+                    @include inner-shadow(0,-4px,0, 0, 0.5);
+    
+                    background:$color-black;
+                    @include ani();
+                }
             }
+    
+            div.custom-checkbox {
+    
+                @include pmz(0,20px 0);
+                text-align:center;
+    
+                input {
+                    display:none;
+                }
+    
+                label {
+                    position:relative;
+                    font-size:16px;
+                    @include pmz(0 10px 0 28px,20px 0);
+    
+                    i {
+                        position:absolute;
+                        left:0;
+                        top:-4px;
+                        color:#ccc;
+                        font-size:26px;
+                    }
+                }
+    
+                input:checked + label {
+                    color:$color-main;
+    
+                    i {
+                        color:$color-main;
+                    }
+                }
+            }
+    
+            button {
+                display:block;
+                width:280px;
+                height:56px;
+                border:none;
+                color:#fff;
+                background:$color-main;
+                border-radius:5px;
+                font-size:18px;
+                font-weight:800;
+                @include ani();
+    
+                &:hover {
+                    background:darken($color-main, 20%);
+                    @include ani();
+                }
+            }
+
         }
 
         p.copyright {
