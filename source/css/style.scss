@@ -77,13 +77,15 @@ body {
             padding:5px;
             text-align:center;
             background:#ccc;
+            
+            @include inner-shadow ($x:0,$y: 0, $blur: 10px, $spread: 2px, $alpha: 0.1)
 
             label {
                 display:inline-block;
                 padding:10px 5px;
                 margin:0;
                 text-align:center;
-                color:#666;
+                color:#333;
                 border-radius:100px;
                 font-weight:400;
             }
@@ -93,6 +95,8 @@ body {
                 background:$color-main;
                 padding:12px 5px 10px;
                 border-color:#ccc;
+
+                @include drop-shadow;
             }
 
             input:checked + label + input + label {
