@@ -1,7 +1,6 @@
 // out: ./styl.css, compress: true, sourceMap: false
-@import "normalize", "rem", "font", "color", "mixin", "default";
+@import "normalize", "rem", "font", "color", "mixin", "default", "grid", "modal";
 //@import "fontello.css";
-
 
 
 html {
@@ -17,7 +16,7 @@ body {
     font-family: $myfont, "Malgun Gothic", "apple sd gothic neo", sans-serif;
     color: $text-color;
     position:relative;
-    min-width:1180px;
+    min-width:800px;
     height:100vh;
 
 
@@ -84,7 +83,7 @@ body {
             padding:5px;
             text-align:center;
             background:#eee;
-            
+
             @include inner-shadow ($x:0,$y: 0, $blur: 10px, $spread: 2px, $alpha: 0.1);
 
             label {
@@ -140,36 +139,36 @@ body {
                 @include pmz(0 10px,0 auto 6px);
                 font-size:18px;
                 font-weight:800;
-    
+
                 @include ani();
-    
+
                 &::placeholder {
                     color:#999;
                     font-weight:400;
                 }
-    
+
                 &:focus {
                     @include inner-shadow(0,-4px,0, 0, 0.5);
-    
+
                     background:$color-black;
                     @include ani();
                 }
             }
-    
+
             div.custom-checkbox {
-    
+
                 @include pmz(0,20px 0);
                 text-align:center;
-    
+
                 input {
                     display:none;
                 }
-    
+
                 label {
                     position:relative;
                     font-size:16px;
                     @include pmz(0 10px 0 28px,20px 0);
-    
+
                     i {
                         position:absolute;
                         left:0;
@@ -178,16 +177,16 @@ body {
                         font-size:26px;
                     }
                 }
-    
+
                 input:checked + label {
                     color:$color-main;
-    
+
                     i {
                         color:$color-main;
                     }
                 }
             }
-    
+
             button {
                 display:block;
                 width:280px;
@@ -199,7 +198,7 @@ body {
                 font-size:18px;
                 font-weight:800;
                 @include ani();
-    
+
                 &:hover {
                     background:darken($color-main, 20%);
                     @include ani();
@@ -226,12 +225,17 @@ body {
 
 
 
+p.coding-guide {
+    background:#efefef;
+    border:2px solid #000;
+    padding:20px;
+    margin:20px 0;
+}
 
 
 
 
-
-    div.sub {
+    div.subView {
         font-size:14px;
         min-height:320px;
         overflow:hidden;
@@ -239,7 +243,7 @@ body {
         h3.btitle {
             font-size:16px;
             font-weight:400;
-            background:$color-main - #ccc;
+            background: darken($color-main, 30%);
             @include pmz(10px,0);
             color:#fff;
             border-radius:8px 8px 0 0;
@@ -438,7 +442,7 @@ body {
 
         display: -webkit-flex;
         display: flex;
-        background:$color-main - #999;
+        background: darken($color-main, 30%);
 
 
 
@@ -576,6 +580,8 @@ body {
 
             iframe {
                 border:none;
+                width:100%;
+                height:calc(100vh - 120px);
             }
 
 
@@ -597,7 +603,6 @@ body {
                     border:none;
                     background:#333;
                     color:#fff;
-                    font-size:28px;
 
                     &.left {
                         left:0;
@@ -605,6 +610,11 @@ body {
 
                     &.right {
                         right:0;
+                    }
+
+                    i {
+                        font-size:34px;
+
                     }
                 }
 
@@ -668,28 +678,40 @@ body {
 
             div.toolarea {
                 position:absolute;
-                right:20px;
-                top:84px;
-                font-size:0;
+                right:0;
+                top:0;
+                font-size:14px;
 
                 button {
+                    display:inline-block;
+                    position:relative;
                     vertical-align:top;
                     background:rgba(0,0,0,0.1);
-                    @include pmz(3px,0 0 0 4px);
+                    @include pmz(3px 10px 3px 30px,0 0 0 4px);
                     border:none;
-                    color:rgba(0,0,0,0.3);
+                    color:#555;
                     border-radius:5px;
-                    width:34px;
+                    width:auto;
                     height:34px;
+                    line-height:1;
+
 
                     svg {
                         fill:rgba(0,0,0,0.3);
-                        width:100%;
+                        width:20px;
                         height:auto;
                     }
 
                     i {
-                        font-size:28px;
+                        margin-right:6px;
+                    }
+
+                    svg,
+                    i {
+                        position:absolute;
+                        left:8px;
+                        top:8px;
+                        font-size:16px;
                     }
 
                     &:hover {
@@ -704,25 +726,21 @@ body {
 
                     &.color-main {
                         background:$color-main;
+                        color:#fff;
 
-                        i {
-                            color:#fff;
-                        }
 
                         &:hover {
-                            background:$color-main - #222;
+                            background: darken($color-main, 30%);
                         }
                     }
 
                     &.color-gray {
                         background:$color-gray;
+                        color:#fff;
 
-                        i {
-                            color:#fff;
-                        }
 
                         &:hover {
-                            background:$color-gray - #111;
+                            background: darken($color-gray, 30%);
                         }
                     }
                 }
@@ -730,10 +748,39 @@ body {
 
             nav.navigation {
                 position: absolute;
-                right: 20px;
-                top: 0;
-                font-size:15px;
-                color:#555;
+                left: 0;
+                top: 40px;
+                font-size:12px;
+                color:#999;
+
+                ol {
+                    margin:0;
+                    padding:0;
+                    list-style:none;
+
+                    li {
+                        display:inline-block;
+
+                        &::after {
+                            content:"/";
+                            padding:0 2px;
+                        }
+
+                        &:last-child {
+                            &::after {
+                                display:none;
+                            }
+                        }
+
+                        &.active {
+                            font-weight:800;
+                        }
+
+                        a {
+                            color:#999;
+                        }
+                    }
+                }
 
                 i {
                     position:relative;
@@ -747,12 +794,13 @@ body {
             div.subView {
 
                 h2.stitle {
-                    @include pmz(0,0 0 18px 0);
+                    @include pmz(0,0 0 26px 0);
+                    @include pmz(0,0 0 26px 0);
                     font-size:22px;
 
                     i {
                         margin-right:8px;
-                        color:$color-main - #222;
+                        color: darken($color-main, 30%);
                         font-size:30px;
                         vertical-align:middle;
                     }
@@ -773,7 +821,7 @@ body {
         line-height:50px;
         text-align:center;
         color:#fff;
-        background:$color-main - #444;
+        background: darken($color-main, 30%);
 
         p {
             @include pmz(0,0);
@@ -795,7 +843,7 @@ body {
                     color:#fff;
 
                     small {
-                        color:$color-main + #999;
+                        color: lighten($color-main, 30%);
                     }
                 }
             }
@@ -803,14 +851,14 @@ body {
             p.welcome {
                 color:#fff;
                 strong {
-                    color:$color-main + #bbb;
+                    color: lighten($color-main, 30%);
 
                 }
             }
 
             button.menu {
                 width:210px;
-                background:$color-main - #333;
+                background:darken($color-main, 30%);
                 @include ani(0.4s);
 
 
@@ -841,7 +889,7 @@ body {
 
             button.logout {
                 color:#fff;
-                background:$color-main - #333;
+                background:darken($color-main, 30%);
             }
         }
         div#content {
@@ -911,7 +959,7 @@ body {
                                 h3{
                                     a {
 
-                                        color:$color-main + #666;
+                                        color:lighten($color-main, 30%);
                                         font-weight:bolder;
                                         position:relative;
                                         background:rgba(255,255,255,0.2);
@@ -1039,7 +1087,7 @@ body {
                                             max-height:1000px;
                                             padding:10px 10px 10px 26px;
                                             margin:0;
-                                            background:$color-main - #bbb;
+                                            background:darken($color-main, 30%);
 
                                             &.on {
                                                 display:block;

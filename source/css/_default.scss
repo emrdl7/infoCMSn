@@ -150,7 +150,7 @@ span.select-outline + label.before  {
 }
 
 input[type="text"],
-input[type="passwd"],
+input[type="password"],
 input[type="date"],
 select {
     vertical-align: top;
@@ -260,7 +260,7 @@ input[type="radio"] + label,
 input[type="checkbox"] + label {
     position: relative;
     font-size: 14px;
-    @include pmz(0 10px 0 28px,20px 0);
+    @include pmz(0 10px 0 28px,0 0);
 
     i {
         position: absolute;
@@ -324,7 +324,7 @@ textarea:read-only {
 .button,
 .btn {
     display:inline-block;
-    vertical-align: top;
+    vertical-align: baseline;
     outline: none;
     border: 1px solid #ccc;
     background:#fff;
@@ -345,11 +345,16 @@ textarea:read-only {
         color:#fff;
         border-color:transparent;
     }
+    &.btn-ms {
+        line-height:26px;
+        font-size:13px;
+        padding:0 15px;
+    }
 
     &.btn-xs {
-        height:20px;
-        line-height:1;
+        line-height:20px;
         font-size:12px;
+        padding:0 10px;
     }
 
     u {
@@ -560,7 +565,8 @@ div.rows {
 div.widget {
     display:inline-block;
     vertical-align:top;
-    margin:0 0 20px;
+    margin:0 0 10px;
+    padding:0 5px; 
 
     &.c02 {
         width:calc((100% / 12) * 2);
@@ -606,11 +612,6 @@ div.widget {
         width:calc((100% / 12) * 7);
     }
 
-
-    & + div {
-        padding-left:10px;
-    }
-
     div.inline {
         font-size:14px;
         background:#fff;
@@ -621,10 +622,34 @@ div.widget {
 
         h3 {
             @include pmz(0 10px,0);
+            font-weight:400;
             line-height:42px;
             background:rgba(0,0,0,0.02);
             border-bottom:1px solid rgba(0,0,0,0.06);
             font-size:16px;
+            letter-spacing:-1px;
+
+            small {
+                display:block;
+                float:right;
+                color:#999;
+
+            }
+
+            button {
+                vertical-align:top;
+                border:none;
+                margin:0;
+                padding:0;
+                background:none;
+                font-size:0;
+                color:#999;
+
+                i {
+                    font-size:22px;
+                    line-height:inherit;
+                }
+            }
         }
 
         div.box {
@@ -642,6 +667,110 @@ div.widget {
                 p {
                     font-size:26px;
                     font-weight:800;
+                }
+            }
+
+            &.calc {
+                ul {
+                    list-style:none;
+                    padding:0;
+                    margin:0;
+
+                    li {
+                        float:left;
+                        width:calc(100% - 20px);
+                        border-bottom:1px solid #eee;
+                        padding:10px 0;
+                        margin:0 10px;
+                        
+                        &:last-child {
+                            border:none;
+                        }
+
+                        span {
+                            display:block;
+                            float:left;
+                            font-size:16px;
+
+                            i {
+                                position:relative;
+                                top:2px;
+                                font-size:22px;
+                                margin:0 6px 0 0;
+                            }
+                        }
+                        strong {
+                            float:right;
+                            font-size:18px;
+                            color:#fff1b7;
+                            font-weight:400;
+
+                            u {
+                                text-decoration:none;
+                                font-size:22px;
+                                font-weight:800;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.table {
+                @include pmz(0,0);
+
+                table {
+                    width:100%;
+                    border-top:1px solid rgba(0,0,0,0.6);
+
+                    th,
+                    td {
+                        border-right:1px solid rgba(0,0,0,0.6);
+                        border-bottom:1px solid rgba(0,0,0,0.6);
+                        text-align:center;
+                        padding:10px 0;
+
+                        &:last-child {
+                            border-right:none;
+                        }
+                    }
+
+                    th {
+                        background:rgba(0,0,0,0.4);
+                    }
+
+                    td {
+                        font-weight:800;
+                        font-size:22px;
+                        color:#fff;
+                    }
+                }
+            }
+
+            &.board {
+                padding:0;
+
+                ul {
+                    list-style:none;
+                    margin:0;
+                    padding:0;
+
+                    li {
+                        position:relative;
+                        padding:10px 20px;
+                        border-bottom:1px solid #efefef;
+
+                        &:last-child {
+                            border:none;
+                        }
+
+                        i {
+                            font-style:normal;
+                            position:absolute;
+                            right:20px;
+                            color:#999;
+                        }
+                    }
+                    
                 }
             }
         }
@@ -675,6 +804,16 @@ div.widget {
         div.inline {
             background:$color-main;
             color:#fff;
+
+            h3 {
+                background:darken($color-main, 10%);
+
+                small {
+                    color:#fff;
+                    opacity:0.6;
+                
+                }
+            }
         }
     }
 
@@ -689,6 +828,30 @@ div.widget {
         div.inline {
             background:$color-black;
             color:#fff;
+
+            h3 {
+                background:#333;
+
+                small {
+                    color:#ccc;
+                }
+            }
+        
+        }
+    }
+
+    &.gray-l {
+        div.inline {
+            background:$color-gray-l;
+            color:#fff;
+
+            h3 {
+                background:#555;
+
+                small {
+                    color:#ccc;
+                }
+            }
         }
     }
 
