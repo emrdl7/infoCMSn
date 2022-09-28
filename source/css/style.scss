@@ -171,6 +171,18 @@ body {
 
             }
 
+            input + input[type=submit] {
+                width:85px;
+                height:56px;
+                border:none;
+                border-radius:5px;
+                font-size:18px;
+                background:#333;
+                color:#fff;
+                margin-left:5px;
+
+            }
+
             div.custom-checkbox {
 
                 @include pmz(0,20px 0);
@@ -204,6 +216,24 @@ body {
             }
 
             button[type=submit] {
+                display:inline-block;
+                width:280px;
+                height:56px;
+                border:none;
+                color:#fff;
+                background:$color-main;
+                border-radius:5px;
+                font-size:18px;
+                font-weight:800;
+                @include ani();
+
+                &:hover {
+                    background:darken($color-main, 20%);
+                    @include ani();
+                }
+            }
+
+            input[type=submit] {
                 display:inline-block;
                 width:280px;
                 height:56px;

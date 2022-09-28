@@ -2111,6 +2111,16 @@ body.login div.outline input + button {
   color: #fff;
   margin-left: 5px;
 }
+body.login div.outline input + input[type=submit] {
+  width: 85px;
+  height: 56px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  background: #333;
+  color: #fff;
+  margin-left: 5px;
+}
 body.login div.outline div.custom-checkbox {
   margin: 20px 0;
   padding: 0;
@@ -2151,6 +2161,22 @@ body.login div.outline button[type=submit] {
   transition: all 0.1s ease;
 }
 body.login div.outline button[type=submit]:hover {
+  background: #031a1b;
+  transition: all 0.1s ease;
+}
+body.login div.outline input[type=submit] {
+  display: inline-block;
+  width: 280px;
+  height: 56px;
+  border: none;
+  color: #fff;
+  background: #0d7377;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 800;
+  transition: all 0.1s ease;
+}
+body.login div.outline input[type=submit]:hover {
   background: #031a1b;
   transition: all 0.1s ease;
 }
