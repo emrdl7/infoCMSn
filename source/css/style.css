@@ -976,6 +976,8 @@ div.widget.fullbox div.inline div.calc-item ul {
 }
 div.widget.fullbox div.inline div.calc-item ul li {
   position: relative;
+  float: left;
+  width: 100%;
 }
 div.widget.fullbox div.inline div.calc-item ul li span {
   display: block;
