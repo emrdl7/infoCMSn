@@ -159,7 +159,7 @@ select {
     height: 36px;
     border-radius: 5px;
     padding:0 10px;
-    margin:0;
+    margin:2px 0;
 
     &.main {
         border-color: $color-main;
@@ -187,8 +187,40 @@ select {
         width:200px;
     }
 
+    &.w300 {
+        width:300px;
+    }
+
     &.w400 {
         width:400px;
+    }
+
+    &.w500 {
+        width:500px;
+    }
+
+    &.w500 {
+        width:500px;
+    }
+
+    &.w600 {
+        width:600px;
+    }
+
+    &.w700 {
+        width:700px;
+    }
+
+    &.w800 {
+        width:800px;
+    }
+
+    &.w900 {
+        width:900px;
+    }
+
+    &.w1000 {
+        width:1000px;
     }
 
     &.wfull {
@@ -219,7 +251,7 @@ span.select-outline {
     &::after {
         content:"";
         position:absolute;
-        top:17px;
+        top:19px;
         display:block;
         width:8px;
         height:1px;
@@ -246,6 +278,31 @@ span.select-outline {
         &::after {
             transform: rotate(45deg);
         }
+
+    }
+}
+
+div.radio-field {
+    background:#efefef;
+    display:inline-block;
+    padding:5px;
+    border-radius:5px;
+
+    input + label {
+        display:inline-block;
+        border-radius:3px;
+        padding:5px 10px;
+
+    }
+
+    input:checked + label {
+        background:$color-main;
+        color:#fff;
+        font-weight:normal;
+        border-bottom:2px solid rgba(0,0,0,0.4);
+        padding:5px 10px;
+
+
 
     }
 }
@@ -308,7 +365,7 @@ input[type="passwd"]:read-only,
 input[type="date"]:read-only,
 textarea:read-only {
     background:#f4f4f4;
-    border:none;
+    border:1px solid #ccc;
     color:#222;
     font-weight:600;
 
@@ -331,7 +388,7 @@ textarea:read-only {
     line-height: 34px;
     border-radius: 5px;
     padding:0 20px;
-    margin:0 2px;
+    margin:2px;
     font-size:14px;
 
     &.main {
@@ -461,8 +518,10 @@ table.board_list {
     thead {
         tr {
             th {
-                padding: 8px 0;
+                padding: 8px 4px;
                 background: #e4e4e4;
+                word-break:keep-all;
+                white-space:nowrap;
             }
         }
     }
@@ -500,6 +559,7 @@ table.landscape {
     th {
         padding: 8px 0;
         background: #e4e4e4;
+        min-width:130px;
     }
     td {
         padding: 8px;
@@ -563,10 +623,11 @@ div.rows {
 
 /* widget layout */
 div.widget {
-    display:inline-block;
+    display:block;
+    float:left;
     vertical-align:top;
     margin:0 0 10px;
-    padding:0 5px; 
+    padding:0 5px;
 
     &.c02 {
         width:calc((100% / 12) * 2);
@@ -605,90 +666,11 @@ div.widget {
     }
 
     &.c11 {
-        width:calc((100% / 12) * 11);
+        width:calc((100% / 12) * 7);
     }
 
     &.c12 {
-        width:calc((100% / 12) * 12);
-    }
-
-    &.fullbox {
-        position:relative;
-        background:#aaa;
-        padding:40px 40px 20px;
-        width:calc(100% + 40px);
-        margin:20px -20px;
-
-        &::before {
-            content:"";
-            position:absolute;
-            top:-49px;
-            left:50%;
-            transform:translateX(-50%);
-            display:block;
-            width:0;
-            height:0;
-            border:25px solid transparent;
-            border-bottom-color:#aaa;
-        }
-
-        div.inline {
-            width:100%;
-            background:transparent !important;
-            box-shadow:none !important;
-            border-radius:0;
-            font-size:0;
-
-            div.calc-item {
-                display:inline-block;
-                font-size:16px;
-                width:calc((100% - 80px) / 5);
-                margin:0 20px 20px 0;
-                padding:10px;
-                background:#222;
-                border-radius:20px;
-
-                &:last-of-type,
-                &:nth-child(5) {
-                    margin-right:0;
-                }
-
-                ul {
-                    list-style:none;
-                    margin:0;
-                    padding:0;
-
-                    li {
-                        position:relative;
-                        float:left;
-                        width:100%;
-
-                        span {
-                            display:block;
-                            float:left;
-
-                            i {
-                                margin:0 10px 0 0; 
-                            }
-    
-                        }
-
-                        strong {
-                            display:block;
-                            float:right;
-                            font-weight:400;
-                            color:#fff1b7;
-
-                            u {
-                                text-decoration:none;
-                                font-weight:600;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
+        width:calc((100% / 12) * 7);
     }
 
     div.inline {
@@ -858,6 +840,18 @@ div.widget {
     &.h02 {
         div.inline {
             min-height:280px;
+        }
+    }
+
+    &.h03 {
+        div.inline {
+            min-height:504px;
+        }
+    }
+
+    &.h04 {
+        div.inline {
+            min-height:570px;
         }
     }
 

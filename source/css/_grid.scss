@@ -2,6 +2,8 @@
 .row {
   margin-left: -15px;
   margin-right: -15px;
+  float:left;
+  width:calc(100% + 30px);
 }
 
 .col-xs-1,

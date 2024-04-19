@@ -11,11 +11,13 @@ html {
 }
 
 
+
 body {
     font-family: $myfont, "Malgun Gothic", "apple sd gothic neo", sans-serif;
     color: $text-color;
     position:relative;
     min-width:800px;
+
 
 
     &.error-page {
@@ -121,14 +123,12 @@ body {
         }
 
         div.outline {
-            width:340px;
             padding:20px;
             text-align:center;
-            font-size:0;
 
             input[type="text"],
             input[type="password"] {
-                display:inline-block;
+                display:block;
                 width:280px;
                 height:56px;
                 border:none;
@@ -153,34 +153,6 @@ body {
                     background:$color-black;
                     @include ani();
                 }
-
-                &.wBtn {
-                    width:190px;
-                }
-            }
-
-            input + button {
-                width:85px;
-                height:56px;
-                border:none;
-                border-radius:5px;
-                font-size:18px;
-                background:#333;
-                color:#fff;
-                margin-left:5px;
-
-            }
-
-            input + input[type=submit] {
-                width:85px;
-                height:56px;
-                border:none;
-                border-radius:5px;
-                font-size:18px;
-                background:#333;
-                color:#fff;
-                margin-left:5px;
-
             }
 
             div.custom-checkbox {
@@ -215,25 +187,7 @@ body {
                 }
             }
 
-            button[type=submit] {
-                display:inline-block;
-                width:280px;
-                height:56px;
-                border:none;
-                color:#fff;
-                background:$color-main;
-                border-radius:5px;
-                font-size:18px;
-                font-weight:800;
-                @include ani();
-
-                &:hover {
-                    background:darken($color-main, 20%);
-                    @include ani();
-                }
-            }
-
-            input[type=submit] {
+            button {
                 display:inline-block;
                 width:280px;
                 height:56px;
@@ -279,6 +233,8 @@ p.coding-guide {
 }
 
 
+
+
     div.subView {
         font-size:14px;
         min-height:320px;
@@ -293,7 +249,6 @@ p.coding-guide {
             border-radius:8px 8px 0 0;
         }
 
-
         div.white-box {
             display:inline-block;
             width:100%;
@@ -302,7 +257,7 @@ p.coding-guide {
             margin:0 0 20px;
             border:1px solid #ccc;
             border-radius:0 0 8px 8px;
-            overflow:hidden;
+            //overflow:hidden;
             @include drop-shadow (0,1px,4px,0,0.1);
 
             &.toolbar {
@@ -619,10 +574,6 @@ p.coding-guide {
                             overflow:hidden;
                             list-style:none;
                             @include pmz(0 30px,0);
-
-                            li {
-                                display:block;
-                            }
                         }
                     }
                 }
@@ -884,263 +835,6 @@ p.coding-guide {
                 }
             }
 
-
-            div.nDashboard {
-
-                div.top {
-                    background:#444;
-                    color:#fff;
-                    padding:20px 30px;
-                    font-size:0;
-                    margin:0 -20px;
-                    white-space:nowrap;
-
-                    div.big {
-                        display:inline-block;
-                        position:relative;
-                        vertical-align:top;
-                        width:270px;
-                        padding:30px 30px 30px 100px;
-                        background:#fff;
-                        color:#444;
-                        margin-right:2px;
-                        font-size:16px;
-
-                        &.left {
-                            border-radius:20px 0 0 20px;
-                        }
-                        &.right {
-                            border-radius:0 20px 20px 0;
-                            margin-right:20px;
-                        }
-
-                        i {
-                            position:absolute;
-                            left:14px;
-                            top:40px;
-                            font-size:60px;
-                            color:#0d7377;
-                        }
-
-
-                        h3 {
-                            margin:0;
-                            //font-weight:400;
-                        }
-
-                        strong {
-                            font-size:34px;
-                            font-weight:800;
-                            color:#2b3e50;
-                            text-align:right;
-
-                            u {
-                                text-decoration:none;
-                                font-size:16px;
-                                font-weight:400;
-                                padding:0 0 0 6px;
-                            }
-                        }
-                    }
-
-                    div.small {
-
-                        display:inline-block;
-                        vertical-align:top;
-                        font-size:16px;
-                        padding:20px 30px;
-                        color:#fff;
-
-                        &.left {
-                        }
-                        &.right {
-                        }
-
-                        h3 {
-                            margin:0 0 10px;
-                            color:#0ba1b5;
-                            font-size:16px;
-                        }
-
-                        div {
-                            display:inline-block;
-                            color:#eee;
-                            margin:0 16px 0 0;
-
-                            strong {
-                                display:block;
-                                font-size:22px;
-                                color:#b6ad9a;
-
-                                u {
-                                    text-decoration:none;
-                                    font-size:14px;
-                                    font-weight:400;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                div.middle {
-
-                    padding:30px 0;
-                    font-size:0;
-
-                    div.table-outline {
-                        display:inline-block;
-                        vertical-align:top;
-                        font-size:14px;
-                        width:calc(50% - 1px);
-                        padding:0 20px;
-
-                        h3 {
-                            position:relative;
-                            background:#2b3e50 ;
-                            color:#fff;
-                            margin:0;
-                            //border:1px solid #e4e4e4;
-                            padding:0 20px;
-                            line-height:55px;
-                            font-size:22px;
-                            @include drop-shadow (0,3px,4px,0,0.2);
-
-                            select {
-                                position:absolute;
-                                right:20px;
-                                top:10px;
-                                color:#222;
-                                font-size:16px;
-                            }
-
-                            small {
-                                position:absolute;
-                                right:20px;
-                                top:0;
-                                font-size:16px;
-                                font-weight:400;
-                            }
-                        }
-
-                        div.outline {
-                            background:#ccc;
-                            @include drop-shadow (0,3px,4px,0,0.2);
-                            //padding:20px;
-
-
-                            table {
-                                width:100%;
-
-                                thead {
-
-                                    tr {
-                                        width:100%;
-                                        font-size:0;
-                                        padding-right:16px;
-
-                                        th {
-                                            background:#333;
-                                            color:#fff;
-                                            //width:calc(100% / 3);
-                                            height:40px;
-                                            font-size:14px;
-                                            border-right:1px solid #999;
-
-                                            &:last-child {
-                                                border-right:none;
-                                            }
-                                        }
-                                    }
-                                }
-
-                                tbody {
-                                    width:100%;
-                                    padding-top:40px;
-                                    background:#fff;
-
-                                    tr {
-                                        width:100%;
-                                        font-size:0;
-
-                                        td {
-                                            height:40px;
-                                            font-size:14px;
-                                            text-align:center;
-                                            border-right:1px solid #ccc;
-                                            border-bottom:1px solid #ccc;
-
-                                            &:last-child {
-                                                border-right:none;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-
-
-
-                            //table {
-                            //    width:100%;
-                            //    position:relative;
-                            //
-                            //    thead {
-                            //        position:absolute;
-                            //        left:0;
-                            //        right:0;
-                            //        top:0;
-                            //
-                            //        tr {
-                            //            display:block;
-                            //            width:100%;
-                            //            font-size:0;
-                            //            padding-right:16px;
-                            //
-                            //            th {
-                            //                display:inline-block;
-                            //                background:#444;
-                            //                color:#fff;
-                            //                width:calc(100% / 3);
-                            //                line-height:40px;
-                            //                font-size:14px;
-                            //            }
-                            //        }
-                            //    }
-                            //
-                            //    tbody {
-                            //        display:block;
-                            //        width:100%;
-                            //        padding-top:40px;
-                            //        background:#fff;
-                            //        height:600px;
-                            //        overflow-y:scroll;
-                            //
-                            //        tr {
-                            //            display:block;
-                            //            width:100%;
-                            //            font-size:0;
-                            //
-                            //            td {
-                            //                display:inline-block;
-                            //                width:calc(100% / 3);
-                            //                line-height:40px;
-                            //                font-size:14px;
-                            //                text-align:center;
-                            //                border-right:1px solid #ccc;
-                            //                border-bottom:1px solid #ccc;
-                            //
-                            //                &:last-child {
-                            //                    border-right:none;
-                            //                }
-                            //            }
-                            //        }
-                            //    }
-                            //}
-                        }
-                    }
-                }
-            }
-
             ul.tool-btns {
                 position:absolute;
                 right:20px;
@@ -1218,7 +912,7 @@ p.coding-guide {
             }
 
             button.menu {
-                width:240px;
+                width:210px;
                 background:darken($color-main, 30%);
                 @include ani(0.4s);
 
@@ -1227,7 +921,7 @@ p.coding-guide {
                 i.bar {
                     display:block;
                     position:absolute;
-                    left:210px;
+                    left:180px;
                     width:15px;
                     height:1px;
                     background:#fff;
@@ -1256,9 +950,7 @@ p.coding-guide {
         div#content {
 
             aside {
-                width:240px;
-		overflow-y:auto;
-
+                width:210px;
 
                 div.profile {
                     margin:40px auto 10px;
@@ -1287,7 +979,7 @@ p.coding-guide {
                                 a {
                                     color:#eee;
                                     @include ani(0.4s);
-                                    width:240px;
+                                    width:210px;
 
                                     i {
                                         color:#fff;
@@ -1326,7 +1018,7 @@ p.coding-guide {
                                         font-weight:bolder;
                                         position:relative;
                                         background:rgba(255,255,255,0.2);
-                                        width:240px;
+                                        width:210px;
 
                                         i {
                                             color:#fff;
@@ -1354,7 +1046,6 @@ p.coding-guide {
                                     padding:0;
                                     opacity:1;
                                     background:rgba(0,0,0,0.5);
-                                    list-style:none;
 
                                     &::before {
                                         content:"";
@@ -1480,7 +1171,7 @@ p.coding-guide {
             }
 
             section.view {
-                padding:38px 0 0 240px;
+                padding:38px 0 0 210px;
             }
         }
     }
